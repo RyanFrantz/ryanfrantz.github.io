@@ -9,7 +9,7 @@
   text-shadow: none;
   color: #111;
 }
-.hightlight code{
+.highlight code{
   float: left;
 }
 .highlight:hover {

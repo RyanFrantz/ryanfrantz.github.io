@@ -1,0 +1,29 @@
+---
+layout: post
+title: Nagios != Application Monitoring
+tags:
+- Code
+- SysAdmin
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+---
+Ask any sysadmin what he uses to monitor systems and services in his environment and chances are good the answer will be "<a href="http://www.nagios.org/" title="http://www.nagios.org/">Nagios</a>".  Ask him what he uses to monitor his applications and the answer may be quite different.  You may get no answer at all.  Nagios is meant to monitor servers, network devices, and services.  Sure, it can be extended to monitor disk capacity, web page delivery speeds, and more, but Nagios, in general, is mostly one dimensional; it's not designed to monitor application states.<br>
+<br>
+In a small environment, Nagios is a fantastic tool that helps a sysadmin get a handle on what's up and what's not.  At a small scale, it's also easier to explain that the "web server" is down or "DNS" isn't working and get your message across.  However, when the organization grows, <strong>the distance between the systems and services a sysadmin manages and the users that consume the applications and services grows</strong>.  With that distance comes a greater need to <a href="http://www.ryanfrantz.com/2012/05/18/operational-relevance/" title="Operational Relevance">clearly communicate the impact of an outage</a> on the availability of a given application.<br>
+<br>
+I tried to find plugins for Nagios that would allow me to extend it for use in demonstrating application state such as <a href="http://exchange.nagios.org/directory/Addons/Components/Nagios-Business-Process-Intelligence-(BPI)/details" title="http://exchange.nagios.org/directory/Addons/Components/Nagios-Business-Process-Intelligence-(BPI)/details">Nagios BPI</a>, but it didn't meet my needs.  In fact, the BPI extension was too simplistic and rigid for my needs.  I may detail my needs in a future post so that you, dear reader, can have something to measure my statements against.<br>
+<br>
+Suffice it to say that application monitoring must be done by you, the sysadmin, the developer, the janitor cum CIO at the new lean start-up.  Only you know what your applications are and what their dependencies are.  The trick is to recognize the various inputs you may have for all levels of monitoring such as <a href="http://www.nagios.org" title="http://www.nagios.org">Nagios</a>, <a href="http://www.splunk.com/" title="http://www.splunk.com/">Splunk</a>, <a href="http://www.quest.com/foglight/" title="http://www.quest.com/foglight/">Foglight</a>, bash/Perl/Powershell scripts, etc.  They all fulfill a given need and <u>should</u> all feed into a custom layer that you need to define and create to monitor application state.  You need to build the "smarts" that glue all of the information and provide application state.  To illustrate this, I've sketched a crude diagram:<br>
+<br>
+<a href="http://www.ryanfrantz.com/wp-content/uploads/2012/06/applicationStateSmarts.png"><img src="http://www.ryanfrantz.com/wp-content/uploads/2012/06/applicationStateSmarts-300x183.png" alt="" title="Application State Smarts" width="300" height="183" class="alignnone size-medium wp-image-521" /></a><br>
+<br>
+You'll note the diagram includes references to <a href="http://bestpractical.com/rt/" title="http://bestpractical.com/rt/">Request Tracker</a> and a dashboard.  I need an application state monitor to also be intelligent enough to track state in a support ticket for historical purposes and reporting and provide updates to some outward-facing service where my customers can see that status of applications for themselves.  Heck, with a few more smarts, that dashboard could probably link to Request Tracker for details.  If that saves a call/email to my Support Desk, it's worth the effort.  For my dashboard, I'm going to take <a href="http://www.stashboard.org/" title="http://www.stashboard.org/">Stashboard</a> out for a drive.<br>
+<br>
+<strong>NOTE:</strong> This is <u>very</u> similar to Google's <a href="http://www.google.com/appsstatus" title="http://www.google.com/appsstatus">Apps Status Dashboard</a>.  I'm shamelessly copying the idea and building my own system to do much the same thing.<br>
+<br>
+Finally, I need my "smarts" to be useful from anything, anywhere.  In other words, I need to build a system that can be accessed and updated from any source using a simple interface.  I've decided to build a RESTful web application.  All of my monitoring services can be extended (i.e. via custom scripts) so it should be simple enough to make HTTP requests to a RESTful web application.  Since I'm strongest coding in Perl, after some research, I've settled on <a href="http://perldancer.org/" title="http://perldancer.org/">Dancer</a> to quickly build my project.  I'll serve up data via an <a href="http://www.sqlite.org/" title="http://www.sqlite.org/">SQLite</a> backend and I expect to have the foundation for my application state monitor in place within a few hours.<br>
+<br>
+I'll post more on this project as I progress.

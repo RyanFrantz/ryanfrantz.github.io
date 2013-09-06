@@ -1,0 +1,33 @@
+---
+layout: post
+title: TCP Segmentation Offload
+tags:
+- Tech
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  _wp_old_slug: ''
+---
+Recently I deployed a small virtual environment on Vmware ESXi consisting of a few virtual switches and a handful of CentOS 5.x and Windows Server 2008 virtual machines.  The CentOS hosts included an iptables firewall and an SFTP server; the Windows Server 2008 hosts included a web server and Citrix server.  So what?<br>
+<br>
+Generally, everything worked well.  All services were responding to requests and users could access all hosts as expected.  Then I began to notice unexpected behavior from my web and Citrix servers: they would simply stop responding in the middle of their transmissions.  I fired up tcpdump and Wireshark but was never able to diagnose the issue.  Either the volume of traffic was too much to weed through, or I was simply to tired (read: lazy) to wade through all the packets.  What's more, the issue was so sporadic, I could never reliably recreate it (a <a href="http://en.wikipedia.org/wiki/Unusual_software_bug" target="_blank">Heisenbug</a>).<br>
+<br>
+Later, during a large file transfer from my SFTP host, my transmission locked up.  Funny, that.  Each subsequent attempt failed as well.  Finally, I had a consistent and repeatable issue.  Again, I fired up iptables.  This time, I found the problem: jumbo frames.  Packets coming from the SFTP server were larger than 1500 bytes and my firewall was trying to inform the SFTP server that it needed to fragment them.  The SFTP server stubbornly set the DF bit on all outgoing packets.<br>
+<br>
+I then set the MTU on the SFTP server's NIC to 1460 and my problem was solved.  At least, in the short term.  I'm not a big fan of one-off solutions.  And I certainly don't want to manually configure each host's MTU.  So I reverted the MTU setting on the SFTP server and tried to force all transmissions through the firewall to be limited to 1500 bytes using the <code>--clamp-mss-to-pmtu</code> iptables option (NOTE: you can use the <code>--set mss <em>xxx</em></code> option as well).  No go; packets were still being denied by my firewall due to their electronic girth.  I tried several variations in my iptables rules to no avail.<br>
+<br>
+Then, I found it: TCP segmentation offload, or TSO.  <a href="http://en.wikipedia.org/wiki/Large_segment_offload" target="_blank">TSO</a> is used to offload packet processing from the CPU to the NIC.  Sounds great, and I'm sure it has it's usefulness, but in my case, the packets were sent as jumbo frames and wouldn't fragment.  When I disabled TSO, my world was right again.<br>
+<br>
+For now, I'm happy to leave TSO disabled.  Maybe I'll use it in the future.<br>
+<ul>
+	<li>To disable TSO on Linux hosts, use ethtool (<code>ethtool -K tso off</code>).</li>
+	<li>To disable TSO on Windows Server 2008 R2 hosts, click on the Advanced tab under the NIC properties and set the following attributes' values to <strong>Off</strong>:</li>
+        <ul>
+	<li>IPv4 Giant TSO Offload</li>
+	<li>IPv4 TSO Offload</li>
+	<li>IPv6 TCP Segmentation Offload</li>
+        </ul>
+</ul>
+Author's Note: All of my virtual machines were using the VMXNET3 network driver.

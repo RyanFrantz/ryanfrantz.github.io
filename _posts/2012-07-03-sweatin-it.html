@@ -1,0 +1,27 @@
+---
+layout: post
+title: Sweatin' It!
+tags:
+- Mgmt
+- SysAdmin
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+---
+On a recommendation from @obfuscurity (<a href="http://obfuscurity.com/2012/07/Graph-Porn-and-Sharing" title="http://obfuscurity.com/2012/07/Graph-Porn-and-Sharing">http://obfuscurity.com/2012/07/Graph-Porn-and-Sharing</a>), I want to share some data my team collected during a recent power outage following a strong windstorm in the Northeast.  What I want to present isn't all that exciting: a simple graph showing the temperature in my data center.  More, it's the <strong><u>result</u></strong> of this data collection and the resulting postmortem analysis that are interesting.<br>
+<br>
+<a href="http://www.ryanfrantz.com/wp-content/uploads/2012/07/sweatinIt_20120702-3.png"><img src="http://www.ryanfrantz.com/wp-content/uploads/2012/07/sweatinIt_20120702-3-300x119.png" alt="" title="sweatinIt_20120702-3" width="300" height="119" class="alignnone size-medium wp-image-555" /></a><br>
+<br>
+Several things happened during this event:<br>
+<ol>
+<br>
+	<li>We didn't get alerted when the temperature blew past our monitor's threshold.  We nearly reached 120 degrees Fahrenheit!</li>
+	<li>We couldn't access the data center to assess the situation physically due to the generator not powering the badge access system and door latches.  We had to consider some rash actions (i.e. shutting down non-critical systems remotely) in lieu of seeing what was happening.</li>
+	<li>After finally gaining physical access to the data center, we found an air handler was doing what is was supposed to.  We just didn't want it to be doing it at the time!</li>
+</ol>
+<br>
+During our postmortem review we identified what failed and why.  We defined preventative measures to implement over the next few days including having extra master door keys made and having a ladder (yes!) handy.<br>
+<br>
+As for the air handler performing correctly, and letting the servers cook, the problem lay in the fact that the condensation pump was not powered by the generator.  The water level rose and the air handler shut off to prevent overflowing.  The most important take away from this is that even facilities management needs postmortem analyses.  I've had recent successes including the developers in postmortem reviews; it's time to include the facility manager in the process as well!

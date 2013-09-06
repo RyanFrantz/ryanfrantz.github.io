@@ -15,8 +15,8 @@
 
   <link rel="alternate" type="application/rss+xml" href="/atom.xml" />
 
-  <link rel="stylesheet" href="/css/fontawesome.min.css" type="text/css" media="screen, projection" />
   <link rel="stylesheet" href="/css/base.css" type="text/css" media="screen, projection" />
+  <link rel="stylesheet" href="/css/font-family.css" type="text/css" media="screen, projection" charset="utf-8" />
   <link rel="stylesheet" href="/css/pygments.css" type="text/css" />
   <link media="only screen and (max-device-width: 480px)" href="/css/mobile.css" type="text/css" rel="stylesheet" />
   <link media="only screen and (device-width: 768px)" href="/css/mobile.css" type="text/css" rel="stylesheet" />
@@ -28,33 +28,45 @@
 </head>
 
 <body>
-  <section class="sidebar">
-    <a href="/">
-      <img src="{{ site.gravatar_url }}?s=150" height="75" width="75" class="avatar" />
-    </a>
+  <div class="header">
+    <div class="container">
+      <section class="name">
+        <a href="/">Ryan<b>Frantz</b></a>
+      </section>
 
-    <section class="name">
-      <a href="/">
-        <span id="fname">{{ site.name|split:' '|first }}</span>
-        <span id="lname">{{ site.name|split:' '|last }}</span>
-      </a>
-    </section>
-
-    <section class="meta">
-      <a href="https://github.com/{{ site.github }}" target="_blank"><i class="icon icon-github"></i></a>
-      <a href="https://twitter.com/{{ site.twitter }}" target="_blank"><i class="icon icon-twitter"></i></a>
-      <a href="/atom.xml"><i class="icon icon-rss"></i></a>
-    </section>
-
-    <section class="sections">
-      <ul>
-        <li><a href="/about.html">about</a></li>
-        <li><a href="/">posts</a></li>
+      <ul class="menu">
+        <li><a href="/about">About</a></li>
+        <li><a href="/talks/">Talks</a></li>
       </ul>
-    </section>
-  </section>
 
+      <ul class="social">
+      <a href="https://github.com/{{ site.github }}" target="_blank"><img src="/images/github_32x32.png" /></a>
+      <a href="https://twitter.com/{{ site.twitter }}" target="_blank"><img src="/images/twitter_32x32.png"></a>
+      <a href="/atom.xml"><img src="/images/rss_32x32.png" /></a>
+      </ul>
+    </div>
+  </div>
+
+  
+  <div class="hipster" style="background-image: url(/images/brooklyn_deer.png);"></div>
+
+  <div class="container">
   {{ content }}
+  </div>
+  <script type="text/javascript">//<![CDATA[
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-33247921-1']);
+                  _gaq.push(['_trackPageview']);
+  (function () {
+      var ga = document.createElement('script');
+      ga.type = 'text/javascript';
+      ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);
+  })();
+  //]]></script>
 </body>
 
 </html>

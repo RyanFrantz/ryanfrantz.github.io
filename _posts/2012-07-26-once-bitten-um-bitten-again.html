@@ -1,0 +1,18 @@
+---
+layout: post
+title: Once Bitten, Um, Bitten Again
+tags:
+- SysAdmin
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+---
+<a href="http://www.ryanfrantz.com/2011/02/03/tcp-segmentation-offload/" title="http://www.ryanfrantz.com/2011/02/03/tcp-segmentation-offload/">TSO</a> jumped up and bit me in the rear again.  One of my clients was having recurring performance issues accessing some applications delivered via Citrix Xenapp.  Their sessions would operate normally, then hang, then catch up, then hang.  In an endless loop.  Packet captures showed what looked like buffering behavior.  Then, during a team powwow, the ultimate ego stroking happened.  One of my sysadmins says to me "Yo, didn't you write about something like this on your blog?"  I teared up.  Then, I exclaimed, exuberantly, "Yes! Yes! TSO!"<br>
+<br>
+Lesson learned: I should have been doing postmortems sooner.  One of the preventative measures would have been to sweep all of my virtual machines to see if they were using the VMXNET3 driver and to check for TSO.<br>
+<br>
+Postmortems are critical to making sure you don't suffer the same outage for the same reason.  In fact, I checked my <a href="http://www.ryanfrantz.com/2011/02/03/tcp-segmentation-offload/" title="http://www.ryanfrantz.com/2011/02/03/tcp-segmentation-offload/">previous article</a> on the subject and found it needed to be updated.  Done.<br>
+<br>
+There will NOT be a third time!

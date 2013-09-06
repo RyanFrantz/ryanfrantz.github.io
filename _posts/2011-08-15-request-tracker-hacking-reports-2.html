@@ -1,0 +1,262 @@
+---
+layout: post
+title: 'Request Tracker: Hacking Reports'
+tags:
+- Code
+- Tech
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+---
+<a href="http://bestpractical.com/rt/">Request Tracker</a> (RT) is a solid ticketing system and I've been piloting it for a few months.  Now, I'm getting ready to deploy it in production.  RT is extremely flexible in that it is highly customizable and extensible.  There are a number of ways to access ticket content including its REST API and CLI tools that come with the implementation.  In addition, one can code against the system by pulling in RT's Perl modules.  I need some reports that aren't available in RT core so I've hacked a couple together to meet my needs.  I present them here in the hopes that they may prove useful to others.<br>
+<br>
+<strong>rtTicketLifetime.pl</strong><br>
+<br>
+
+The first report demonstrates how long tickets live in my Support Desk queue.  I have a service level that states all support requests must be addressed and resolved within 7 days.  This report tells me how effective my team is.  The output can be used to generate a histogram, if need be.<br>
+
+NOTE: I <a href="http://www.ryanfrantz.com/2011/07/01/request-tracker-ticket-lifetime-report/">posted</a> about this before but I referenced another site; I'm posting the code here as well.<br>
+<br>
+{% highlight perl linenos %}
+#!/usr/bin/perl
+
+#
+# rtTicketLifetime.pl - query RT and generate a report on the lifetime of resolved tickets
+# Author: Ryan Frantz ryanfrantz [at] informed-llc [dot] com
+#
+
+use strict;
+use warnings;
+
+use lib "/usr/local/rt/lib";
+
+use RT;
+use RT::User;
+use RT::Interface::CLI qw( CleanEnv GetCurrentUser );
+
+use Date::Calc qw( Delta_DHMS );
+
+# TODO:
+# 1. add a break out of ticket lifetime by owner
+# 2. add email support
+# 3. make this available via the web interface with graphing goodness
+
+## start me up!
+
+# set the stage...
+CleanEnv();
+RT::LoadConfig;
+RT::Init;
+
+my $currentUser = GetCurrentUser();
+my $tickets = RT::Tickets->new( $currentUser );
+my $query = qq[ Created > '3 months ago' AND Queue = 'Support Desk' AND Status = 'resolved' ];
+
+my $validQuery = $tickets->FromSQL( $query );
+#print "VALID QUERY!\n" if $validQuery;
+
+my $binThreshold = '7';	# 7 days, trust me...
+my @histogramData;	# prep dat
+# initialize the bins, in case there are any that don't get incremented later
+# we'll use the array's indices to define the time period in which the ticket lived (i.e. $histogramData[0] is for tickets resolved in < 1 day)
+foreach my $day ( 0..$binThreshold ) {
+	$histogramData[ $day ] = '0';
+}
+
+while ( my $ticket = $tickets->Next() ) {
+	#my $owner = $ticket->OwnerObj;	# we're not using this yet...
+
+	# CreatedObj is available via RT::Record
+	my $dateCreated = $ticket->CreatedObj->Get( Timezone => 'server' );
+	my $dateResolved = $ticket->ResolvedObj->Get( Timezone => 'server' );
+	my @dateCreated = split( /-|:| /, $dateCreated );
+	my @dateResolved = split( /-|:| /, $dateResolved );
+	my ( $deltaDays, $deltaHours, $deltaMinutes, $deltaSeconds ) = Delta_DHMS( @dateCreated, @dateResolved );
+
+	# increment the bins; if the value is above the bin threshold, simply lump it into a "more" bin ( $binThreshold )
+	if ( $deltaDays > $binThreshold ) {
+		#print "DEBUG: $deltaDays > $binThreshold\n";
+		$histogramData[ $binThreshold ]++;
+	} else {
+		#print "DEBUG: $deltaDays <= $binThreshold\n";
+		$histogramData[ $deltaDays ]++;
+	}
+}
+
+print "\n" . localtime() . "\n";
+print "\nQuery: $query\n";
+print "\nFound " . $tickets->CountAll . " tickets\n\n";
+
+my $day = '1';
+foreach my $ticketsResolved ( @histogramData ) {
+	if ( $day <= $binThreshold ) {
+		print $day - 1 . " < " . $day . ": " . $ticketsResolved . "\n";
+	} else {
+		print $day . "+ : " . $ticketsResolved . "\n";
+	}
+	$day++;
+}
+print "\n";
+</code>
+The output looks similar to the following:
+<code>
+Mon Aug 15 22:45:14 2011
+
+Query:  Created > '3 months ago' AND Queue = 'Support Desk' AND Status = 'resolved'
+
+Found 108 tickets
+
+0 < 1: 73
+1 < 2: 5
+2 < 3: 9
+3 < 4: 6
+4 < 5: 4
+5 < 6: 2
+6 < 7: 0
+8+ : 9
+
+</code>
+
+This shows my team resolves the majority of tickets in less than a day.  Very nice.
+
+<strong>rtTicketFirstResponse.pl</strong>
+
+The second report tells me how quickly my team is responding to new requests.  My service level for responses is 30 minutes or less (remember the old Domino's Pizza guarantee?).
+
+<code>
+#!/usr/bin/perl
+
+#
+# rtTicketFirstResponse.pl - query RT and generate a report on how long it took to respond to a request
+# Author: Ryan Frantz ryanfrantz [at] informed-llc [dot] com
+#
+
+use warnings;
+use strict;
+
+use lib "/usr/local/rt/lib/";
+
+use RT;
+use RT::User;
+use RT::Interface::CLI qw( CleanEnv GetCurrentUser );
+
+use Date::Calc qw( Date_to_Time );
+use Time::Interval;
+
+## start me up!
+
+# set the stage...
+CleanEnv();
+RT::LoadConfig;
+RT::Init;
+
+my $currentUser = GetCurrentUser();
+my $tickets = RT::Tickets->new( $currentUser );
+my $query = qq[ Created > '3 months ago' AND Queue = 'Support Desk' AND Status = 'resolved' ];
+
+my $binThreshold = '7200';	# 2 hours, in seconds
+# define the response times for each bin; in seconds
+my %histogramData = (
+	'900'	=>	'0',	# 15min
+	'1800'	=>	'0',	# 30min
+	'2700'	=>	'0',	# 45min
+	'3600'	=>	'0',	# 1hour
+	'4500'	=>	'0',	# 1hour15min
+	'5400'	=>	'0',	# 1hour30min
+	'6300'	=>	'0',	# 1hour45min
+	$binThreshold	=>	'0',	# 2hours
+	#'more'	=>	'0'	# $binThreshold + 1; we'll add this key in at the end
+);
+
+my $numAboveBinThreshold;
+sub tallyResponseTime {
+
+	my $responseTime = shift;
+	#print "\nTEST VALUE: $responseTime\n";	# debug
+	my $rangeLow = '0';
+
+	foreach my $binResponseTime ( sort { $a <=> $b } keys %histogramData ) {	# ensure a numeric sort; not ASCII-betical
+		if ( $responseTime >= $rangeLow and $responseTime < $binResponseTime ) {
+			$histogramData{ $binResponseTime }++;
+			last;   # no need to continue
+		} elsif ( $responseTime > $binThreshold ) {
+			$numAboveBinThreshold++;	# we'll add this value to a 'more' key in the hash at the end of the script
+			last;
+		}
+
+		$rangeLow = $binResponseTime;
+	}
+
+}	# end tallyResponseTime()
+
+my $validQuery = $tickets->FromSQL( $query );
+#print "VALID QUERY!\n" if $validQuery;	# debug
+
+# iterate over the transactions, find those where Type == Status, then where status changes from 'new' to 'open' or 'new' to 'resolved'
+# and compare the date the transaction was created against the Created date for the ticket
+# NOTE: I've seen tickets move from 'new' to 'resolved' because techs log the ticket after resolving the issue (i.e. password resets); we need these too
+my $totalTickets = '0';
+while ( my $ticket = $tickets->Next() ) {
+	my $dateTicketCreated = $ticket->CreatedObj->Get( Timezone => 'server' );
+	my $transactions = RT::Transactions->new( $currentUser );
+	$transactions->LimitToTicket( $ticket->id );
+
+	while ( my $transaction = $transactions->Next() ) {
+		next unless $transaction->Type eq 'Status';
+		next unless ( ($transaction->OldValue eq 'new' and $transaction->NewValue eq 'open') or ($transaction->OldValue eq 'new' and $transaction->NewValue eq 'resolved') );	# only new -> open transactions
+
+		my $dateTransactionCreated = $transaction->CreatedObj->Get( Timezone => 'server' );
+	        my @dateTicketCreated = split( /-|:| /, $dateTicketCreated );
+		my @dateTransactionCreated = split( /-|:| /, $dateTransactionCreated );
+		my $timeTicketCreated = Date_to_Time( @dateTicketCreated );	# seconds since epoch
+		my $timeTransactionCreated = Date_to_Time( @dateTransactionCreated );	# seconds since epoch
+		my $timeDiff = $timeTransactionCreated - $timeTicketCreated;
+
+		tallyResponseTime( $timeDiff );
+		$totalTickets++;
+	}
+}
+
+# after all tallies, add the key/value pair for those tickets whose response time was above our bin threshold
+$histogramData{ $binThreshold + 1 } = $numAboveBinThreshold;	# 7201 seconds
+
+# report!
+print "\n" . localtime() . "\n";
+print "\nQUERY: $query\n\n";
+foreach my $key ( sort { $a <=> $b } keys %histogramData ) {    # ensure a numeric sort; not ASCII-betical
+	my $timeInterval = parseInterval( seconds => $key );
+	if ( $key < $binThreshold + 1 ) {
+		print "< ";
+	} else {
+		print "> ";
+	}
+	print $timeInterval->{'hours'} . 'h ' . $timeInterval->{'minutes'} . 'm: ' . $histogramData{ $key } . "\n";
+}
+
+print "\nTOTAL TICKETS: $totalTickets\n\n";
+{% endhighlight %}
+<br>
+The output looks similar to the following:<br>
+<br>
+<code>
+Mon Aug 15 22:46:32 2011<br>
+<br>
+QUERY:  Created > '3 months ago' AND Queue = 'Support Desk' AND Status = 'resolved'<br>
+<br>
+< 0h 15m: 43<br>
+< 0h 30m: 2<br>
+< 0h 45m: 6<br>
+< 1h 0m: 4<br>
+< 1h 15m: 5<br>
+< 1h 30m: 2<br>
+< 1h 45m: 3<br>
+< 2h 0m: 5<br>
+> 2h 0m: 35<br>
+<br>
+TOTAL TICKETS: 105<br>
+</code>
+
+<br>
+In this case, my guys respond to most tickets in 15 minutes or less, or 2+ hours.  Generally, many of those late responses are related to tickets received close to the end of the business day.  This script doesn't calculate business days, so the output may appear artificially inflated (i.e. a ticket could come in Friday at 4:59PM and be addressed at 8:31AM the next Monday but would still show here at 2+ hours instead of 2 minutes).

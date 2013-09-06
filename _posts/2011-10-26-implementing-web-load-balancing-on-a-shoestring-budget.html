@@ -1,0 +1,245 @@
+---
+layout: post
+title: Implementing Web Load Balancing on a Shoestring Budget
+tags:
+- SysAdmin
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+---
+I made a presentation at this month's <a title="Crabby Admins" href="http://crabbyadmins.org/">LOPSA Baltimore</a> meeting about my recent web load balancing implementation using off-the-shelf software. The (short) deck is available below.<br>
+<div id="__ss_9563920" style="width: 425px;">
+<strong style="display: block; margin: 12px 0 4px;"><a title="Implementing Web Load Balancing On A Shoestring Budget" href="http://www.slideshare.net/ryanfrantz/implementing-web-load-balancing-on-a-shoestring-budget" target="_blank">Implementing Web Load Balancing On A Shoestring Budget</a></strong> <iframe src="http://www.slideshare.net/slideshow/embed_code/9563920" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="425" height="355"></iframe>
+<div style="padding: 5px 0 12px;">View more <a href="http://www.slideshare.net/" target="_blank">presentations</a> from <a href="http://www.slideshare.net/ryanfrantz" target="_blank">ryanfrantz</a></div>
+</div>
+<h2>Configs</h2>
+Absent from the deck are the configuration files that I reviewed with the group when describing my implementation.  Those files are available below.
+<h3>Nginx</h3>
+{% highlight nginx %}
+# nginx.conf 
+
+user nginx nginx;
+# worker_processes should be equal to the number of CPU cores
+worker_processes  4;
+
+# default values of log: main == error; http == crit
+# server == crit
+# levels avail: debug, info, notice, warn, error, crit
+# error_log /path/ level
+error_log /var/log/nginx/error.log error;
+
+events {
+		# each worker_process will manage 1024 connections
+		worker_connections  1024;	# limited to 4096 (4*1024) connections
+}# end events()
+
+
+http {
+	# compress content
+	gzip on;				# enable compression
+	gzip_min_length 1100;	# anything shorter than 1100 bytes will not be compressed
+	gzip_buffers 4 8k;		# set the number and size of the buffers
+	gzip_types text/plain text/css text/js; # the MIME types we want to compress
+	
+	# No need to display the version of our server
+	server_tokens off;
+
+	# use requested Host header for redirects
+	server_name_in_redirect off;
+
+	# setting timeout for the proxy (haproxy)
+	#proxy_read_timeout 180;
+	proxy_read_timeout 1500;	# 60 sec * 25 min = 1500 sec; required for long-running web reports
+
+
+	# allowing us to upload more than 1MB of data
+	client_max_body_size 10M;
+
+	# nginx should service SSL requests and forward them to haproxy (bound on the HTTP port)
+
+	# Site www.example.com;
+	# 192.168.1.2 www.example.com
+		upstream www.example.com {
+			server 192.168.1.2:80;
+		}
+
+		server {
+			listen 192.168.1.2:443;
+			access_log /var/log/nginx/access.log;
+			ssl on;	# go!
+			ssl_certificate /usr/local/ssl/wildcard.example.com.cert;
+			ssl_certificate_key /usr/local/ssl/wildcard.example.com.key;
+			ssl_prefer_server_ciphers on;	# prefer SSLv3 and TLSv1 ciphers
+			ssl_ciphers HIGH:+MEDIUM:!ADH:!MD5;	# use 128-bit and higher ciphers; exclude ADH and MD5
+			ssl_protocols TLSv1 SSLv3;	# guarantee only TLSv1 and SSLv3 protocols
+
+			# match all HTTP requests
+			location / {
+				proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+				proxy_set_header secureCookie YES;
+				proxy_pass	http://www.example.com;
+			}
+		}	# end server www.example.com 192.168.1.2
+
+} # end http
+
+{% endhighlight %}
+<h3>Haproxy</h3>
+{% highlight nginx %}
+#
+# haproxy.conf
+#
+
+global
+	log 127.0.0.1	local1 info
+	log 127.0.0.1	local2 emerg notice
+	#maxconn 5000
+	maxconn 32500
+	nbproc 1
+	chroot /var/chroot/haproxy
+	pidfile /var/run/haproxy.pid
+	user haproxy
+	group haproxy
+	daemon
+	stats socket /tmp/haproxy.stat
+
+defaults
+	# log all proxy instances
+	log global
+
+	# enable verbose HTTP-related logging
+	option httplog
+
+	# run as a layer 7 proxy
+	mode http
+
+	# force closed active connections after response is transferred
+	#option forceclose
+
+	# try a downed server 2 times before sending request to good server
+	# 2 retries x 2s connect timeout = 4s until haproxy finds a good server
+	# NOTE: The 'retries' + 'timeout connect' combo operates independently
+	# of the 'listen' block's declaration (i.e. health checks). The below
+	# options govern how haproxy handles current incoming connections and
+	# the health checks in the backend declarations govern whether or not
+	# haproxy decides to use the defined backends in the farm. If a
+	# given backend host is currently down while a connection request is
+	# being made, the below options are in effect.  Once that host is 
+	# down "hard", as far as haproxy is concerned, it's no longer used in
+	# the farm (until it recovers) and subsequent requests don't even
+	# attempt to use that backend. -ryanfrantz 1/14/2010
+	# P.S. We've decided to configure the 'retries' + 'timeout connect'
+	# values to be as close to the health check timers as possible to
+	# ensure a fluid experience for the end user. -ryanfrantz 1/14/2010
+	retries	2
+	timeout connect 2s
+	# redispatch requests originally sent to downed backend servers
+	option redispatch
+
+	# expect that the response from the client doesn't take longer than 5s
+	timeout client 5s
+	# expect that the response from the server doesn't take longer than 5s
+	#timeout server 5s
+	#timeout server 90s
+	#timeout server 180s
+	# expect that the response from the server doesn't take longer than 25 mins; required for long-running reports; matches nginx's config
+	timeout server 1500s
+
+	# simple round rooin algo
+	balance roundrobin
+	#balance leastconn
+
+	# set X-Forward-For HTTP header
+	option forwardfor
+
+	# force all HTTP connections closed so haproxy analyzes/logs all traffic
+	option httpclose
+
+listen statsWWW2 192.168.1.1:8080
+	# enable the haproxy stats page (uri-stem = /haproxy?stats)
+	stats enable
+	stats auth god:sex
+	stats refresh 120s
+
+
+# Site www.example.com
+listen  www.example.com
+	bind 192.168.1.2:80
+	acl acl_port_80 dst_port eq 80
+	acl acl_secure hdr(secureCookie) YES
+	acl acl_sourceLocal src 192.168.1.2
+	acl acl_excludeCSS url_dir -i CSS
+	acl acl_excludeImages url_dir -i images
+	redirect location https://www.example.com/sslRedirect.asp code 301 if acl_port_80 !acl_secure !acl_sourceLocal !acl_excludeCSS !acl_excludeImages
+	cookie SERVERID insert indirect nocache
+	server www1 192.168.1.3 cookie www1 weight 1 check inter 1s fall 3 rise 2
+	server www2 192.168.1.4 cookie www2 weight 1 check inter 1s fall 3 rise 2
+	server www3 192.168.1.5 cookie www3 weight 1 check inter 1s fall 3 rise 2
+	option httpchk GET /ping.htm HTTP/1.1\r\nHost:www.example.com
+	capture request header X-Forwarded-For len 15
+###############################################################################
+# Site www.foo.com
+listen  www.foo.com
+...
+{% endhighlight %}
+<h3>Keepalived</h3>
+{% highlight nginx %}
+#Configuration for lb1
+
+global_defs {
+	notification_email {
+		admin@example.com
+	}
+	notification_email_from lb1@example.com
+	smtp_server mail.example.com
+	smtp_connect_timeout 30
+	lvs_id lb1
+}
+
+vrrp_sync_group virtualGroup1 {
+	group {
+		virtualInstance1
+	}
+}
+
+vrrp_instance virtualInstance1 {
+	notify_master /usr/local/bin/keepalivedMaster.sh
+	notify_fault /usr/local/bin/keepalivedFault.sh
+	notify_backup /usr/local/bin/keepalivedBackup.sh
+	interface eth0
+	advert_int 1	# advertise interval in sec; 1 is default
+	state BACKUP	# either MASTER or BACKUP
+	virtual_router_id 1	# MUST be between 1 and 255
+	priority 100	# 101 on MASTER, 100 on BACKUP
+	smtp_alert
+	authentication {
+		auth_type AH
+		auth_pass "<yeah right...>"
+	}
+	virtual_ipaddress {
+		192.168.1.1/24 brd 192.168.1.255 dev eth0 # comment
+		192.168.1.2/24 brd 192.168.1.255 dev eth0 # comment
+		192.168.1.3/24 brd 192.168.1.255 dev eth0 
+		192.168.1.4/24 brd 192.168.1.255 dev eth0 
+		192.168.1.5/24 brd 192.168.1.255 dev eth0
+		192.168.1.6/24 brd 192.168.1.255 dev eth0
+		192.168.1.7/24 brd 192.168.1.255 dev eth0
+		192.168.1.8/24 brd 192.168.1.255 dev eth0
+		192.168.1.9/24 brd 192.168.1.255 dev eth0
+		192.168.1.10/24 brd 192.168.1.255 dev eth0
+		192.168.1.11/24 brd 192.168.1.255 dev eth0
+		192.168.1.12/24 brd 192.168.1.255 dev eth0
+		192.168.1.13/24 brd 192.168.1.255 dev eth0
+		192.168.1.14/24 brd 192.168.1.255 dev eth0
+		192.168.1.15/24 brd 192.168.1.255 dev eth0
+		192.168.1.16/24 brd 192.168.1.255 dev eth0
+		192.168.1.17/24 brd 192.168.1.255 dev eth0
+		192.168.1.18/24 brd 192.168.1.255 dev eth0
+		192.168.1.19/24 brd 192.168.1.255 dev eth0
+	}
+}
+
+...
+{% endhighlight %}

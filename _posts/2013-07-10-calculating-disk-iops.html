@@ -1,0 +1,212 @@
+---
+layout: post
+title: Calculating Disk IOPS
+tags:
+- Mgmt
+- SysAdmin
+status: publish
+type: post
+published: true
+---
+<h2><span>System Design</span></h2>
+<p>
+Determining the performance of a disk system is an often overlooked aspect of designing systems.  Because the disk system is the slowest medium in a computer, it should be one of the <span><strong>FIRST</strong></span> components whose specification is properly defined.  Without doing so, one risks implementing a poorly performing system that does not meet users' expectations.
+</p>
+<p>
+All production-class systems should have their requirements defined as best as possible so that the proper disk system can be implemented.  Further, after the implementation of a system, knowing the performance requirements, the system administrator can use that information as a baseline to monitor the performance of the disk system.  So, sit down with the developers, the project stakeholders, and the folks on the front line of the business and understand what they want to achieve.
+</p>
+<h2>IOPS</h2>
+<p>
+IOPS are used to define the performance of a given disk or disk array.  For the purposes of general calculations (and this post), the following can be assumed to be the <strong>maximum</strong> IOPS (performance) for a given disk:
+</p>
+<ul><li>10K RPM Fibre Channel Disk: <strong>130</strong> IOPS
+</li><li>15K RPM Fibre Channel Disk: <strong>180</strong> IOPS
+</li></ul><p>
+<strong>NOTE: To calculate the <span>actual</span> IOPS for a given disk, the following information is required:</strong>
+</p>
+<ul><li>Average latency
+</li><li>Average seek time
+</li></ul><p>
+<em>This information is available from the drive&#39;s manufacturer.</em>
+</p>
+<h3>Calculate a Single Drive&#39;s Maximum IOPS</h3>
+<p>
+Assume that we have a <strong>Seagate ST3146807FCV Cheetah 146GB 10K RPM Fibre Channel</strong> hard disk.  It is rated as follows:
+</p>
+<ul><li>Average latency (<tt>avgLatency</tt>): <strong>2.99 ms</strong> or <tt>.00299</tt> seconds
+</li><li>Average seek time (<tt>avgSeek</tt>): <strong>4.7 ms</strong> or <tt>.0047</tt> seconds
+</li></ul>
+<p>
+To calculate this disk&#39;s IOPS, use the following equation:
+</p>
+{% highlight bash %}
+IOPS = 1/(avgLatency + avgSeek)
+{% endhighlight %}
+<br><br>
+<p>
+For our example disk, the equation would be (note the values of <tt>avgLatency</tt> and <tt>avgSeek</tt> are measured in <span>seconds</span>):
+</p>
+{% highlight bash %}
+IOPS = 1/(.00299 + .0047)
+IOPS = 130
+{% endhighlight %}
+<br>
+<p>
+Total <span><strong>maximum</strong></span> IOPS for this disk is <strong>130</strong>.
+</p>
+<h3>Calculate a Disk Array&#39;s Maximum IOPS</h3>
+<p>
+Per the note about system design above, calculating the performance of a disk system is critical to the operation of a given system.  Most systems use RAID to provide storage redundancy.  This section defines how IOPS are calculated for RAID arrays.
+</p>
+<h3>Maximum Read IOPS</h3>
+<p>
+Calculating maximum read IOPS (<tt>maxReadIops</tt>) for a RAID array is simple: multiply the number of disks (<tt>numDisks</tt>) in the array by the maximum IOPS per disk (<tt>diskMaxIops</tt>):
+</p>
+{% highlight bash %}
+maxReadIops = numDisks * diskMaxIops
+{% endhighlight %}
+<br>
+<p>
+For an array of 5 10K RPM disks, the maximum read IOPS (<tt>maxReadIops</tt>) would be calculated as follows:
+</p>
+{% highlight bash %}
+maxReadIops = 5 * 130
+maxReadIops = 650
+{% endhighlight %}
+<br>
+<p>
+Total <span><strong>maximum</strong></span> read IOPS for the above array is <span><strong>650</strong></span>.
+</p>
+<h4>Maximum Write IOPS</h4>
+<p>
+Calculating maximum write IOPS (<tt>maxWriteIops</tt>) is a slightly different matter, with respect to RAID arrays.  RAID arrays suffer a write penalty; the type of RAID array determines the severity of the write penalty.  This penalty is a result of the redundancy that RAID provides.  The array necessarily has to write the data to multiple disks/locations to ensure data integrity.
+</p>
+<h5>RAID Write Penalty</h5>
+<p>
+Each RAID type suffers a different write penalty.  The most common RAID types and their write penalties are defined in the following table:
+</p>
+<p>
+<span></span> 
+</p>
+<table border=1>
+<tr><th><strong>RAID Type</strong></th><th><strong>Write Penalty</strong>
+</th></tr><tr><td>RAID 1</td><td>2
+</td></tr><tr><td>RAID 5</td><td>4
+</td></tr><tr><td>RAID 10</td><td>2
+</td></tr></table>
+<br>
+<p>
+<strong>NOTE: <span>RAID 5</span> has the worst write penalty: 4x.</strong>
+</p>
+<p>
+To calculate the maximum write IOPS (<tt>maxWriteIops</tt>) for a given RAID array, divide the maximum read IOPS (<tt>maxReadIops</tt>) by the RAID array&#39;s write penalty (<tt>raidWritePenalty</tt>):
+</p>
+{% highlight bash %}
+maxWriteIops = maxReadIops / raidWritePenalty
+{% endhighlight %}
+<br>
+<p>
+Using the the example above, a RAID 5 array capable of <strong>650</strong> maximum read IOPS (<tt>maxReadIops</tt>), the maximum write IOPS (<tt>maxWriteIOPS</tt>) is calculated as follows:
+</p>
+{% highlight bash %}
+maxWriteIops = 650 / 4
+maxWriteIops = 162
+{% endhighlight %}
+<br>
+<p>
+Total <span><strong>maximum</strong></span> write IOPS for the above array is <span><strong>162</strong></span>.
+</p>
+<h3>Designing for Performance</h3>
+<p>
+Simply calculating the maximum read and write IOPS for an existing or future RAID array is not enough.  To ensure consistent and sustained performance the systems architect needs to profile the performance requirements for a system to determine the best disk solution.  The minimum required IOPS must be determined so that the proper number, and speed, of disks can be purchased.
+</p>
+<p>
+To start, one must have known performance requirements (i.e. read and write IOPS) for a given system or application.  This information can be obtained from vendor documentation or system monitoring software such as Nagios.
+</p>
+<h4><span></span> Calculating the Minimum Required IOPS</h4>
+<p>
+Let&#39;s assume we have an application that requires the following:
+</p>
+<ul><li>400 Read IOPS
+</li><li>200 Write IOPS
+</li></ul><p>
+The disk array will be created using RAID 5.
+</p>
+<p>
+To calculate the <span><strong>minimum</strong></span> number of IOPS (<tt>minReqdIops</tt>), add the number of required read IOPS (<tt>reqdReadIops</tt>) to the product of the number of required write IOPS (<tt>reqdWriteIops</tt>) and the RAID type&#39;s write penalty (<tt>raidWritePenalty</tt>):
+</p>
+{% highlight bash %}
+minReqdIops = reqdReadIops + (reqdWriteIops * raidWritePenalty)
+{% endhighlight %}
+<br>
+<p>
+In our example, the <span><strong>minimum</strong></span> IOPS would be calculated as follows:
+</p>
+{% highlight bash %}
+minReqdIops = 400 + (200 * 4)
+minReqdIops = 1200
+{% endhighlight %}
+<br>
+<p>
+The <span><strong>minimum</strong></span> number of IOPS required to provide the level of performance for our example application is <strong>1200</strong>.
+</p>
+<p>
+<strong>NOTE: This calculation determines the <span></span></strong><span>minimum<strong></strong></span><strong> number of IOPS required to meet the performance specification.  This means the disk array should <span>NOT</span> perform <span>below</span> this performance level.</strong>
+</p>
+<h4>Calculate the Minimum Number of Disks</h4>
+<p>
+Once the minimum number of required IOPS is determined, it&#39;s very easy to determine the minimum number and speed of disks required to create a RAID array to meet performance requirements.
+</p>
+<h5><span></span>Minimum Number of Disks by Disk Speed</h5>
+<p>
+The minimum number of disks needed to meet our performance requirement (<tt>minNumDiskMinPerf</tt>) is calculated as follows:
+</p>
+{% highlight bash %}
+minNumDisksMinPerf = minReqdIops / maxIopsByDiskSpeed
+{% endhighlight %}
+<br>
+<p>
+Using the information from calculating the minimum required IOPS above, and assuming we want to create an array of 10K RPM disks (130 IOPS per disk), the calculation for the minimum  number of disks that will meet our minimum performance requirement (<tt>minNumDisksMinPerf</tt>) of <strong>1200</strong> IOPS (<tt>minReqdIops</tt>) is as follows:
+<span></span>
+</p>
+{% highlight bash %}
+minNumDisksMinPerf = 1200 / 130
+minNumDisksMinPerf = 10
+{% endhighlight %}
+<br>
+<p>
+The <strong>minimum</strong> number of 10K RPM disks needed to meet our performance requirement is <strong>10</strong>.
+</p>
+<p>
+Optionally, if we want to create an array of 15K RPM disks (180 IOPS per disk), the minimum number of disks needed to meet our performance requirement would be calculated as follows:
+</p>
+{% highlight bash %}
+minNumDisksMinPerf = 1200 / 180
+minNumDisksMinPerf = 7
+{% endhighlight %}
+<br>
+<p>
+The <strong>minimum</strong> number of 15K RPM disks needed to meet our performance requirement is <strong>7</strong>.
+</p>
+<h5>Minimum Number of Disks by RAID Type</h5>
+<p>
+The RAID type determines the minimum number of disks to satisfy the RAID type&#39;s requirements.  For example, RAID 5 always requires <span>at least</span> 3 disks, at a minimum; RAID 10 always requires <span>at least</span> 4 disks, at a minimum.
+</p>
+<p>
+For any arrays requiring a large number of disks, use the multiplier in the table below to determine the proper number of disks to meet the requirements of the RAID type:
+</p>
+<p>
+<span></span>
+</p>
+<table border=1>
+<tr><th><strong>RAID Type</strong></th><th><strong>Minimum Number of Disks</strong></th><th><strong>RAID Multiplier</strong>
+</th></tr><tr><td>RAID 5</td><td>3</td><td>N/A
+</td></tr><tr><td>RAID 10</td><td>4</td><td>4
+</td></tr></table>
+<br>
+<p>
+After calculating the number of disks required by disk speed, determine the minimum number of disks required by RAID type.
+</p>
+<p>
+In the example where 10K RPM disks were selected to build an array, the calculation shows <span>at least</span> 10 drives are required.  If the RAID type will be <strong>5</strong>, 10 disks will suffice.  If, however, the RAID type will be <strong>10</strong>, the minimum number of disks required by that RAID type will be <span><strong>8</strong></span> (not simply 7) since the multiplier for RAID 10 is <strong>4</strong>.
+</p>

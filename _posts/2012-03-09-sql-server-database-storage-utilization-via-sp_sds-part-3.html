@@ -1,0 +1,104 @@
+---
+layout: post
+title: 'SQL Server: Database Storage Utilization via sp_SDS (Part 3)'
+tags:
+- Code
+- SysAdmin
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+---
+As the final article in this 3-part series (see <a href="http://www.ryanfrantz.com/2012/03/04/sql-server-database-storage-utilization-via-sp_sds-part-1/" title="SQL Server: Database Storage Utilization via sp_SDS (Part 1)">Part 1</a> and <a href="http://www.ryanfrantz.com/2012/03/06/sql-server-database-storage-utilization-via-sp_sds-part-2/" title="SQL Server: Database Storage Utilization via sp_SDS (Part 2)">Part 2</a> for more background), I wanted to demonstrate how the stored procedure <code>sp_SDS</code> is called by Nagios.<br>
+<br>
+<strong>NOTE</strong>: Installing the <code>DBD::ODBC</code> Perl module and its dependencies (i.e. FreeTDS) is beyond the scope of this article and is left as an exercise for the reader.  The previous statement assumes (rightfully so) that the reader is running Nagios on a <code>*nix</code> system.  Nagwin... Even the name sounds horrible.<br>
+<br>
+The following script is attributed to Jaakan Shorter, one of the sysadmins on my staff that does excellent work.<br>
+<br>
+Notice the call to <code>sp_SDS</code> using the argument <code>@nagios = 'true'</code>.<br>
+<br>
+{% highlight perl %}
+#!/usr/bin/perl
+
+use warnings;
+use strict;
+
+use Sys::Hostname;
+use DBI;
+
+my $dataSource = shift;
+#my $sqlHost = shift;
+#my $database = shift;
+my $sqlUsername = shift;
+my $sqlPassword = shift;
+
+#print "$dataSource, $database, $sqlUsername, $sqlPassword, -- start --\n";	# debug
+
+# start
+
+my $dbh = DBI->connect( "DBI:ODBC:$dataSource", $sqlUsername, $sqlPassword )
+                        or die "Unable to connect to database using DBI:ODBC:$dataSource " . DBI->errstr. "\n";
+
+my $sqlExecSP = qq( EXEC sp_SDS \@nagios = 'true' );
+
+my $sth = $dbh->prepare( $sqlExecSP );
+
+#print "\n -- $sqlExecSP -- \n";	# debug
+
+$sth->execute
+	or die "Unable to execute statement: " . $sth->errstr . "\n";
+
+
+my ( $databaseWeight, $databaseName, $databaseUsed, $databaseFree, $databaseTotal, $databaseUsedPct, $databaseFreePct, $databaseDataTotal, $databaseDataUsed, $databaseDataUsedPct,  $databaseLogTotal,  $databaseLogUsed,  $databaseLogUsedPct, $Totals_databaseDataTotal, $Totals_databaseDataUsed, $Totals_databaseLogTotal,  $Totals_databaseLogUsed);
+
+# BIND TABLE COLUMNS TO VARIABLES
+$sth->bind_columns( \$databaseWeight,\$databaseName,\$databaseUsed,\$databaseFree,\$databaseTotal,\$databaseUsedPct,\$databaseFreePct,\$databaseDataTotal,\$databaseDataUsed,\$databaseDataUsedPct, \$databaseLogTotal, \$databaseLogUsed, \$databaseLogUsedPct);
+
+        print "DB ALL";
+        print " | ";
+
+$Totals_databaseDataTotal=0;
+$Totals_databaseDataUsed=0;
+$Totals_databaseLogTotal=0;
+$Totals_databaseLogUsed=0;
+
+# LOOP THROUGH RESULTS
+while($sth->fetch()) {
+        print "'$databaseName DATABASE TOTAL'=".($databaseTotal = $databaseTotal * 1024 * 1024);
+        print "Bytes; ";
+        print "'$databaseName DATABASE USED'=".($databaseUsed = $databaseUsed * 1024 * 1024);
+        print "Bytes; ";
+        print "'$databaseName DATABASE USED  (%)'=$databaseUsedPct%;";
+	print "'$databaseName DATA TOTAL'=".($databaseDataTotal = $databaseDataTotal * 1024 * 1024);
+	print "Bytes; ";
+	print "'$databaseName DATA USED'=".($databaseDataUsed = $databaseDataUsed  * 1024 * 1024);
+	print "Bytes; ";
+	print "'$databaseName DATA USED  (%)'=$databaseDataUsedPct%;";
+	print "'$databaseName LOG TOTAL'=".($databaseLogTotal = $databaseLogTotal * 1024 * 1024);
+	print "Bytes; ";
+	print "'$databaseName LOG USED'=".($databaseLogUsed = $databaseLogUsed * 1024 * 1024);
+	print "Bytes; ";
+	print "'$databaseName LOG USED  (%)'=$databaseLogUsedPct%;";
+
+	$Totals_databaseDataTotal = $Totals_databaseDataTotal + $databaseDataTotal; 
+	$Totals_databaseDataUsed = $Totals_databaseDataUsed + $databaseDataUsed;
+	$Totals_databaseLogTotal = $Totals_databaseLogTotal + $databaseLogTotal;
+	$Totals_databaseLogUsed = $Totals_databaseLogUsed + $databaseLogUsed;
+}
+
+
+        print "'TOTAL DB SIZE on DISK'=$Totals_databaseDataTotal";
+        print "Bytes; ";
+        print "'TOTAL DB USED'=$Totals_databaseDataUsed";
+        print "Bytes; ";
+        print "'TOTAL LOG SIZE on DISK'=$Totals_databaseLogTotal";
+        print "Bytes; ";
+        print "'TOTAL LOG USED'=$Totals_databaseLogUsed";
+        print "Bytes; ";
+
+#print "\n -- $sth -- \n";	# debug
+$sth->finish();
+$dbh->disconnect();
+
+{% endhighlight %}

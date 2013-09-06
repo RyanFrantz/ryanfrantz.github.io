@@ -1,0 +1,38 @@
+---
+layout: post
+title: 'Concierge: He Knows What''s Up'
+tags:
+- Code
+- SysAdmin
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+---
+Nagios doesn't monitor my applications.  I <a href="http://www.ryanfrantz.com/2012/06/12/nagios-application-monitoring/ " title="http://www.ryanfrantz.com/2012/06/12/nagios-application-monitoring/ ">covered that</a> a few weeks ago.  I need something to glue all of my current (and future) monitoring solutions into an interface that describes the state of my applications.  To that end, I've started work on a project I've named <a href="https://github.com/RyanFrantz/Concierge" title="https://github.com/RyanFrantz/Concierge">Concierge</a>.
+
+<h3>Project Goals</h3>
+My goals with this project are simple:
+<ul>
+	<li>Provide a custom layer between my monitoring things and an outward-facing status dashboard.</li>
+	<li>Provide a RESTful interface to all of my monitoring things so that any(one|thing) can communicate status about applications (and their dependencies) using any programming language or command-line utility.  Extensibility is key.</li>
+</ul>
+
+<h3>Design Choices</h3>
+To get this project off the ground, I made specific design choices.  The following is from the project's README:
+<h4>Perl Dancer</h4>
+This project uses <a href="http://perldancer.org/" title="http://perldancer.org/">Perl Dancer</a>. I'm best at Perl. Perl Dancer is based on the <a href="http://www.sinatrarb.com/" title="http://www.sinatrarb.com/">Sinatra</a> project.
+
+<h4>SQLite</h4>
+SQLite is fast and simple, two things I really want this project to be.
+
+<h4>Table Names</h4>
+The table names I selected are singular. I usually prefer plural table names in designing tables (the content makes up a collection of the thing the table is named for), but I also like simple code. So, to serve the latter, I use singular table names to make my code simpler.<br>
+
+<h3>Todo</h3>
+I have much work to do.  The current state of this project is very alpha.  It's not ready for production and isn't being delivered via a web server (like Apache or Nginx) just yet.  I may also port this to Ruby and take advantage of Sinatra.<br>
+<br>
+In the meantime, I'll continue to build on the project and update it as often as I can.<br>
+<br>
+Finally, at this time, I plan to use <a href="http://www.stashboard.org/" title="http://www.stashboard.org/">Stashboard</a>, by Twilio, to display application status information.  That may change in the future.<br>
