@@ -79,8 +79,9 @@ a {
 
 li {
   padding: 0;
-  list-style-type: square;
-  font-size: 20px;
+  /* this overrides numbers for ordered lists */
+  /*list-style-type: square;*/
+  font-size: 15px;
   margin-left: 0;
   line-height: 160%;
 }
