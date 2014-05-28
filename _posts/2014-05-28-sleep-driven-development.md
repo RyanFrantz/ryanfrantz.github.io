@@ -44,7 +44,7 @@ Note that last bit of information: 3 times I was woken up and **didn't** go back
 ## More Sleep Research
 
 I'm fascinated by the science behind sleep: what happens when we sleep; why we need to sleep; what the affects
-are when we don't get enough of it. I was very fortunate to host [Dr. Michael Grander](http://www.michaelgrandner.com/)
+are when we don't get enough of it. I was very fortunate to host [Dr. Michael Grandner](http://www.michaelgrandner.com/)
 at Etsy a few weeks back. Dr. Grandner is a clinical psychologist and sleep researcher at the University of Pennsylvania.
 I met him online while looking for tools to help measure the impact of sleep loss. His enthusiasm for the subject of sleep
 is infectious and what he intended to be an hour-long presentation rolled smoothly into three!
