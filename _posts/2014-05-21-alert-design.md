@@ -11,10 +11,10 @@ published: true
 I think a lot about alert design. I think about it even more when I'm on call and I'm square in the operator's seat
 taking in information about exceeded thresholds, fielding reports from teammates about events they're seeing,
 and trying to get some context around what's happening. I want to fix the problem as soon as I can. **Sometimes the
-alerts do little more than tell that something went bump.**
+alerts do little more than tell us that something went bump.**
 
 Often, after resolving an issue, I go back to an alert and try to dissect it, reasoning about what could make it
-more useful.  Communication is difficult, especially in the absence of context.  So, I look to outfit the alert
+more useful.  **Communication is difficult, especially in the absence of context.**  So, I look to outfit the alert
 with better information around the source of the alert. My hope is that the next engineer on call will find it
 helpful. At a minimum, I know the next time I'm on call and I receive that same alert, I'll understand better
 what I need to do.
