@@ -35,6 +35,11 @@ Clone the [nagios-herald repo](https://github.com/etsy/nagios-herald), write you
 [configure](https://github.com/etsy/nagios-herald/blob/master/docs/config.md#notable-configuration-values)
 **nagios-herald** to load them.
 
+## Todo
+
+There's still plenty of work to do with this project, including making it usable as a Ruby gem, improving
+documentation, writing tests, and [more](https://github.com/etsy/nagios-herald/issues?state=open).
+
 I look forward to feedback from the community and pull requests!
 
 ## Special Thanks
