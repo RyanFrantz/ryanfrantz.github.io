@@ -1,9 +1,9 @@
 ---
 layout: layout
-title: "Continuos Culture"
+title: "Continuous Culture"
 ---
 
-#Continuos Culture
+#Continuous Culture
 
 Culture is always evolving and doesn't come for free. This is the story of
 Etsy's journey from 4-person startup to an international organization and
