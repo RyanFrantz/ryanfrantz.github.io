@@ -1,5 +1,5 @@
 ---
-layout: layout
+layout: talks
 title: "It's 3AM, Do You Know Why You Got Paged?"
 ---
 

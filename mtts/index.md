@@ -1,5 +1,5 @@
 ---
-layout: layout
+layout: talks
 title: "Mean Time to Sleep "
 ---
 
