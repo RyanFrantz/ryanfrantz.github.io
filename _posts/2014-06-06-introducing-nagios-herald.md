@@ -10,7 +10,7 @@ published: true
 
 ## aka Rub Some Context On It
 
-I wrote about [alert design](posts/alert-design/) a few weeks back and I hinted at a forthcoming project that would
+I wrote about [alert design](/posts/alert-design/) a few weeks back and I hinted at a forthcoming project that would
 be useful in adding context to Nagios alerts. I'm really excited (and a bit nervous) to introduce
 **nagios-herald**!
 
