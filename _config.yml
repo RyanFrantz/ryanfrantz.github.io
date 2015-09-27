@@ -1,4 +1,4 @@
-pygments: true
+highlighter: pygments
 permalink: /posts/:title
 excerpt_separator: ""   # Workaround for http://blog.slaks.net/2013-08-09/jekyll-tag-was-never-closed
 
