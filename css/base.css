@@ -57,8 +57,9 @@ a {
 }
 
 .container {
-  width: 650px;
-  margin: 0 auto;
+  width: 50%;
+  /*margin: 0 auto;*/
+  margin: 0 5%;
 }
 
 .menu {
@@ -198,8 +199,14 @@ li {
       margin-bottom: 7px; }
 
 .content {
+/*
   max-width: 650px;
   margin-left: 110px;
+  margin-right: 20px;
+  margin-bottom: 50px; }
+*/
+  max-width: 100%;
+  margin-left: 20px;
   margin-right: 20px;
   margin-bottom: 50px; }
   .content h1 {
