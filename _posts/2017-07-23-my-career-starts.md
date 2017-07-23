@@ -9,7 +9,7 @@ published: true
 ---
 
 "Networks!" she exlaimed as we popped out of Ft. Pitt Tunnel westbound.
-I felt like Benjamin Braddock in 'The Graduate' [1] My placement advisor
+I felt like Benjamin Braddock in 'The Graduate'. [1] My placement advisor
 continued on, "A few years ago it was databases. Now it's all about networks.
 You're gonna love this place." I believed her. After all, aside from learning
 a trade at a reasonable price (compared to a 4-year degree program), I had
@@ -48,10 +48,12 @@ up a mobile account so folks, especially future employers, could reach me. They
 offered me a job and I was so excited I took it on the spot. I started
 immediately the next week. I didn't bother giving any notice at the restaurant.
 
-I had finally started my career. My salary was $22,000. It was Pittsburgh in 1978.
+I had finally started my career. My salary was $22,000. It was Pittsburgh in 1998.
 
+### Footnotes
 
 [1] Mr. McGuire pulls Ben aside to give him direction after college by uttering
 a single word: "Plastics".
+
 [2] You read that right. It was mandatory to learn how to repair black and white
 TVs at my technical school. It was actually fun to learn.
