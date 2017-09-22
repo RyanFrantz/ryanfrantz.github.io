@@ -44,7 +44,7 @@ look like for them. They could choose one, many, all, or none of them. They
 could tweak them to suit their needs. In any case, **it'd be better than starting
 from scratch**. And this leads to another (likely more important) point:
 
-It's difficult for humans to change habits.
+It's difficult for humans to form or change habits.
 
 There are reams of papers and studies on this fact. Whether we're starting a diet,
 trying to learn a new spoken language, or how to cook, if the goal seems too
@@ -53,11 +53,26 @@ large or too far off, we quit before we even start. But give a person a headstar
 or following [Sandra's Semi-homemade](http://www.foodnetwork.com/shows/semi-homemade-cooking-with-sandra-lee)
 recipes) and they're more likely to get on the good foot and stay there.
 
+Apply this to writing tests for Chef cookbooks. There are several hurdles
+people need to address when writing tests:
+
+1. "It's like learning a second language. I don't have time."
+2. Writing tests can feel a monotonous process.
+3. No tests have ever been written and it's unclear where to begin.
+
+Couple #2 and #3 you've got a doozy of a barrier to entry.
+
 And so it is that `chef-umami` came to be! `chef-umami` exists to help make it
 easy to get started with a set of tests written specifically for **your**
 cookbook. Here, see it in action:
 
 <script type="text/javascript" src="https://asciinema.org/a/138816.js" id="asciicast-138816" async></script>
+
+In practice, `chef-umami` generated over 600 unit tests in one of our large
+cookbooks! 75% of the tests passed, a lot of engineering time was saved, and
+our confidence in the operation of the code increased. I reckon an hour or two
+hours' worth of time would be required to fix up the remaining 25% of the
+tests. That feels a lot easier to manage than writing 600 tests from scratch.
 
 To be certain `chef-umami` needs more work and there are certain opinions
 baked into the code. But I'm excited to see how it works for other folks and
