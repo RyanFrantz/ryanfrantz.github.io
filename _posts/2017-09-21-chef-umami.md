@@ -48,10 +48,7 @@ It's difficult for humans to form or change habits.
 
 There are reams of papers and studies on this fact. Whether we're starting a diet,
 trying to learn a new spoken language, or how to cook, if the goal seems too
-large or too far off, we quit before we even start. But give a person a headstart
-(placing healthy snacks in the office, greeting each other in Spanish in the morning,
-or following [Sandra's Semi-homemade](http://www.foodnetwork.com/shows/semi-homemade-cooking-with-sandra-lee)
-recipes) and they're more likely to get on the good foot and stay there.
+large or too far off, we quit before we even start.
 
 Apply this to writing tests for Chef cookbooks. There are several hurdles
 people need to address when writing tests:
@@ -61,6 +58,11 @@ people need to address when writing tests:
 3. No tests have ever been written and it's unclear where to begin.
 
 Couple #2 and #3 you've got a doozy of a barrier to entry.
+
+But give a person a headstart (placing healthy snacks in the office, greeting
+each other in Spanish in the morning, or following
+[Sandra's Semi-homemade](http://www.foodnetwork.com/shows/semi-homemade-cooking-with-sandra-lee)
+recipes) and they're more likely to get on the good foot and stay there.
 
 And so it is that `chef-umami` came to be! `chef-umami` exists to help make it
 easy to get started with a set of tests written specifically for **your**
