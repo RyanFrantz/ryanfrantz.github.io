@@ -2,6 +2,7 @@
 layout: post
 title: Systems Thinking in Practice
 tags: 
+- Systems
 type: post
 status: publish
 published: true

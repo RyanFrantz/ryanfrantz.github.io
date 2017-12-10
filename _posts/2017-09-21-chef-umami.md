@@ -2,7 +2,6 @@
 layout: post
 title: chef-umami
 tags:
-- History
 type: post
 status: publish
 published: true
