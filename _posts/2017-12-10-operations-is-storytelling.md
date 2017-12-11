@@ -118,7 +118,7 @@ rich and compelling your stories become. This is certainly why I am attracted
 to stories from folks who have been in the depths of distributed systems or the
 internals of the Linux kernel: the amount of time folks have spent learning and
 understanding how those systems work means their grasp of the subject is sure
-to keep my enthralled. Perhaps I, too, can make it to their level and share in
+to keep me enthralled. Perhaps I, too, can make it to their level and share in
 those tales.
 
 ## Denouement
