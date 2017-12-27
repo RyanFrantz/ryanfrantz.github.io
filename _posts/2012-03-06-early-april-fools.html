@@ -54,16 +54,16 @@ spinner(){
 	sleepTime=$2
 	count=1
 	while [ "$count" -le "$maxCount" ];do
-		#echo -n ".." ; sleep 0.1
-		echo -n ".." ; sleep $sleepTime
-		echo -n "/" ; sleep $sleepTime
-		echo -n "-" ; sleep $sleepTime
-		echo -n "\\" ; sleep $sleepTime
-		echo -n "|" ; sleep $sleepTime
-		echo -n "/" ; sleep $sleepTime
-		echo -n "-" ; sleep $sleepTime
-		echo -n "\\" ; sleep $sleepTime
-		echo -n "|" ; sleep $sleepTime
+		#echo -n ".." ; sleep 0.1
+		echo -n ".." ; sleep $sleepTime
+		echo -n "/" ; sleep $sleepTime
+		echo -n "-" ; sleep $sleepTime
+		echo -n "\\" ; sleep $sleepTime
+		echo -n "|" ; sleep $sleepTime
+		echo -n "/" ; sleep $sleepTime
+		echo -n "-" ; sleep $sleepTime
+		echo -n "\\" ; sleep $sleepTime
+		echo -n "|" ; sleep $sleepTime
 		echo -n "."
 		count=`expr $count + 1`
 	done
@@ -73,10 +73,10 @@ spinner(){
 endlessSpinner(){
 	sleepTime=$1
 	while [ true ];do
-		echo -n "/" ; sleep $sleepTime
-		echo -n "-" ; sleep $sleepTime
-		echo -n "\\" ; sleep $sleepTime
-		echo -n "|" ; sleep $sleepTime
+		echo -n "/" ; sleep $sleepTime
+		echo -n "-" ; sleep $sleepTime
+		echo -n "\\" ; sleep $sleepTime
+		echo -n "|" ; sleep $sleepTime
 	done
 	return 0
 }	# end spinner()
