@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body>
+        <div class="header">
+            <div class="title">
+              <a href="/">Ryan<b>Frantz</b></a>
+            </div>
+            <div class="menu">
+              <ul>
+                <li><a href="/about">About</a></li>
+                <li><a href="/talks/">Talks</a></li>
+                <li><a href="/archive/">Archive</a></li>
+                <li><a href="/reading/">Reading</a></li>
+              </ul>
+            </div>
+        </div> <!-- end header -->
+        <div class="banner">
+            <img src="/images/brooklyn_deer.png">
+        </div>
+        <div class="container">
+            <div id="left" class="column">
+                <div class="menu">
+                  {{ content | toc_only | inject_anchors }}
+                </div> <!-- end menu -->
+            </div> <!-- end left column -->
+            <div id="right" class="column">
+                <div class="content">
+                  {{ content }}
+                </div> <!-- end content -->
+            </div> <!-- end right column -->
+        </div> <!-- end class="container"-->
+    </body>
+</html>
