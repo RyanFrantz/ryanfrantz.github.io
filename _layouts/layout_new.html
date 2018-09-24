@@ -1,6 +1,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/pygments.css" type="text/css" />
     </head>
     <body>
         <div class="header">
@@ -22,7 +23,8 @@
         <div class="container">
             <div id="left" class="column">
                 <div class="menu">
-                  {{ content | toc_only | inject_anchors }}
+                <!-- Uses https://github.com/allejo/jekyll-toc -->
+                {% include toc.html html=content ordered=true %}
                 </div> <!-- end menu -->
             </div> <!-- end left column -->
             <div id="right" class="column">
