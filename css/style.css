@@ -42,6 +42,12 @@ body {
     margin-bottom: 8px;
 }
 
+.content p code {
+  font-family: monospace;
+  background-color: #eeeeee;
+  padding: 2px 3px;
+}
+
 .column {
     height: 100%;  /*allows both columns to span the full height of the browser window*/
     display: flex;
@@ -62,12 +68,9 @@ body {
     padding-left: 10px;
 }
 
-/*
 .container .menu li {
-    font-size: 10px;
-    list-style-type: none;
+    padding-top: 3px;
 }
-*/
 
 #right .content .menu ul {
     margin: 0px;
@@ -243,7 +246,7 @@ tr:hover {
 
 .title {
     text-align: left;
-    font-size: 20px;
+    font-size: 35px;
 }
 
 .title a:hover {

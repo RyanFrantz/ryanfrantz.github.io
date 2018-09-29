@@ -16,21 +16,22 @@ with the goal of helping to monitor pressure on the service in the form of
 unhandled connections. I've poked at this problem from time to time but had
 never found a solution, until now.
 
-##TCP Listen Backlog
+## TCP Listen Backlog
 For some background, know that whenever a process opens a TCP socket, it defines
 a listen backlog value. This value determines the number of fully acknowledged
 (SYN -> SYN/ACK -> ACK) connections that are waiting to be `accept()`ed by the
 process. When requests are being processed quickly, this value should be 0, if
 not really low.
 
-###Apache ListenBacklog
-By default, Apache sets its listen backlog to `511` based on the [ListenBacklog](http://httpd.apache.org/docs/2.0/mod/mpm_common.html#listenbacklog)
+### Apache ListenBacklog
+By default, Apache sets its listen backlog to `511` based on the
+[ListenBacklog](http://httpd.apache.org/docs/2.0/mod/mpm_common.html#listenbacklog)
 directive. However, the Linux kernel has a completely different idea in mind:
 if the value of a socket's listen backlog exceeds that of `net.core.somaxconn`
 sysctl value (defaults to 128 on stock builds), the kernel quietly shrinks the
 socket's listen backlog to `net.core.somaxconn`. **Thanks, Linus.**
 
-##Tuning Apache and `ss`
+## Tuning Apache and `ss`
 While working on a project I needed to tune a small number of Apache boxes to
 handle a decent chunk of traffic (~3000 requests per second across 2, maybe 4
 boxes). Our production web cluster contains a large number of servers so each
@@ -40,7 +41,7 @@ project, with fewer servers, I needed to tune Apache and possibly the kernel.
 I set about tweaking Apache's config and benchmarking performance. I launched
 several `siege`s [[1]](#references) against a few poor, unsuspecting Apache boxes and crushed
 them. I knew about the TCP listen backlog and tuned `net.core.somaxconn` along
-with Apache's *Server* and *Workers directives. I had hoped that `ss` [[2]](#references) would
+with Apache's `Server` and `Workers` directives. I had hoped that `ss` [[2]](#references) would
 show me the state of the TCP listen backlog during these trials but I could
 never surface the information.
 
@@ -54,7 +55,7 @@ Still, the TCP listen backlog taunted me, coming to me in my dreams. I may have
 even crafted what I imagined the backlog to look like out of
 [mashed potatoes](https://www.youtube.com/watch?v=yecJLI-GRuU&feature=youtu.be&t=24s)...
 
-##Trawling the Kernel and `ss` Source
+## Trawling the Kernel and `ss` Source
 I had enough. I started digging into kernel source this week to find the damned
 thing. The more I dug, the more I found traces. First, I landed a direct hit in
 `include/net/sock.h` with the following comment: [[3]](#references)
@@ -90,7 +91,7 @@ tracking a listen backlog would have the string '**backlog**' *somewhere* in the
 names. Naming is especially hard when you give something a name that's a bit
 overloaded.
 
-###Displaying Backlogged Connections with `ss`
+### Displaying Backlogged Connections with `ss`
 
 Now that we know backlogged connections are defined as **unacked**, we can call
 on `ss` to determine if the HTTP socket is backing up:
@@ -104,7 +105,7 @@ LISTEN     223    511                                                           
 
 The output above was output when `siege`ing Apache.
 
-##Finally, Mutha$%^&@n' Graphs!
+## Finally, Mutha$%^&@n' Graphs!
 After a year, we've got TCP listen backlog graphs for Apache!
 
 ![Apache TCP backlog under pressure](/images/apache_tcp_backlog.png)
@@ -121,7 +122,7 @@ requests it's receiving.**
 Gawd I love graphs!
 
 <a name="references"></a>
-##References
+## References
 
 [1] `siege` is a handy tool for assailing an HTTP server with requests. Check it out.
 
