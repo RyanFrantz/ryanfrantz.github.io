@@ -25,6 +25,11 @@ a:visited {
     padding-bottom: 20px;
 }
 
+.banner img {
+    /*display: block;*/
+    /*max-height: 250px;*/
+}
+
 body {
     height: 100%;   
     margin: 8px;
