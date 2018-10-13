@@ -18,7 +18,7 @@ of peer-driven architecture review.
 
 What follows is an adaptation of a document I drafted describing an architecture
 review process that I will be implementing at Bloomberg. I expect this document
-to be updated from periodically. If you would like to contribute, you can find
+to be updated periodically. If you would like to contribute, you can find
 this and other documents relating to software engineering at my
 [engineering](https://github.com/RyanFrantz/engineering) repo where I'm
 collecting my ideas.
