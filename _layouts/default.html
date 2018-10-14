@@ -29,8 +29,10 @@ banner_image: "/images/brooklyn_deer.png"
             <div id="left" class="column">
                 <div class="menu">
                 <!-- Uses https://github.com/allejo/jekyll-toc -->
-                <!-- This should have no effect on the index and archive pages. -->
+                <!-- Only display TOC if the layout says so. -->
+                {% if layout.display_toc %}
                 {% include toc.html html=content ordered=true %}
+                {% endif %}
                 </div> <!-- end menu -->
             </div> <!-- end left column -->
             <div id="right" class="column">
