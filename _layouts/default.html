@@ -1,7 +1,11 @@
+---
+banner_image: "/images/brooklyn_deer.png"
+---
 <html>
     <head>
         <link rel="stylesheet" href="/css/style.css">
         <link rel="stylesheet" href="/css/pygments.css" type="text/css" />
+        {% include google_analytics.html %}
     </head>
     <body>
         <div class="header">
@@ -18,12 +22,14 @@
             </div>
         </div> <!-- end header -->
         <div class="banner">
-            <img src="/images/brooklyn_deer.png">
+            <!--<img src="/images/brooklyn_deer.png">-->
+            <img src="{{ layout.banner_image }}">
         </div>
         <div class="container">
             <div id="left" class="column">
                 <div class="menu">
                 <!-- Uses https://github.com/allejo/jekyll-toc -->
+                <!-- This should have no effect on the index and archive pages. -->
                 {% include toc.html html=content ordered=true %}
                 </div> <!-- end menu -->
             </div> <!-- end left column -->

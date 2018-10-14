@@ -227,6 +227,10 @@ p {
     width: 60%;
 }
 
+span.date {
+    text-transform: uppercase;
+}
+
 table {
     border-collapse: collapse;
     margin-top: 5px;
