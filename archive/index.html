@@ -3,7 +3,7 @@ layout: archive
 ---
 
 <div class="menu">
-  <ul class="listing">
+  <ul>
     {% for post in site.posts offset:6 %}
     <li>
       <a href="{{ post.url }}">{{ post.title }}</a> <span class="date">{{ post.date | date: "%B %e, %Y" }}</span>
