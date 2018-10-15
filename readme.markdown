@@ -1,8 +1,9 @@
 # Southpaw
 
-Southpaw is my hack of Zach Holman's [Left](https://github.com/holman/left) layout for [Jekyll](https://github.com/mojombo/jekyll).
+Southpaw was originally a hack of Zach Holman's
+[Left](https://github.com/holman/left) layout for
+[Jekyll](https://github.com/mojombo/jekyll). I've since modified most of the
+layouts and styling.
 
-Most of my updates are in the fonts (I'm using the OpenSans family) and CSS that I shamelessly took from Holman's site that I liked
-(and didn't see in the CSS of this project!).
-
-Oh, BTW, this content is the source for [www.ryanfrantz.com](http://www.ryanfrantz.com).
+Here I also store my blog posts for
+[www.ryanfrantz.com](http://www.ryanfrantz.com).

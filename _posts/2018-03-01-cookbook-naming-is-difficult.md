@@ -116,7 +116,7 @@ However, future engineers may encounter this issue and it's important they have
 the necessary context to address this. While this article should be useful, I'll
 be updating any `Policyfile.rb` I come across with the following story:
 
-```ruby
+{% highlight ruby %}
 default_source :community
 default_source :supermarket, 'https://supermarket.example.com' do |s|
   s.preferred_for 'nrpe-client',
@@ -148,7 +148,7 @@ end
 #    s.preferred_for "nrpe"
 #  end
 # [c] https://supermarket.chef.io/cookbooks/nrpe/versions/1.0.0
-```
+{% endhighlight %}
 
 ## Footnotes
 

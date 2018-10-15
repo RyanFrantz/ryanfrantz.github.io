@@ -1,0 +1,291 @@
+
+/*
+ * The flex-y portions of this styling have been adapted from
+ * https://www.bitovi.com/blog/use-flexbox-to-create-a-sticky-header-and-sidebar-with-flexible-content
+ */
+* {
+    font-family: verdana;
+    -webkit-font-smoothing: antialiased; /* Thins out the font nicely. */
+}
+
+a {
+  color: #227ce8;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+.banner {
+    height: 250px;
+    background-size: cover;
+    padding-bottom: 20px;
+}
+
+/* Ensure our images cover the container and scale nicely. */
+.banner img {
+    max-height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+body {
+    height: 100%;   
+    margin: 8px;
+}
+
+.byline {
+    color: #777;
+    font-size: 15px;
+}
+
+.caption {
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 8px;
+}
+
+.content p code {
+  font-family: monospace;
+  background-color: #eeeeee;
+  padding: 2px 3px;
+}
+
+.column {
+    height: 100%;  /*allows both columns to span the full height of the browser window*/
+    display: flex;
+    flex-direction: column;  /*places the left and right headers above the bottom content*/
+    padding: 10px;
+}
+
+.container {
+    overflow: hidden; /*makes the container non-scrollable (we will add scrolling to the menu and main content containers)*/
+    display: flex; /*enables flex content for its children*/
+    padding: 8px;
+    margin-top: 30px;
+}
+
+.container .menu ol {
+    font-size: 12px;
+    list-style-type: none;
+    padding-left: 10px;
+}
+
+.container .menu li {
+    padding-top: 3px;
+}
+
+#right .content .menu ul {
+    margin: 0px;
+}
+
+.content .menu li {
+	margin-top: 10px;
+	padding: 7px 5px;
+    font-size: 18px;
+}
+
+.content .menu p {
+    margin: 0px;
+	padding: 7px 5px;
+}
+
+.content .menu li span {
+	float: right;
+    font-size: 12px;
+    color: #999
+}
+
+.copyright {
+    font-style: italic;
+}
+
+/* A simple, elegant divider. */
+.divider {
+    border: 1px;
+    border-bottom-style: solid;
+    border-top-style: solid;
+    font-size: 12px;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: right;
+}
+
+.footer {
+    margin-top: 25px;
+}
+
+.footer .info {
+    display: inline-block;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.footer .info div {
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+.footnote {
+    font-size: 12px;
+}
+
+.header {
+    padding: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    /*text-align: center;*/
+}
+
+.header .menu li {
+	display: inline;
+    padding-right: 15px;
+}
+
+.header .menu li a {
+	text-transform: uppercase;
+}
+
+h1, h2, h3, h4 {
+    margin-top: 18px;
+    margin-bottom: 5px;
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 25px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 17px;
+}
+
+h4 {
+    font-size: 14px;
+}
+
+html {
+    height: 100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+#left {
+    flex-shrink: 0;  /*makes sure that content is not cut off in a smaller browser window*/
+}
+
+#left.column {
+    width: 25%;
+    padding-left: 5px;
+    /*list-style-type: none;*/
+    margin: 0px;
+}
+
+.logo {
+    float: left;
+    margin: 8px;
+}
+
+.menu {
+    margin-top: 5px; /* Ensure the top of the menu doesn't look clipped. */
+}
+
+.menu, .content {
+    flex-grow: 1;  /*ensures that the container will take up the full height of the parent container*/
+    overflow-y: auto;  /*adds scroll to this container*/
+}
+
+.menu a:hover {
+    /*background: lightgrey;*/
+    background: none;
+}
+
+.menu a:link {
+    text-decoration: none;
+}
+
+.menu a:visited {
+    text-decoration: none;
+}
+
+.menu ul {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+.header .menu ul {
+    display: block;
+    list-style-type: none;
+}
+
+p {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    font-size: 14px;
+}
+
+.quote {
+    font-style: italic;
+}
+
+#right.column {
+    width: 60%;
+}
+
+span.date {
+    text-transform: uppercase;
+}
+
+table {
+    border-collapse: collapse;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-left: 8px;
+}
+
+td {
+    padding: 5px;
+    vertical-align: top;
+    border-bottom: 1px solid;
+}
+
+/* Making a row clickable requires some JS that I don't believe is
+ * necessary at the moment. Should we decide we want that sort of
+ * functionality, let's uncomment this styling so that it matches
+ * the design of the left-hand menu.
+tr:hover {
+    background-color: lightgrey;
+}
+ */
+
+.title {
+    text-align: left;
+    font-size: 35px;
+}
+
+.title a:hover {
+    background: none;
+}
+
+ul.footnote, ul.reference {
+    list-style-type: none;
+}
+
+ul.footnote li, ul.reference li {
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+

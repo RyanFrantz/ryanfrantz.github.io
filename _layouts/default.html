@@ -1,0 +1,45 @@
+---
+banner_image: "/images/brooklyn_deer.png"
+---
+<html>
+    <head>
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/pygments.css" type="text/css" />
+        {% include google_analytics.html %}
+    </head>
+    <body>
+        <div class="header">
+            <div class="title">
+              <a href="/">Ryan Frantz</a>
+            </div>
+            <div class="menu">
+              <ul>
+                <li><a href="/about">About</a></li>
+                <li><a href="/talks/">Talks</a></li>
+                <li><a href="/archive/">Archive</a></li>
+                <li><a href="/reading/">Reading</a></li>
+              </ul>
+            </div>
+        </div> <!-- end header -->
+        <div class="banner">
+            <!--<img src="/images/brooklyn_deer.png">-->
+            <img src="{{ layout.banner_image }}">
+        </div>
+        <div class="container">
+            <div id="left" class="column">
+                <div class="menu">
+                <!-- Uses https://github.com/allejo/jekyll-toc -->
+                <!-- Only display TOC if the layout says so. -->
+                {% if layout.display_toc %}
+                {% include toc.html html=content ordered=true %}
+                {% endif %}
+                </div> <!-- end menu -->
+            </div> <!-- end left column -->
+            <div id="right" class="column">
+                <div class="content">
+                  {{ content }}
+                </div> <!-- end content -->
+            </div> <!-- end right column -->
+        </div> <!-- end class="container"-->
+    </body>
+</html>
