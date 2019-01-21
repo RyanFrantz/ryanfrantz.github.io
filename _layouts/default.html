@@ -32,6 +32,7 @@ banner_image: "/images/brooklyn_deer.png"
                 <!-- Uses https://github.com/allejo/jekyll-toc -->
                 <!-- Only display TOC if the layout says so. -->
                 {% if layout.display_toc %}
+                <a href="#title">{{ page.title }}</a>
                 {% include toc.html html=content ordered=true %}
                 {% endif %}
                 </div> <!-- end menu -->
