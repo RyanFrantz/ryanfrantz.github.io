@@ -295,6 +295,10 @@ tr:hover {
     background: none;
 }
 
+ul {
+    font-size: 14px;
+}
+
 ul.footnote, ul.reference {
     list-style-type: none;
 }
