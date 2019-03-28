@@ -74,7 +74,7 @@ actively perpetuates the notion that we are in complete control. The primary
 reasons these agents of control have persisted for so long is because they offer
 a simple premise: because we are in complete control any failure that occurs
 must be due to a lack of control somewhere. Therefore, all we have to do is
-locate where control was lost, correct it, and carry on. Nevermind that this
+locate where control was lost, correct it, and carry on. Never mind that this
 premise contradicts the illusion that we are in complete control.
 
 The following agents exist to maintain our belief in complete control and should
@@ -192,9 +192,9 @@ Daniel Kahneman
 In other words, knowing the outcome gives us confidence we know how to resolve
 the issue. It limits what we may learn because it presupposes all the conditions
 and actions that lead up to an event occurring. Things are neat and orderly,
-naturally. By constrast, when we recognize that many contributing factors are
+naturally. By contrast, when we recognize that many contributing factors are
 necessary for an event to occur, we see those factors as partially flowing
-linearaly (often in parallel) and partially converging, intersecting, and
+linearly (often in parallel) and partially converging, intersecting, and
 diverging at different points along a time line.
 
 Hindsight, as an agent of control, reinforces the belief that we can know our
@@ -212,7 +212,7 @@ Gary Klein, "Sources of Power"
 </blockquote>
 
 The quote above, taken from "Sources of Power" is related to how experts make
-decisions in high-consequence situations, specfically when presented with
+decisions in high-consequence situations, specifically when presented with
 information that runs counter to past experiences or a mental model of what is
 occurring. He is describing how people adapt to the new information to make
 decisions. If we allow hindsight to guide a review, we will miss asking
