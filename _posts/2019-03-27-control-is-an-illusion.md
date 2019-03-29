@@ -18,13 +18,15 @@ Paul Simon, "You Can Call Me Al"
 ## Control
 
 A fundamental aspect of humanity is that we believe we are in control of our
-lives, our environment, the larger world, etc. To a limited extent this may be
+lives, our environment, the larger world. To a limited extent this may be
 true but that truth is constrained by what we allow to be part of the story.
 Certainly, I set the temperature I want to maintain in my house so I can say I
 have control over the comfort of its residents. But I have no control over the
 external temperature, its impact on how much work my HVAC needs to perform, what
 the daily cost of power generation will be, how that affects my monthly bill,
-etc. The real truth is that control is an illusion. One of our own making.
+etc.
+
+The real truth is that control is an illusion. One of our own making.
 
 To believe we are in complete control requires us to perceive ourselves as
 existing outside our systems, with absolute ability to manipulate all inputs and
@@ -84,7 +86,7 @@ be avoided by post-incident review facilitators.
 
 Put simply, there is no root cause. For such a simple statement, I've found it's
 very difficult for many to accept. A "root cause" seems to make sense, initially,
-because at it's core it offers a simple solution to how we can describe how we
+because at its core it offers a simple solution to how we can describe how we
 came to experience an event like an outage. The irony is that if we accept our
 systems are complex, how can we expect to describe them, and their behavior, in
 simple terms? **In order to maximize the value we can extract from a post-incident
@@ -114,7 +116,7 @@ money or time) and simple ways.
 The term "triggering cause" is a softening of the idea of a root cause.
 Generally, it captures the belief that all the dominoes were already set up,
 waiting for a well-placed nudge to set off a collapse. It's an improvement over
-the notion of a root cause, albeit a superficial one. It break down under
+the notion of a root cause, albeit a superficial one. It breaks down under
 scrutiny, however.  Taking the domino metaphor a bit further, it assumes that
 our systems are set up to fail in the first place and that they are extremely
 easy to destroy. Our experiences tell us this isn't true; we don't purposely
@@ -143,7 +145,7 @@ Richard I. Cook, "How Complex Systems Fail"
 </blockquote>
 
 The "root cause" is probably the most persistent agent of control because it
-furthers the belief that if we can just find that think that caused us to lose
+furthers the belief that if we can just find that thing that caused us to lose
 control, we can prevent it in the future.
 ### Blame
 
@@ -162,11 +164,11 @@ go on forever (at least as long as there are people around to blame).
 
 The reality is that because we are an intrinsic part of the systems we use and
 operate, the fact that we're even able to do the things we can do with and
-within these systems warrants scrutiny. Was an outage caused by an engineer
-mis-typing a command? Sure, partly. How was it possible that engineer was able
+within these systems warrants scrutiny. Was an outage influenced by an engineer
+mistyping a command? Sure, partly. How was it possible that engineer was able
 to perform that work? What gave that person the confidence it was the correct
 action? Were there other factors (time pressure, sleep deprivation from being
-on-call/having sick kids) that contributed to, or detracted from the person's
+on-call/having sick kids) that contributed to, or detracted from, the person's
 attention? What are the ways in which our systems help people bring attention to
 high-risk actions?
 
@@ -195,7 +197,7 @@ and actions that lead up to an event occurring. Things are neat and orderly,
 naturally. By contrast, when we recognize that many contributing factors are
 necessary for an event to occur, we see those factors as partially flowing
 linearly (often in parallel) and partially converging, intersecting, and
-diverging at different points along a time line.
+diverging at different points along a timeline.
 
 Hindsight, as an agent of control, reinforces the belief that we can know our
 systems fully, especially because we exist outside of them. After all, if we
