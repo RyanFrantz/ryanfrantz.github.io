@@ -56,7 +56,7 @@ failed. It is very easy for these reviews to be performative, with the tacit
 goal of simply getting to the end, to alleviate the
 [anxiety](/posts/when-does-an-investigation-end.html#anxiety) of the experience.
 These types of reviews are largely ineffective, providing little beyond our
-ability to churn out stacks of remediation items in a mis-guided effort to
+ability to churn out stacks of remediation items in a misguided effort to
 demonstrate that we know how to fully prevent an event's recurrence.
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Consider this: If you find your post-incident reviews are neither compelling nor helping your organization learn, it&#39;s very likely those reviews simply assemble facts rather than tell stories.<br><br>We learn best from, and are engaged more by, stories.</p>&mdash; Ryan Frantz (@Ryan_Frantz) <a href="https://twitter.com/Ryan_Frantz/status/1103293847113744389?ref_src=twsrc%5Etfw">March 6, 2019</a></blockquote>
@@ -73,7 +73,7 @@ the illusion of control and prevent real learning.
 
 We'll refer to these plot devices as agents of control because their use
 actively perpetuates the notion that we are in complete control. The primary
-reasons these agents of control have persisted for so long is because they offer
+reasons these agents of control have persisted for so long is that they offer
 a simple premise: because we are in complete control any failure that occurs
 must be due to a lack of control somewhere. Therefore, all we have to do is
 locate where control was lost, correct it, and carry on. Never mind that this
@@ -226,7 +226,7 @@ made within, and how they contributed to an outage and its resolution.
 Post-incident reviews hold a lot of promise for helping us learn from failure.
 If we put in the effort to develop the practice of facilitation, we will learn
 there are a number of approaches we should avoid so that we can collectively
-develop more expertise. After all:
+develop our expertise. After all:
 
 <blockquote class="quote">
 Recognizing hazard and successfully manipulating system operations to remain
