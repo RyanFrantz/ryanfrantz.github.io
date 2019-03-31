@@ -9,7 +9,7 @@ Laurie Denness and I gave a presentation at Velocity Santa Clara wherein
 we discussed the ways Etsy's Operations team worked to improve the on-call experience for our fellow engineers.
 
 ## Slides
-<iframe src="http://www.slideshare.net/slideshow/embed_code/36305607" width="476" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+<iframe src="https://www.slideshare.net/slideshow/embed_code/36305607" width="476" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
 
 ## Video
 <iframe width="560" height="315" src="//www.youtube.com/embed/FLqucVb_et0" frameborder="0" allowfullscreen></iframe>
