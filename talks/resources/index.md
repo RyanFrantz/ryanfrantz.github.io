@@ -3,18 +3,18 @@ layout: talks
 title: " Talk Resources "
 ---
 
-#Talk Resources
+# Talk Resources
 
 Want to learn more about things I've referenced in various talks? This page will help.
 
-##Mean Time to Sleep
+## Mean Time to Sleep
 
 [Laurie Denness](https://twitter.com/lozzd) and I gave a presentation at Velocity Santa Clara wherein we discussed the ways we tried to improve
 the experience for on-call engineers.
 
 SLIDES
 
-###Opsweekly
+### Opsweekly
 
 * [Opsweekly](http://codeascraft.com/2014/06/19/opsweekly-measuring-on-call-experience-with-alert-classification/)
 is the tool Etsy's Operations team wrote to help quantify the on-call experience.

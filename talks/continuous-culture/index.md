@@ -3,7 +3,7 @@ layout: talks
 title: "Continuous Culture"
 ---
 
-#Continuous Culture
+# Continuous Culture
 
 Culture is always evolving and doesn't come for free. This is the story of
 Etsy's journey from 4-person startup to an international organization and
@@ -17,5 +17,5 @@ It even got picked up by [FedScoop](http://fedscoop.com/):
 
 [Patent office hosts IT Meetup featuring Etsy speaker](http://fedscoop.com/patent-office-hosts-meetup-featuring-etsy-speaker/)
 
-##Slides
+## Slides
 <script async class="speakerdeck-embed" data-id="916807f07f450132d6c52a0240a77894" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
