@@ -4,7 +4,6 @@
  * https://www.bitovi.com/blog/use-flexbox-to-create-a-sticky-header-and-sidebar-with-flexible-content
  */
 * {
-    font-family: verdana;
     -webkit-font-smoothing: antialiased; /* Thins out the font nicely. */
 }
 
@@ -49,6 +48,7 @@ blockquote p {
 }
 
 body {
+    font-family: verdana;
     height: 100%;   
     margin: 8px;
 }
