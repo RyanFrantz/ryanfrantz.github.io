@@ -42,13 +42,13 @@ discovered.
 
 While failures tend to capture our imagination there is ample opportunity to
 learn more about our systems by studying how "things go right" (Hollnagel).
-By taking a new view of safety, Safety-II, defined as "the ability to succeed
-under varying conditions" we may surface the capacity within organizations that
-allows them to adapt to uncertain events and situations and keep their systems
-running. Feebly attempting to apply the law of variety, here, the more we
-understand about how people interoperate with their systems the more we can
-apply that knowledge to regulate them. The presence of expertise is the driving
-force behind the safety of our systems.
+By taking a different perspective on safety, Safety-II, defined as "the ability
+to succeed under varying conditions" we may surface the capacity within
+organizations that allows them to adapt to uncertain events and situations and
+keep their systems running. Feebly attempting to apply the law of variety, here,
+the more we understand about how people interoperate with their systems the more
+we can apply that knowledge to regulate them. The presence of expertise is the
+driving force behind the safety of our systems.
 
 ## A Failure by Any Other Name...
 
@@ -156,6 +156,13 @@ normal performance is for our systems and their role within their environment.
 
 Success need not be surprising. The more we study how our systems behave, the
 more safe they become. (Flesh this out).
+
+> Have i mentioned anything about conflicting goals such as keeping the site up
+versus shipping new features?
+
+> HAVE to mention that what makes things work "right" is invisible and that this
+is a double whammy (doubly true) for software because the work that goes into
+creating code is a largely invisible process.
 
 ## Footnotes
 
