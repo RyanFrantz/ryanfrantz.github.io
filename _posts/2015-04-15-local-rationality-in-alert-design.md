@@ -8,7 +8,7 @@ type: post
 published: true
 ---
 
-##Local Rationality
+## Local Rationality
 
 I recently finished [reading](/reading/2015/) Sidney Dekker's
  *[Field Guide to Understanding Human Error](http://www.amazon.com/Field-Guide-Understanding-Human-Error/dp/1472439058)*
@@ -23,7 +23,7 @@ to understand **why** things happened as they did. You see things from *their*
 point of view. It occurred to me that the local rationality principle is not limited
 to the study of human factors.
 
-##Alert Design
+## Alert Design
 In a [previous post](/posts/alert-design/) I described possible sources for
 good context one can add to alerts that page operators. For example, surfacing
 the reason the check exists (i.e. something failed in the past and the check
@@ -35,7 +35,7 @@ the middle of the night. However, [I like my sleep](/posts/sleep-driven-developm
 so if a computer is going to wake me up, I want the alert content to be as explicit
 as possible.
 
-###Be Locally Rational
+### Be Locally Rational
 
 When writing monitoring checks, be conscious of those things that may seem obvious
 to you, the check writer, that influence the need for, and design of, the check:
