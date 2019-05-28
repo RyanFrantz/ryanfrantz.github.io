@@ -8,7 +8,7 @@ type: post
 published: true
 ---
 
-##Over-communication
+# Over-communication
 
 One could argue that by now we all know communication is important. That it's
 paramount to well-run and tight knit teams and organizations. Somehow, though,
@@ -17,7 +17,7 @@ defined. If it were, there'd be a dearth of books on the subject and I'd not be
 writing this post. So it is that I offer my opinion on one way to address the
 problem of what makes for good communication: you need to over-communicate.
 
-##Your Story
+# Your Story
 
 What does it mean to over-communicate? What does it look like? Let's start by
 stating what it is not:
@@ -29,7 +29,7 @@ stating what it is not:
 
 Over-communicating is about telling a story. *Your* story.
 
-###Be a Storyteller
+## Be a Storyteller
 
 Find the interesting things about what you want to share and tell a short story
 about them. I often find it useful to write out everything I can about a subject,
@@ -39,18 +39,18 @@ necessary, I'll add in details for more context.
 Also, while it may seem kitsch, in keeping with this post's theme, there are
 a few different types of stories one can tell.
 
-####Anecdote
+### Anecdote
 
 These are really short stories about something you recently discovered or
 learned, and think your team might find useful. Think of these as TIL
 (Today I Learned) stories.
 
-####Blockbuster
+### Blockbuster
 
 You've had a major win or completed a grueling debug session. Whatever
 it is, it feels big and you want to share it with everyone.
 
-####Mini-series
+### Mini-series
 
 One of my favorites, this is a story that takes place over time. It's often
 related to a big project. You start by laying out a plan, including what you're
@@ -67,7 +67,7 @@ chunks. This story type helps reinforce some planning on your part because you'l
 want to demonstrate progress. When readers have a roadmap, it helps them not only
 see where you're going, but how far you've come.
 
-###Multimedia and Repetition
+## Multimedia and Repetition
 
 It is not enough to tell your story once. You need to find and understand your
 potential audience. This means telling your story in various media such as
@@ -87,13 +87,15 @@ They may, in fact subscribe, but choose to ignore a stream for periods of time
 (i.e. to get work done). They may be physically present when you tell your
 story but have their focus somewhere else. They could just be busy and miss it.
 
-###Working Remotely
+## Working Remotely
+
 On a side note, if you are a remote employee, you really have to hone your
 storytelling skill. Because you are not face-to-face with your peers in the
 office, the way you communicate and the frequency with which you do becomes
 your proxy. Take special care to practice telling your story.
 
-##Summary
+# Summary
+
 Over-communication is not about a constant stream of information, nor is it
 about raising the volume of content. It's about telling your story as often and
 in as many media as necessary to have it heard.
