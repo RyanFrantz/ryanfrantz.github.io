@@ -122,14 +122,13 @@ aren’t waiting for the alert.**
 If an alert requires your attention, it should include information -- text,
 visuals, audio (if appropriate) -- that helps you mentally move from what you
 were doing to addressing the alert. Just as important, though less often
-described, that information may also help you determine that you do not need
+described, that information may also help you determine that you do **not** need
 to give an alert your attention or, perhaps, that action can be delayed.
 
-This information supports a "joint cognitive system property" called
-**preattentive reference** that "includes partial information on what the
-attention directing signal is referring to, so that the observer can pick up
-**whether the interrupt signal warrants a shift in attention**." (Woods;
-emphasis mine)
+This context supports a joint cognitive system property called **preattentive
+reference** that "includes partial information on what the attention directing
+signal is referring to, so that the observer can pick up **whether the interrupt
+signal warrants a shift in attention**." (Woods; emphasis mine)
 
 ### Initiation
 
@@ -154,10 +153,10 @@ The capacity to hold information in mind for the purpose of completing a task.
 Humans are not computers but we do have a similar mechanism for storing
 information: working memory. The information available at hand when an alert
 interrupts you either supports your response or is irrelevant. The context of an
-alert must provide the engineer with enough information to address the interrupt.
+alert must provide an engineer with enough information to address the interrupt.
 The little bit of detail available in most alerts will push aside part of a
 responder's working memory; if we're going to flush that cache, we need to make
-that process as efficient as possible by including more information.
+that process as efficient as possible by including relevant information.
 
 ### Planning/Organization
 
@@ -168,14 +167,14 @@ The ability to manage current and future-oriented task demands.
 "[O]perators must build and maintain a coherent situation assessment in
 a changing environment." (Woods) A single alert provides a limited view of the
 system and its operations. Engineers will want to step up and out of that view
-as part of the process of planning which steps to take to address an alert. They
-will need to organize their thoughts by looking around at the encompassing
+as part of the process of planning which actions to take to address an alert.
+They will need to organize their thoughts by looking around at the encompassing
 environment.
 
 The more familiar an engineer is with a given alert, the more likely they have a
 prepared plan. Information in the alert may help adjust that plan. For others,
-especially engineers new to a team or on-call rotation, supporting planning and
- organization is even more critical.
+especially engineers new to a team or on-call rotation, aiding planning and
+organization is even more critical.
 
 ## Alert Design
 
