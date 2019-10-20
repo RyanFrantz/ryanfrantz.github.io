@@ -24,10 +24,14 @@ COMING SOON
 
 ## References
 
-The following papers influenced this presentation and are well worth a read (or
-several):
+The following papers and books influenced this presentation and are well worth
+a read (or several):
 
 * [The Alarm Problem and Directed Attention Dynamic Fault Management](https://www.researchgate.net/publication/40961767_The_Alarm_problem_and_directed_attention_in_dynamic_fault_management)
 by David Woods
 * [Cognitive Systems Engineering: New wine in new bottles](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.458.2247&rep=rep1&type=pdf) by Erik Hollnagel and David Woods
 * [Designing for Joint Cognitive Systems](https://www.researchgate.net/publication/4213914_Designing_for_joint_cognitive_systems) by Erik Hollnagel
+* [Thinking in Systems](https://www.amazon.com/Thinking-Systems-Donella-H-Meadows/dp/1603580557)
+  by Donella Meadows
+  * After reading that book I wrote up my thoughts in [Systems Thinking in
+    Practice](/posts/systems-thinking-in-practice.html).
