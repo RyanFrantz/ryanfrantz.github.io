@@ -8,7 +8,7 @@ type: post
 published: true
 ---
 
-##Narrow Scope
+## Narrow Scope
 
 I can understand why many folks would make the case that monitoring is
 terrible, but I think the real issue is one of narrow scope. Specifically, what
@@ -18,7 +18,7 @@ solved problems, given that we have numerous ways to generate health and
 performance data, store them, and notify operators when they are outside of
 expected bounds.
 
-###Data Collection and Storage
+### Data Collection and Storage
 One can choose from several well-trodden solutions to capture system- and
 application-level metrics such as Ganglia, Graphite, and collectd. Tools like
 [StatsD](https://github.com/etsy/statsd) make it easy to instrument your code
@@ -36,7 +36,7 @@ one wishes to maintain. Key-value stores have some popularity as well (see
 [LevelDB](http://en.wikipedia.org/wiki/LevelDB)'s use in
 [InfluxDB](http://influxdb.com/)).
 
-###Threshold-based Alerting
+### Threshold-based Alerting
 
 There are several solutions available for comparing data points to thresholds
 and making a determination if an operator should be alerted.
@@ -55,7 +55,7 @@ It can be enticing to drop one’s current system in favor of a new solution. It
 like making progress when in actuality it's replacing one set of problems for another without
 addressing the underlying issues we have with the current state of monitoring.
 
-##Monitoring Problems
+## Monitoring Problems
 
 So if we've managed to solve the problems of collection, storage, and alerting,
 why do people still believe that monitoring is terrible? Because there are **more**
@@ -68,7 +68,7 @@ the following intrigues me:
 * Contextualizing Alerts
 * Event Correlation
 
-###Improving Signal Detection
+### Improving Signal Detection
 
 There are a number of factors that contribute to improving the detection of
 signals. It's part reducing noisy, useless alerts and part developing checks
@@ -78,15 +78,15 @@ monitoring system. Put another way, I only want to be alerted when an issue
 requiring my attention occurs. And I want to be certain that I'm not wasting
 my time and energy to address it.
 
-###Contextualizing Alerts
+### Contextualizing Alerts
 
-[Computers can, and should, do as much work as possible for us before they have to wake us up](http://ryanfrantz.com/posts/alert-design/).
+[Computers can, and should, do as much work as possible for us before they have to wake us up](http://ryanfrantz.com/posts/alert-design.html).
 Computers can augment our work, helping make better sense of alerts and the
 conditions that precipitate them. I have [a few ideas](http://ryanfrantz.com/talks/3am-why-you-got-paged/)
 about ways we can start addressing this problem, but I think there's more work
 to be done here.
 
-###Event Correlation
+### Event Correlation
 
 This is somewhat similar to contextualizing alerts, in that I want to use
 computers to augment an operator's senses when being alerted, but the scope is
@@ -128,7 +128,7 @@ also vaguely aware of an area of study known as
 [Complex Event Processing](http://en.wikipedia.org/wiki/Complex_event_processing)
 that I'd like to learn more about.
 
-##A New Definition
+## A New Definition
 
 The current colloquial definition of "monitoring", that of data collection,
 storage, and threshold-based alerting, is maladjusted for the expansive and

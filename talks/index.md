@@ -3,6 +3,16 @@ layout: talks
 title: "Talks"
 ---
 
+## Designing Alerts to Direct Attention
+
+Many of the alerts monitoring systems send us are primitive capture events
+lacking useful context that can aid our response. In this presentation I
+discuss joint cognitive systems, humans' executive functions, and recommend
+ideas that challenge the audience to think about designing their alerts to
+support humans' mental abilities.
+
+[Slides/Video/References](/talks/designing-alerts-direct-attention)
+
 ## Continuous Culture
 
 Culture is always evolving and doesn't come for free. This is the story of

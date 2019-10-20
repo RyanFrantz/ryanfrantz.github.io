@@ -41,14 +41,14 @@ accomplish.
 ## There Really Aren't Enough Hours in the Day, a Monologue
 
 > Q: There really are only 24 hours in a day.  What does one to about it?
-> Especially when one's list is chock full of things to do?
->
-> **A: Sleep.  At least 8 hours.**
->
+> Especially when one's list is chock full of things to do?<br>
+> <br>
+> **A: Sleep.  At least 8 hours.**<br>
+> <br>
 > Q: But that means there are only 16 hours left in the day, and I still have to
 > eat, shower, commute, work, commute, eat, watch Avengers...  How do I fit in
-> all those things?
-> 
+> all those things?<br>
+> <br>
 > **A: You don't.**
 
 When constraints are applied to a system, in this case, our day, our output is
