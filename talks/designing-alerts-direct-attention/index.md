@@ -16,7 +16,7 @@ A long form version of this topic is available in my post
 
 ## Slides
 
-COMING SOON
+<script async class="speakerdeck-embed" data-id="6f5dc94febfb445dbfe2bfe9a80fdd39" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
 
 ## Video
 
