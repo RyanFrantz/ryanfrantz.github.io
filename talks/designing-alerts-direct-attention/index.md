@@ -20,7 +20,8 @@ A long form version of this topic is available in my post
 
 ## Video
 
-COMING SOON
+<iframe src="https://player.vimeo.com/video/369643225?portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+<p><a href="https://vimeo.com/369643225">Monitorama BAL 2019 - Ryan Frantz - Designing Alerts to Direct Attention</a> from <a href="https://vimeo.com/monitorama">Monitorama</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
 
 ## References
 
