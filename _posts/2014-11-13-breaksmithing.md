@@ -36,7 +36,7 @@ of systems, have admitted they came by this knowledge through hardship:
 
     "The only things I know anything in depth about are things that have
     caused me problems in the past."
-<br>
+
 This is an experience I believe we all share. We remember most those events
 that were the most problematic, that confused us, that pushed the limits of our
 knowledge and experience at the time. The pain of that experience cemented the
