@@ -11,3 +11,16 @@ display_toc: true
 </div>
 
 {{ content }}
+
+{% assign all_tags = page.tags | sort %}
+{% if all_tags.size > 0 %}
+<hr>
+<small>
+    Tags
+    <ul>
+    {% for tag in all_tags %}
+    <li><a href="/tags/{{ tag }}/">{{ tag }}</a>
+    {% endfor %}
+    </ul>
+</small>
+{% endif %}
