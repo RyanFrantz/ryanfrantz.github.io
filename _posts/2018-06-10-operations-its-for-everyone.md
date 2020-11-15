@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Operations - It's for Everyone
-tags: operators, systems, design, human factors
+tags: ["Story Telling"]
 type: post
 status: publish
 published: true

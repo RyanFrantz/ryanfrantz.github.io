@@ -2,6 +2,7 @@
 layout: post
 title: Local Rationality in Alert Design
 tags:
+- Alert Design
 - Monitoring
 status: publish
 type: post

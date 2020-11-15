@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Control is an Illusion
-tags: engineering, facilitation, human factors, learning, safety, systems
+tags: [Engineering, "Human Factors", Learning, "Systems Thinking"]
 type: post
 status: publish
 published: true

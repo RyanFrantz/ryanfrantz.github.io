@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Step Back and Reflect
-tags: 
+tags: []
 type: post
 status: publish
 published: true

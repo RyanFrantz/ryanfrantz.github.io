@@ -2,7 +2,7 @@
 layout: post
 title: Operations is Storytelling
 tags:
-- Systems
+- Story Telling
 type: post
 status: publish
 published: true

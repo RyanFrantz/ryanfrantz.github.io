@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Learning in the Open
-tags: learning
+tags: [Learning]
 type: post
 status: publish
 published: true

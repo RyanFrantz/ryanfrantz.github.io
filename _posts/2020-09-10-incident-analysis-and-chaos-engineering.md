@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Incident Analysis and Chaos Engineering
-tags: analysis, chaos engineering, incidents, investigations
+tags: ["Incident Analysis", "Chaos Engineering"]
 type: post
 status: publish
 published: true

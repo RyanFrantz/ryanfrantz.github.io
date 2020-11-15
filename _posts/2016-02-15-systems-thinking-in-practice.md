@@ -1,8 +1,7 @@
 ---
 layout: post
 title: Systems Thinking in Practice
-tags: 
-- Systems
+tags: ["Systems Thinking"]
 type: post
 status: publish
 published: true

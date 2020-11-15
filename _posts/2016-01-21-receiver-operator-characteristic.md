@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Receiver Operating Characteristic Curves
-tags: 
+tags: []
 type: post
 status: publish
 published: true

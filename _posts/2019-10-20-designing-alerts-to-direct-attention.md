@@ -1,7 +1,12 @@
 ---
 layout: post
 title: Designing Alerts to Direct Attention
-tags: alerts, cognitive systems engineering, design, learning, systems
+tags:
+  - Alert Design
+  - Cognitive Systems Engineering
+  - Systems Design
+  - Learning
+  - Systems Thinking
 type: post
 status: publish
 published: true

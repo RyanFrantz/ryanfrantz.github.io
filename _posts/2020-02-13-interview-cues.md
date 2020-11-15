@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Interview Cues
-tags: accidents, analysis, discovery, incidents, investigations
+tags: ["Incident Analysis"]
 type: post
 status: publish
 published: true

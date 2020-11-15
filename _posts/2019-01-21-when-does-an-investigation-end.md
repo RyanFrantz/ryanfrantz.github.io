@@ -1,7 +1,7 @@
 ---
 layout: post
 title: When Does an Investigation End?
-tags: engineering, human factors, learning, safety, systems
+tags: [Engineering, "Human Factors", Learning, "Systems Thinking"]
 type: post
 status: publish
 published: true

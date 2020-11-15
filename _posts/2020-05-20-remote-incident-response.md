@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Remote Incident Response
-tags: accidents, incidents, investigations, remote, response
+tags: ["Incident Analysis", "Incident Response"]
 type: post
 status: publish
 published: true

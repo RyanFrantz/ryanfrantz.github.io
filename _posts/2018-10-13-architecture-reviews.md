@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Architecture Reviews
-tags: architecture, engineering, systems, design
+tags: [Architecture, Engineering, "Systems Design"]
 type: post
 status: publish
 published: true

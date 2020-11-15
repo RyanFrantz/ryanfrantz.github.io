@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Let's Get to Work
-tags: black lives matter, systemic racism, white privilege
+tags: []
 type: post
 status: publish
 published: true

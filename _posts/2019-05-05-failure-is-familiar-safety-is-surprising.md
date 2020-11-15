@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Failure is Familiar, Safety is Surprising
-tags: engineering, facilitation, human factors, learning, safety, systems
+tags: [Engineering, "Human Factors", Learning, "Systems Thinking"]
 type: post
 status: publish
 published: true

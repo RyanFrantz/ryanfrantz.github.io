@@ -2,7 +2,7 @@
 layout: post
 title: A Year After Etsy
 tags:
-- Systems
+- Story Telling
 type: post
 status: publish
 published: true
