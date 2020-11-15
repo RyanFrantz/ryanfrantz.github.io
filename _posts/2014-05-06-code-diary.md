@@ -2,7 +2,7 @@
 layout: post
 title: Code Diary
 tags:
-- General
+- Miscellany
 status: publish
 type: post
 published: true

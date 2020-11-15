@@ -2,7 +2,8 @@
 layout: post
 title: Breaksmithing
 tags:
-- General
+- System Administration
+- Chaos Engineering
 status: publish
 type: post
 published: true

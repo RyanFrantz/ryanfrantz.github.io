@@ -2,20 +2,20 @@
 layout: post
 title: On Influence
 tags:
-- General
+- Leadership
 status: publish
 type: post
 published: true
 ---
 
-##What is Influence?
+## What is Influence?
 
 How is influence gauged? Beyond traditional measures such as being published in some industry magazine or website,
 how does one know they are influential? It’s rare that someone will approach you and exclaim,
 “Hey, you’re an influence on me!” Does it happen by chance? Is it simply a by-product of hard work?
 Or being in the right place at the right time? I think in most cases, the answer is “no”.
 
-##I Want to be Influential
+## I Want to be Influential
 
 I’m not a narcissist (I don’t think). I’m not looking for recognition.
 
@@ -27,7 +27,7 @@ Those people that I turned to for help were an influence on me and had an impact
 I turned to those people when I needed help. In walks with peers, conversations over coffee or beer, and on
 long runs, I’ve reflected on what that reason is. I want to identify what made those people influential to me.
 
-##A Brief Aside
+## A Brief Aside
 
 I can’t help but recall an interview with [Jerome “The Bus" Bettis](http://en.wikipedia.org/wiki/Jerome_Bettis)
 where he described struggling to produce yardage when he first started playing professional football.
@@ -35,7 +35,7 @@ As he improved, he saw new rookies needing some guidance and he took it upon him
 the hard lessons he hard learned. The idea was that they could advance **faster** than they would have on their own.
 But this was well before he was “The Bus”. So what made his teammates pay him any attention? I think I might know.
 
-##Consistency
+## Consistency
 
 I think that to be influential, you have to be in peoples' minds. You can’t get there just by asking for it.
 Or doing something great, one time (everyone has a chance at their 15 minutes). Whatever it is that you do,
@@ -48,7 +48,7 @@ them all, so pick a few. Maybe it’s writing a regular blog post. It could be c
 Speak to your peers on a given subject. Doing those things aren’t difficult; doing them consistently,
 over time, is the challenge.
 
-##I Want to Give Back
+## I Want to Give Back
 
 I want to be influential. I want to help others advance faster than I have in my career.
 I want to support them in what they do so that the state of the art of our work continues to improve.

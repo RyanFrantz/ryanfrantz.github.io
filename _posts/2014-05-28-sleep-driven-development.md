@@ -2,7 +2,9 @@
 layout: post
 title: Sleep-driven Development
 tags:
-- General
+- Alert Design
+- Monitoring
+- System Administration
 status: publish
 type: post
 published: true

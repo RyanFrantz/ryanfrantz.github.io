@@ -2,7 +2,7 @@
 layout: post
 title: Introducing nagios-herald
 tags:
-- General
+- Alert Design
 status: publish
 type: post
 published: true

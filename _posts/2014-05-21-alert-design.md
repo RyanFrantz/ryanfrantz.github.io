@@ -2,7 +2,7 @@
 layout: post
 title: Alert Design
 tags:
-- General
+- Alert Design
 status: publish
 type: post
 published: true

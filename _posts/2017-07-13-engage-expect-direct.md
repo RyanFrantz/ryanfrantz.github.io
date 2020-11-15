@@ -2,7 +2,7 @@
 layout: post
 title: Engage, Expect, Direct
 tags:
-- Management
+- Leadership
 type: post
 status: publish
 published: true

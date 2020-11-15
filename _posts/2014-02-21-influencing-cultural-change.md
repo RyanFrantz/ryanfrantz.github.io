@@ -2,7 +2,7 @@
 layout: post
 title: Influencing Cultural Change
 tags:
-- General
+- Miscellany
 status: publish
 type: post
 published: true

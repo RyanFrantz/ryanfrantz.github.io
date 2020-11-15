@@ -2,7 +2,7 @@
 layout: post
 title: The Best Egg Sandwich
 tags:
-- General
+- Miscellany
 status: publish
 type: post
 published: true

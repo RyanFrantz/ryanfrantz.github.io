@@ -2,7 +2,7 @@
 layout: post
 title: Be Vulnerable
 tags:
-- General
+- Leadership
 status: publish
 type: post
 published: true

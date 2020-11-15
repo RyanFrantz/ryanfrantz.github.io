@@ -2,7 +2,7 @@
 layout: post
 title: Markdown on the Fly
 tags:
-- General
+- Miscellany
 status: publish
 type: post
 published: true
