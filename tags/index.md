@@ -8,7 +8,8 @@ banner_image: "/images/brooklyn_deer.png"
   <ul>
   {% assign sorted_tags = site.tags | sort %}
   {% for tag in sorted_tags %}
-  <h3>{{ tag[0] }}</h3>
+  {% assign tag_name = tag[0] %}
+  <h3 id="{{ tag_name }}">{{ tag_name }}</h3>
   <ul>
     {% assign tagged_posts = tag[1] | sort | reverse %}
     {% for post in tagged_posts %}
