@@ -3,6 +3,7 @@ layout: post
 title: AWS Kinesis Outage Analysis
 tags:
   - Incident Analysis
+  - Incomplete
 type: post
 status: publish
 published: true
@@ -10,7 +11,7 @@ published: true
 
 ## Kinesis Outage
 
-On November 25, 2020, Amazon Web Services (AWS) experiencing an outage in its
+On November 25, 2020, Amazon Web Services (AWS) experienced an outage in its
 Kinesis product that resulted in several cascading failures in several
 downstream products. The outage is known to have impact several well-known
 companies such as
