@@ -87,3 +87,9 @@ by storing 3 hours' worth of metrics in local storage.
       [maintenance as practice](https://ryanfrantz.com/posts/maintenance-as-practice.html)?
  - Support staff will be trained on the backup comms process.
 
+### Kinesis Dependencies
+
+Based on the above notes, here's a rough diagram of the services that have
+immediate or secondary (?) dependencies on Kinesis:
+
+![AWS Kinesis Dependencies](/images/aws_kinesis_outage.png)

@@ -1,0 +1,41 @@
+digraph aws_kinesis_outage_20201125 {
+    rankdir=LR;
+    // font must be defined for each portion of the graph.
+    // Can be overridden at lower levels.
+    graph [fontname="Sans serif"]
+    node [fontname="Sans serif"]
+    edge [fontname="Sans serif"]
+    //bgcolor="transparent";
+    center=true;
+
+    subgraph cluster_aws_elastic_objects {
+        label="AWS Kinesis Dependencies";
+        color=lightskyblue;
+        style=filled;
+        // AWS objects.
+        aws_kinesis [label="AWS Kinesis",shape=rectangle,color=pink,style=filled];
+        aws_cloudwatch [label="AWS CloudWatch",shape=rectangle,color=pink,style=filled];
+        aws_cognito [label="AWS Cognito",shape=rectangle,color=pink,style=filled];
+        aws_service_health [label="status.aws.amazon.com",shape=rectangle,color=pink,style=filled];
+        aws_eventbridge [label="AWS EventBridge",shape=rectangle,color=pink,style=filled];
+        aws_autoscaling [label="AWS Auto Scaling",shape=rectangle,color=pink,style=filled];
+        aws_lambda [label="AWS Lambda",shape=rectangle,color=pink,style=filled];
+        aws_ecs [label="AWS ECS",shape=rectangle,color=pink,style=filled];
+        aws_eks [label="AWS EKS",shape=rectangle,color=pink,style=filled];
+    }
+
+    //aws_kinesis -> aws_cognito;
+
+    /* An explicit dependency is defined via the DependsOn statement so that CloudFormation
+     * waits to create a dependent object until the depended-upon object is created.
+     */
+    edge [style=dotted];
+    aws_cognito -> aws_kinesis [label="DependsOn"];
+    aws_service_health -> aws_cognito [label="DependsOn"];
+    aws_cloudwatch -> aws_kinesis [label="DependsOn"];
+    aws_autoscaling -> aws_cloudwatch [label="DependsOn"];
+    aws_eventbridge -> aws_kinesis [label="DependsOn"];
+    aws_ecs -> aws_eventbridge [label="DependsOn"];
+    aws_eks -> aws_eventbridge [label="DependsOn"];
+    aws_lambda -> aws_kinesis [label="DependsOn"];
+}
