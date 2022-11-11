@@ -23,6 +23,7 @@ recipients. Hence a wealth of information creates a poverty of attention and a
 need to allocate that attention efficiently among the overabundance of
 information sources that might consume it.
 >
+>
 > Herb Simon
 
 Writing can potentially direct attention. Doing so is economical for everyone.
