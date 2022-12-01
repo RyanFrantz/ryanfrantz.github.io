@@ -8,8 +8,8 @@ status: publish
 published: true
 ---
 
-An unordered, likely incomplete set of things I engage in on a weekly basis as
-an Engineering Director:
+An unordered, likely incomplete set of activities I engage in on a weekly basis
+as an Engineering Director:
 
 - Defining short- and long-term strategy
 - Making and supporting space for engineers to think through problems
