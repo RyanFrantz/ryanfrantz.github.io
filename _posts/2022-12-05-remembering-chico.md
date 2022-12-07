@@ -28,3 +28,5 @@ And endless joy he'd given
 Sweet boy, our hearts break for you
 
 We're grateful your ache is through
+
+![Chico in the sun](/images/chico.jpg)
