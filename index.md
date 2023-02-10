@@ -14,3 +14,5 @@ banner_image: "/images/brooklyn_deer.png"
     {% endfor %}
   </ul>
 </div>
+
+{% include footer.html %}
