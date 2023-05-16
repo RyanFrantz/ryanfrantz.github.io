@@ -1,4 +1,4 @@
-ryan+cv@ryanfrantz.com 
+<ryan+cv@ryanfrantz.com>
 
 I am looking for a role that I can dive into and make meaningful contributions
 to further the team's mission. When the path is clear I can be a force
@@ -6,39 +6,41 @@ multiplier; in the face of ambiguity I can set a course. I'll do the hard work,
 the boring work. And I’ll support focus, so that we work on the right thing at
 the right time.
 
-# Lumos Labs - Engineering Director
-## 10/2020 - Present
+# Experience
+
+## Lumos Labs - Engineering Director
+### 10/2020 - Present
 * Partnered with Product to define and execute strategy across 3 verticals: Consumer, Research, and Medical.
 * Redefined the remit and structure of several teams (data engineering, backend development, web development, Corp IT) to help them deliver on our mission.
 * Reshaped our interview process to be more humane by shortening the duration of interview schedules, providing candidates with advanced notice of content, and clarifying role expectations. As a result, we hit our hiring goals during a very hot talent market in 2022.
 * Created and staffed a Security Engineering role to fill a critical gap in the operation of our products.
 
-# Jeli, Inc. - Co-founder and CTO
-## 8/2019 - 9/2020
+## Jeli, Inc. - Co-founder and CTO
+### 8/2019 - 9/2020
 * Laid the technical foundation for cloud-first development of a product that aids teams learning from software outages/incidents. Combined 12-factor application principles, containerized workloads, and AWS services like ECS in a strategy to minimize operational overhead and focus on delivering valuable features. 
 * Established an early security and compliance program to position the company for a SOC 2 Type 2 attestation that would appeal to early customers.
 
-# Bloomberg, L.P. - Senior Software Engineer
-## 3/2017 - 8/2019
+## Bloomberg, L.P. - Senior Software Engineer
+### 3/2017 - 8/2019
 * Managed projects, provided architectural guidance, and engineering expertise to develop a storage automation project that reduced a request backlog from 1 week to 1 day and eliminated a $1M service contract.
 * Designed and implemented a CI platform supporting 4 operating systems, configuration management solutions (Chef, Salt) and multiple projects written in Python, Ruby, and Go. After onboarding 100 repos in 3 months, engineers and management were more confident in their updates, detecting common/recurring bugs, and following consistent testing practices.
 
-# Etsy, Inc. - Staff Operations Engineer
-## 1/2013 - 3/2017
+## Etsy, Inc. - Staff Operations Engineer
+### 1/2013 - 3/2017
 * Partnered with product teams to help them focus operational effort in support of their work including preparing feature launches and honing reliability practices. By describing a minimum set of required outcomes and training to realize them, I provided a clear roadmap to teams that enabled them to consistently deliver reliable features.
 * Led architecture reviews, operational readiness efforts, and facilitated incident debriefings to drive an holistic approach to systems thinking and continuous learning.
 * Contributed open source tooling in the monitoring space and encouraged the industry to think differently about alert design and the on-call experience.
 
-# Conifer Health Solutions - Technical Services Director (Previously InforMed, LLC)
-## 1/2004 - 1/2013
+## Conifer Health Solutions - Technical Services Director (Previously InforMed, LLC)
+### 1/2004 - 1/2013
 * Established and grew a Systems Engineering team to support the long-term technical needs of the clinician, customer service, and claims administration departments. We built and implemented low-friction solutions that supported the mission of providing high-quality care at reduced costs.
 * Built a Support Desk team, setting service levels for response time and quality, to provide regular assistance to clinicians spread across the country.
 
-# Ebix Health - Senior System Administrator
-## 10/1998 - 1/2004
+## Ebix Health - Senior System Administrator
+### 10/1998 - 1/2004
 * Provided post-sales engineering design, implementation, and support to customers including managing onsite customer installations across a range of platforms.
 
-#Miscellany
+# Miscellany
 ## Conference Presentations
 
 I am fascinated by the prospect of people using computers to augment their activities during incidents. I’ve given several presentations on tooling I’ve built to support on-call engineers, alert design, and how we might apply concepts from Cognitive Systems Engineering to improve the state of the art.
