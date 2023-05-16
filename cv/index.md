@@ -60,17 +60,16 @@ https://ryanfrantz.com/talks/mtts/
 ## Blog Posts
 
 I write occasionally. These are some samples of my posts.
-Incident Analysis and Chaos Engineering: Complementary Practices - https://www.learningfromincidents.io/posts/incident-analysis-and-chaos-engineering 
-
-Remote Incident Response - https://ryanfrantz.com/posts/remote-incident-response.html
-
-When Does an Investigation End? - https://ryanfrantz.com/posts/when-does-an-investigation-end.html
+* Incident Analysis and Chaos Engineering: Complementary Practices - https://www.learningfromincidents.io/posts/incident-analysis-and-chaos-engineering 
+* Remote Incident Response - https://ryanfrantz.com/posts/remote-incident-response.html
+* When Does an Investigation End? - https://ryanfrantz.com/posts/when-does-an-investigation-end.html
 
 ## Open Source Software
 
 I’ve open-sourced a few tools I hoped might be useful to others.
 
-* nagios-herald is a project that supports adding context to alerts to help orient on-call engineers. See https://github.com/etsy/nagios-herald
+* `nagios-herald` is a project that supports adding context to alerts to help orient on-call engineers.
+  * See https://github.com/etsy/nagios-herald
 
-* chef-umami provides a low-friction way to get started writing tests for Chef cookbooks by doing it _for_ you! See https://github.com/bloomberg/chef-umami
-
+* `chef-umami` provides a low-friction way to get started writing tests for Chef cookbooks by doing it _for_ you!
+  * See https://github.com/bloomberg/chef-umami
