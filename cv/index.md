@@ -1,4 +1,4 @@
-<ryan+cv@ryanfrantz.com>
+[ryan+cv@ryanfrantz.com](mailto:ryan+cv@ryanfrantz.com)
 
 I am looking for a role that I can dive into and make meaningful contributions
 to further the team's mission. When the path is clear I can be a force
@@ -47,29 +47,29 @@ I am fascinated by the prospect of people using computers to augment their activ
 
 Designing Alerts to Direct Attention describes Cognitive Systems Engineering concepts and their application in designing alerts.
 
-https://ryanfrantz.com/talks/designing-alerts-direct-attention/
+[https://ryanfrantz.com/talks/designing-alerts-direct-attention/](https://ryanfrantz.com/talks/designing-alerts-direct-attention/)
 
 It’s 3AM, Do You Know Why You Got Paged? dives into alert design and ways we can aid on-call engineers’ ability to orient themselves. I introduce nagios-herald and illustrate how it applies these ideas.
 
-https://ryanfrantz.com/talks/3am-why-you-got-paged/
+[https://ryanfrantz.com/talks/3am-why-you-got-paged/](https://ryanfrantz.com/talks/3am-why-you-got-paged/)
 
 In Mean Time to Sleep, a colleague and I discuss quantifying the on-call experience and tooling we’ve built to aid engineers.
 
-https://ryanfrantz.com/talks/mtts/
+[https://ryanfrantz.com/talks/mtts/](https://ryanfrantz.com/talks/mtts/)
 
 ## Blog Posts
 
 I write occasionally. These are some samples of my posts.
-* Incident Analysis and Chaos Engineering: Complementary Practices - https://www.learningfromincidents.io/posts/incident-analysis-and-chaos-engineering 
-* Remote Incident Response - https://ryanfrantz.com/posts/remote-incident-response.html
-* When Does an Investigation End? - https://ryanfrantz.com/posts/when-does-an-investigation-end.html
+* [Incident Analysis and Chaos Engineering: Complementary Practices](https://www.learningfromincidents.io/posts/incident-analysis-and-chaos-engineering)
+* [Remote Incident Response](https://ryanfrantz.com/posts/remote-incident-response.html)
+* [When Does an Investigation End?](https://ryanfrantz.com/posts/when-does-an-investigation-end.html)
 
 ## Open Source Software
 
 I’ve open-sourced a few tools I hoped might be useful to others.
 
 * `nagios-herald` is a project that supports adding context to alerts to help orient on-call engineers.
-  * See https://github.com/etsy/nagios-herald
+  * See [https://github.com/etsy/nagios-herald](https://github.com/etsy/nagios-herald)
 
 * `chef-umami` provides a low-friction way to get started writing tests for Chef cookbooks by doing it _for_ you!
-  * See https://github.com/bloomberg/chef-umami
+  * See [https://github.com/bloomberg/chef-umami](https://github.com/bloomberg/chef-umami)
