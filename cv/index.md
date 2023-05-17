@@ -45,17 +45,12 @@ the right time.
 
 I am fascinated by the prospect of people using computers to augment their activities during incidents. I’ve given several presentations on tooling I’ve built to support on-call engineers, alert design, and how we might apply concepts from Cognitive Systems Engineering to improve the state of the art.
 
-Designing Alerts to Direct Attention describes Cognitive Systems Engineering concepts and their application in designing alerts.
-
-[https://ryanfrantz.com/talks/designing-alerts-direct-attention/](https://ryanfrantz.com/talks/designing-alerts-direct-attention/)
-
-It’s 3AM, Do You Know Why You Got Paged? dives into alert design and ways we can aid on-call engineers’ ability to orient themselves. I introduce nagios-herald and illustrate how it applies these ideas.
-
-[https://ryanfrantz.com/talks/3am-why-you-got-paged/](https://ryanfrantz.com/talks/3am-why-you-got-paged/)
-
-In Mean Time to Sleep, a colleague and I discuss quantifying the on-call experience and tooling we’ve built to aid engineers.
-
-[https://ryanfrantz.com/talks/mtts/](https://ryanfrantz.com/talks/mtts/)
+* [Designing Alerts to Direct Attention](https://ryanfrantz.com/talks/designing-alerts-direct-attention/) describes Cognitive Systems Engineering concepts and their application in designing alerts.
+  * [https://ryanfrantz.com/talks/designing-alerts-direct-attention/](https://ryanfrantz.com/talks/designing-alerts-direct-attention/)
+* [It’s 3AM, Do You Know Why You Got Paged?](https://ryanfrantz.com/talks/3am-why-you-got-paged) dives into alert design and ways we can aid on-call engineers’ ability to orient themselves. I introduce nagios-herald and illustrate how it applies these ideas.
+  * [https://ryanfrantz.com/talks/3am-why-you-got-paged/](https://ryanfrantz.com/talks/3am-why-you-got-paged/)
+* In [Mean Time to Sleep](https://ryanfrantz.com/talks/mtts/), a colleague and I discuss quantifying the on-call experience and tooling we’ve built to aid engineers.
+  * [https://ryanfrantz.com/talks/mtts/](https://ryanfrantz.com/talks/mtts/)
 
 ## Blog Posts
 
@@ -63,6 +58,7 @@ I write occasionally. These are some samples of my posts.
 * [Incident Analysis and Chaos Engineering: Complementary Practices](https://www.learningfromincidents.io/posts/incident-analysis-and-chaos-engineering)
 * [Remote Incident Response](https://ryanfrantz.com/posts/remote-incident-response.html)
 * [When Does an Investigation End?](https://ryanfrantz.com/posts/when-does-an-investigation-end.html)
+* I've also collected [thoughts on software engineering](https://github.com/ryanfrantz/engineering) that I ocassionally update.
 
 ## Open Source Software
 
