@@ -10,15 +10,25 @@ the right time.
 
 ## Lumos Labs - Engineering Director
 ### 10/2020 - Present
-* Partnered with Product to define and execute strategy across 3 verticals: Consumer, Research, and Medical.
-* Redefined the remit and structure of several teams (data engineering, backend development, web development, Corp IT) to help them deliver on our mission.
-* Reshaped our interview process to be more humane by shortening the duration of interview schedules, providing candidates with advanced notice of content, and clarifying role expectations. As a result, we hit our hiring goals during a very hot talent market in 2022.
-* Created and staffed a Security Engineering role to fill a critical gap in the operation of our products.
+* Developed an execution strategy that improved the engineers' delivery
+capability and increased team velocity as they rewrote our core consumer app.
+* Shipped critical medical and research products that served our long-term
+strategy to expand into more markets.
+* Reshaped the interview process to extract stronger signal from candidates in
+fewer cycles and hit all of our hiring goals in an extremely competitive talent
+market.
+* Managed engineers across a breadth of specialties including data engineering,
+infrastructure, web and backend development, security, and Corp IT.
 
 ## Jeli, Inc. - Co-founder and CTO
 ### 8/2019 - 9/2020
-* Laid the technical foundation for cloud-first development of a product that aids teams learning from software outages/incidents. Combined 12-factor application principles, containerized workloads, and AWS services like ECS in a strategy to minimize operational overhead and focus on delivering valuable features. 
-* Established an early security and compliance program to position the company for a SOC 2 Type 2 attestation that would appeal to early customers.
+* Laid the technical foundation for cloud-first development of a product that
+aids teams learning from their software incidents. Combined 12-factor
+application principles, containerized workloads, and AWS services like ECS in
+a strategy to minimize operational overhead and focus on delivering valuable
+features. 
+* Established an early security and compliance program to position the company
+for a SOC 2 Type 2 attestation that would appeal to early customers.
 
 ## Bloomberg, L.P. - Senior Software Engineer
 ### 3/2017 - 8/2019
