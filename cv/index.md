@@ -1,9 +1,9 @@
 [ryan+cv@ryanfrantz.com](mailto:ryan+cv@ryanfrantz.com)
 
-I am looking for a role that I can dive into and make meaningful contributions
-to further the team's mission. When the path is clear I can be a force
-multiplier; in the face of ambiguity I can set a course. I'll do the hard work,
-the boring work. And I’ll support focus, so that we work on the right thing at
+I dive into my roles, identifying key outcomes, and prioritizing work to deliver
+the team's mission. When the path is clear I'm a force multiplier; in the face
+of ambiguity I set a course. I do the hard work, the boring work. And I create
+the conditions necessary to support focus, so that we work on the right thing at
 the right time.
 
 # Experience
