@@ -74,7 +74,7 @@ I write occasionally. These are some samples of my posts.
 * [Incident Analysis and Chaos Engineering: Complementary Practices](https://www.learningfromincidents.io/posts/incident-analysis-and-chaos-engineering)
 * [Remote Incident Response](https://ryanfrantz.com/posts/remote-incident-response.html)
 * [When Does an Investigation End?](https://ryanfrantz.com/posts/when-does-an-investigation-end.html)
-* I've also collected [thoughts on software engineering](https://github.com/ryanfrantz/engineering) that I ocassionally update.
+* I've also collected [thoughts on software engineering](https://github.com/ryanfrantz/engineering) that I occasionally update.
 
 ## Open Source Software
 
