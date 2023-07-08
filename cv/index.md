@@ -1,5 +1,11 @@
 [ryan+cv@ryanfrantz.com](mailto:ryan+cv@ryanfrantz.com)
 
+For 25 years I have been practicing software development (predominantly backend
+with frontend work as needed) and web operations, holding roles in management
+and as an individual contributor. I've worked across a wide range of companies,
+from startups to large organizations, covering a breadth of industries including
+healthcare, e-commerce, fintech, and gaming.
+
 I dive into my roles, identifying key outcomes, and prioritizing work to deliver
 the team's mission. When the path is clear I'm a force multiplier; in the face
 of ambiguity I set a course. I do the hard work, the boring work. And I create
