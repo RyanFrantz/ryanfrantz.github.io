@@ -257,7 +257,7 @@ p {
  */
 /* Jekyll will nest the image inside a paragraph element. */
 .presentation p img {
-    border: 1px;
+    border: 5px solid;
 }
 
 .quote {
