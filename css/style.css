@@ -255,7 +255,8 @@ p {
 /* Give presentation images a simple border so they stand out.
  * Great for light-colored images.
  */
-.presentation img {
+/* Jekyll will nest the image inside a paragraph element. */
+.presentation p img {
     border: 1px;
 }
 
