@@ -252,6 +252,13 @@ p {
     font-size: 14px;
 }
 
+/* Give presentation images a simple border so they stand out.
+ * Great for light-colored images.
+ */
+.presentation img {
+    border: 1px;
+}
+
 .quote {
     font-style: italic;
 }

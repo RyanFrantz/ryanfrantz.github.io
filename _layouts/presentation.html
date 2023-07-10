@@ -1,0 +1,28 @@
+---
+layout: default
+banner_image: "/images/brooklyn_deer.png"
+display_toc: true
+---
+
+<a name="title"></a>
+<div class="title"></div>
+ <div class="byline">
+     {{ page.date | date: "%B %e, %Y" }}
+</div>
+
+<div class="presentation">
+{{ content }}
+</div>
+
+{% assign all_tags = page.tags | sort %}
+{% if all_tags.size > 0 %}
+<hr>
+<small>
+    Tags
+    <ul>
+    {% for tag in all_tags %}
+    <li><a href="/tags#{{ tag }}">{{ tag }}</a>
+    {% endfor %}
+    </ul>
+</small>
+{% endif %}

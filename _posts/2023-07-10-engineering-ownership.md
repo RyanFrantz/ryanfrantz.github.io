@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: presentation
 title: Engineering Ownership
 tags:
   - Engineering
