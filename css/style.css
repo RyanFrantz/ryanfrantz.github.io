@@ -257,7 +257,7 @@ p {
  */
 /* Jekyll will nest the image inside a paragraph element. */
 .presentation p img {
-    border: 5px solid;
+    border: 2px solid;
     /* Some images are large. Basic attempt to size them a bit smaller. */
     width: 90%;
 }
