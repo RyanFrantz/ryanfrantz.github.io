@@ -9,15 +9,13 @@ status: publish
 published: true
 ---
 
-@mcfunley-style presentation post.
+These are slides from a presentation I gave on the topic of engineering
+ownership. I plan to write a long form version of this, but this
+[@mcfunley-style](https://dotclub.club/) format will have to do for now.
 
 ![](/images/eng_ownership/01.png)
 
-Words
-
 ![](/images/eng_ownership/02.png)
-
-More words
 
 ![](/images/eng_ownership/03.png)
 
