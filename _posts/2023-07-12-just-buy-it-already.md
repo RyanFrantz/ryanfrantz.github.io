@@ -60,7 +60,7 @@ Let's say, for the sake of argument, that you _don't_ have the skills or knowled
 supporting software but you still think you need to build it. That means you need to hire for that
 experience. Notwithstanding the lead times to source and interview candidates, how confident are you
 in your ability to vet them for that same experience? And if you do manage to hire someone, how long
-will it take to deliver that thing? Your time is a a scarce resource. It would be a better use of your
+will it take to deliver that thing? Your time is a scarce resource. It would be a better use of your
 time to rely on a vendor and instead focus on the core of your product.
 
 Finally, lest you think the nearly-always-buy position is naive, I know it's not as simple as composing
@@ -74,7 +74,7 @@ because they get mindshare first.
 
 ## I'm Still Not Convinced Building is a Bad Proposition
 
-Skepticism can be healthy. So I'll enumerate some examples of _some_ of work that would be required to
+Skepticism can be healthy. So I'll enumerate some examples of _some_ of the work that would be required to
 operate typical parts of a product.
 
 ### Email
@@ -92,7 +92,7 @@ I've run Sendmail, Postfix. Even Exchange. Here is a non-exhaustive set of thing
 
 ### Authentication
 
-This problem space requires deep and often estoteric knowledge. And it is difficult to get right.
+This problem space requires deep and often estoteric knowledge. It is difficult to get right.
 And it is _so_ important to the customer's on-boarding experience.
 
 - Password-hashing (still a problem!)
@@ -106,7 +106,8 @@ And it is _so_ important to the customer's on-boarding experience.
 You're in business to make money. But you already know that. Again, a non-exhaustive (but
 eye-opening) set of responsibilities you take on if you want to build your own support.
 
-- Invoices
+- Checkout/carts
+- Invoicing
 - Refunds
 - Chargebacks
 - Managing payment gateways and processors
