@@ -56,10 +56,10 @@ with a stretch goal of Boston to Philly. Reppin' the Northeast!
 Our assistant knows what payment providers that market tends to use and recommends 2-3 options to select.
 
 Because PayMeBack's assistant also knows Jordan isn't a developer but wants to use Squarespace, it gives them step-by-step instructions
-on how to set up a site on there and offering a free starter theme that includes support for integrating with PayMeBack's payment orchestration
+on how to set up a site there and offers a free starter theme that includes support for integrating with PayMeBack's payment orchestration
 using those 2-3 providers it initially recommended. In fact, Jordan's new account at PayMeBack (the AI assistant set this up once Jordan engaged it)
 has already been set up and configured to use them! PayMeBack's AI assistant wraps all of this information into a custom page at `paymeback.com/jordan`
-that you can keep referring back to. Or, they can send it to Reagan! Jordan or Reagan whips up an MVP that same day, allowing Jordan to tinker and
+that they can keep referring back to. Or, they can send it to Reagan! Jordan or Reagan whips up an MVP that same day, allowing Jordan to tinker and
 test their ideas with a fully functioning site.
 
 At PayMeBack, we've extended the top of our funnel with little effort while also building confidence in our product.
