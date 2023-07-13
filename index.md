@@ -6,7 +6,7 @@ banner_image: "/images/brooklyn_deer.png"
 
 <div class="menu">
   <ul>
-    {% for post in site.posts limit:5 %}
+    {% for post in site.posts limit:6 %}
     <li>
       <a href="{{ post.url }}">{{ post.title }}</a> <span class="date">{{ post.date | date: "%B %e, %Y" }}</span>
     </li>
