@@ -9,7 +9,7 @@ outcomes into engineering direction and convert engineering outcomes into
 business value.
 
 This has included: delivering the backend for a long-running, FDA-reviewed,
-clinical trial; shipping a backwards-compatible authentication solution for a,
+clinical trial; shipping a backwards-compatible authentication solution for a
 1-million-user consumer application; kickstarting a security and compliance
 program, targeting SOC 2 compliance, to position a SaaS startup for enterprise
 customers;  building a cross-platform CI rig, and related tooling, to support
