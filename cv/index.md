@@ -88,6 +88,8 @@ I am fascinated by the prospect of people using computers to augment their activ
 ## Blog Posts
 
 I write occasionally. These are some samples of my posts.
+* [Engineering Ownership](https://ryanfrantz.com/posts/engineering-ownership.html)
+* [Complexity is a By-product of Success](https://ryanfrantz.com/posts/complexity-is-byproduct-of-success.html)
 * [Incident Analysis and Chaos Engineering: Complementary Practices](https://www.learningfromincidents.io/posts/incident-analysis-and-chaos-engineering)
 * [Remote Incident Response](https://ryanfrantz.com/posts/remote-incident-response.html)
 * [When Does an Investigation End?](https://ryanfrantz.com/posts/when-does-an-investigation-end.html)
