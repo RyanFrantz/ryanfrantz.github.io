@@ -24,8 +24,9 @@ thing at the right time.
 
 ## Lumos Labs - Engineering Director
 ### 10/2020 - Present
-* Developed an execution strategy that improved the engineers' delivery
-capability and increased team velocity as they rewrote our core consumer app.
+* Developed an execution strategy, with the Head of Product, that improved the
+engineers' delivery capability and increased team velocity as they rewrote our
+core consumer app.
   * Working in 1-week cycles, the team doubled their output in the first 2
   months.
 * Shipped important medical and research products that served our
