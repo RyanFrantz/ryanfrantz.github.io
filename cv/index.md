@@ -29,8 +29,8 @@ thing at the right time.
 ### 10/2020 - Present
 * Developed an execution strategy, with the Head of Product, that improved the
 engineers' delivery capability and increased team velocity as they rewrote our
-core consumer app. This resulted in us shipping an early version of the web app
-to India and the Philippines.
+core consumer app. We shipped an early version of the web app to India and the
+Philippines.
   * Working in 1-week cycles, the team doubled their output in the first 2
   months.
 * Shipped important medical and research products that served our
