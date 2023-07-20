@@ -1,18 +1,18 @@
 [ryan+cv@ryanfrantz.com](mailto:ryan+cv@ryanfrantz.com)
 
 I'm seeking engineering management (director-level and above) roles to continue
-my progression toward becoming a CTO. I'm interested in well-established
+**progressing toward becoming a CTO**. I'm interested in well-established
 companies looking to improve their engineering processes and startups that have
 found product market fit and need to scale. I'm an engineering leader by trade,
 a translator by practice. I distill business strategy into engineering direction
 and convert engineering outcomes into business value.
 
-A sample of my achievements includes delivering the backend for a long-running,
-FDA-reviewed, clinical trial; shipping a backwards-compatible authentication
-solution for a 1-million-user consumer application; kickstarting a security and
+A sample of my achievements includes delivering the backend for **a long-running,
+FDA-reviewed, clinical trial**; shipping a backwards-compatible authentication
+solution for a **1-million-user consumer application**; kickstarting a security and
 compliance program, targeting SOC 2 compliance, to position a SaaS startup for
 enterprise customers;  building a cross-platform CI rig, and related tooling, to
-support development of products that impact global financial markets; designing
+support development of products that **impact global financial markets**; designing
 and managing the architecture necessary to operate a medical management
 company's nationwide mission of raising the bar for patient care and
 simultaneously reducing total healthcare costs.
@@ -29,20 +29,20 @@ thing at the right time.
 ### 10/2020 - Present
 * Developed an execution strategy, with the Head of Product, that improved the
 engineers' delivery capability and increased team velocity as they rewrote our
-core consumer app. We shipped an early version of the web app to India and the
-Philippines.
-  * Working in 1-week cycles, the team doubled their output in the first 2
-  months.
+core consumer app. **We shipped an early version of the web app to India and the
+Philippines**.
+  * Working in 1-week cycles, the team **doubled their output in the first 2
+  months**.
 * Shipped important medical and research products that served our
 [long-term strategy](https://www.lumoslabs.com/digital-medicine) to expand into
 more markets, including:
   * A fully-documented backend for an 18-month FDA-reviewed clinical trial to
-  validate a potential ADHD digital therapeutic.
-  * A web application for an active double-blind study of 10,000 participants to
+  validate a potential **ADHD digital therapeutic**.
+  * A web application for **an active double-blind study of 10,000 participants** to
   detect biomarkers that might support early
   diagnosis of multiple sclerosis.
 * Reshaped the interview process to extract stronger signal from candidates in
-fewer cycles and hit all of our hiring goals in an extremely competitive talent
+fewer cycles and **hit all of our hiring goals** in an extremely competitive talent
 market.
 * Managed, coached, and promoted engineers across a breadth of specialties
 including data engineering, infrastructure, web and backend development,
