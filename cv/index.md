@@ -1,8 +1,11 @@
 [ryan+cv@ryanfrantz.com](mailto:ryan+cv@ryanfrantz.com)
 
-I'm an engineering leader by trade, a translator by practice. I distill business
-outcomes into engineering direction and convert engineering outcomes into
-business value.
+I'm seeking engineering management (director-level and above) roles to continue
+my progression toward becoming a CTO. I'm interested in well-established
+companies looking to improve their engineering processes and startups that have
+found product market fit and need to scale. I'm an engineering leader by trade,
+a translator by practice. I distill business strategy into engineering direction
+and convert engineering outcomes into business value.
 
 A sample of my achievements includes delivering the backend for a long-running,
 FDA-reviewed, clinical trial; shipping a backwards-compatible authentication
@@ -26,7 +29,8 @@ thing at the right time.
 ### 10/2020 - Present
 * Developed an execution strategy, with the Head of Product, that improved the
 engineers' delivery capability and increased team velocity as they rewrote our
-core consumer app.
+core consumer app. This resulted in us shipping an early version of the web app
+to India and the Philippines.
   * Working in 1-week cycles, the team doubled their output in the first 2
   months.
 * Shipped important medical and research products that served our
