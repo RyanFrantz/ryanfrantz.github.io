@@ -13,6 +13,9 @@ banner_image: "/images/brooklyn_deer.png"
     <!--{{ post.excerpt }}-->
     {% endfor %}
   </ul>
+  <p>
+    For older posts, check out the <a href="/archive">archive</a>.
+  </p>
 </div>
 
 {% include footer.html %}
