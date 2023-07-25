@@ -69,14 +69,35 @@ for a SOC 2 Type 2 attestation that would appeal to early customers.
 * Led architecture reviews, operational readiness efforts, and facilitated incident debriefings to drive an holistic approach to systems thinking and continuous learning.
 * Contributed open source tooling in the monitoring space and encouraged the industry to think differently about alert design and the on-call experience.
 
-## Conifer Health Solutions - Technical Services Director (Previously InforMed, LLC)
+## Conifer Health Solutions (Tenet Healthcare) - Technical Services Director
 ### 1/2004 - 1/2013
-* Established and grew a Systems Engineering team to support the long-term technical needs of the clinician, customer service, and claims administration departments. We built and implemented low-friction solutions that supported the mission of providing high-quality care at reduced costs.
-* Built a Support Desk team, setting service levels for response time and quality, to provide regular assistance to clinicians spread across the country.
+* Established and grew the SRE and Corp IT teams that built and operated the
+infrastructure for the following products (largely for self-funded health plans):
+  * Online enrollment for dental, medical, and vision plans.
+  * Third-party administration of dental, medical, and vision claims via LuminX.
+  * Data warehousing and ETL processing for predictive analysis of future costs.
+  * Medical case management and care coordination delivered by clinicians (RNs)
+  around the country.
+* Collaborated with facilities management to build and expand on-premises data
+center operations.
+* Provided all telecommunications management including bundling T1s, PSTN lines,
+and a VoIP-based unified messaging platform to deliver both our online presence
+and toll-free based services for over 100 customers.
+* Drafted, performed, and audited all necessary controls to maintain HIPAA
+compliance within my area of responsibility.
 
 ## Ebix Health - Senior System Administrator
 ### 10/1998 - 1/2004
-* Provided post-sales engineering design, implementation, and support to customers including managing onsite customer installations across a range of platforms.
+* As a value-added reseller, we bundled our medical claims-processing software
+(LuminX) with nearly every version of proprietary UNIX (AIX, HP-UX, Solaris,
+Tru64), Linux, and Windows.
+* Provided post-sales engineering design, implementation, and ongoing support to
+customers. The scope of this work included:
+  * Integrating with their existing backend infrastructure.
+  * Rolling out front office workstations (Windows NT and 2000) and scanning
+  stations to generate OCR images of paper claims to be processed.
+  * Implementing short- and long-term storage (disk and WORM media, respectively)
+  that satisfied regulatory requirements. 
 
 # Miscellany
 ## Conference Presentations
