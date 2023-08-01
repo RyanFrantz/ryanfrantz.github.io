@@ -19,9 +19,8 @@ simultaneously reducing total healthcare costs.
 
 I dive into my roles, identifying key outcomes, and prioritizing work to deliver
 the team's mission. **When the path is clear I'm a force multiplier; in the face
-of ambiguity I set a course**. I do the hard work, the necessary work. And I
-create the conditions necessary to support focus, so that **we work on the right
-thing at the right time**.
+of ambiguity I set a course**. And I create the conditions necessary to support
+focus, so that **we work on the right thing at the right time**.
 
 # Experience
 
@@ -40,12 +39,12 @@ more markets, including:
   **validate a potential ADHD digital therapeutic**.
   * A web application for **an active double-blind study of 10,000 participants**
   to detect biomarkers that might support early diagnosis of multiple sclerosis.
-* Managed, coached, and promoted **15 engineers** across a breadth of
-specialties including data engineering, infrastructure, web and backend
-development, and Corp IT.
 * Reshaped the interview process to extract stronger signal from candidates in
 fewer cycles, **growing the web and platform teams from 2 engineers to 8**
 in an extremely competitive talent market.
+* Managed, coached, and promoted **15 engineers** across a breadth of
+specialties including data engineering, infrastructure, web and backend
+development, and Corp IT.
 * Created and staffed a security and compliance function to manage our bug
 bounty program, provide regular training, and to shape early controls ahead of
 bringing a digital therapeutic product to market.
