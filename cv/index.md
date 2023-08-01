@@ -37,16 +37,15 @@ Philippines**.
 [long-term strategy](https://www.lumoslabs.com/digital-medicine) to expand into
 more markets, including:
   * A fully-documented backend for an 18-month FDA-reviewed clinical trial to
-  validate a potential **ADHD digital therapeutic**.
+  **validate a potential ADHD digital therapeutic**.
   * A web application for **an active double-blind study of 10,000 participants**
   to detect biomarkers that might support early diagnosis of multiple sclerosis.
-* Managed, coached, and promoted 15 engineers across a breadth of specialties
-including data engineering, infrastructure, web and backend development, and
-Corp IT.
+* Managed, coached, and promoted **15 engineers** across a breadth of
+specialties including data engineering, infrastructure, web and backend
+development, and Corp IT.
 * Reshaped the interview process to extract stronger signal from candidates in
-fewer cycles and **hit all of our hiring goals** in an extremely competitive
-talent market (2022) resulting in the web and platform functions growing from
-**2 engineers to 8**.
+fewer cycles, **growing the web and platform teams from 2 engineers to 8**
+in an extremely competitive talent market.
 * Created and staffed a security and compliance function to manage our bug
 bounty program, provide regular training, and to shape early controls ahead of
 bringing a digital therapeutic product to market.
@@ -87,13 +86,13 @@ industry to think differently about alert design and the on-call experience.
 
 ## Conifer Health Solutions (Tenet Healthcare) - Technical Services Director
 ### 1/2004 - 1/2013
-* Established and grew an Engineering team (0 to 10) to build and operate the
-infrastructure for the following products (largely for self-funded health plans):
+* **Established and grew an Engineering team (0 to 10)** to build and operate the
+infrastructure powering healthcare products such as:
   * Online enrollment for dental, medical, and vision plans.
   * Third-party administration of dental, medical, and vision claims via LuminX.
-  * Data warehousing and ETL processing for predictive analysis of future costs.
+  * Data warehousing and ETL processing for predictive analysis of plan costs.
   * Medical case management and care coordination delivered by clinicians (RNs)
-  around the country.
+  nationwide.
 * Collaborated with facilities management to build and expand on-premises data
 center operations.
 * Provided all telecommunications management including bundling T1s, PSTN lines,
@@ -111,7 +110,7 @@ Tru64), Linux, and Windows.
 customers. The scope of this work included:
   * Integrating with their existing backend infrastructure.
   * Rolling out front office workstations (Windows NT and 2000) and scanning
-  stations to generate OCR images of paper claims to be processed.
+  stations to generate OCR images of paper claims.
   * Implementing short- and long-term storage (disk and WORM media, respectively)
   that satisfied regulatory requirements. 
 
