@@ -27,26 +27,29 @@ thing at the right time**.
 
 ## Lumos Labs - Engineering Director
 ### 10/2020 - Present
-* Developed an execution strategy, with the Head of Product, that improved the
-engineers' delivery capability and increased team velocity as they rewrote our
-core consumer app. **We shipped an early version of the web app to India and the
+* Developed an execution strategy using personas and user story mapping, that
+improved the engineers' delivery capability as they rewrote our core consumer
+web app. **We shipped an early version of the web app to India and the
 Philippines**.
-  * Working in 1-week cycles, the team **doubled their output in the first 2
-  months**.
+  * Working in 1-week cycles, the team increased velocity from **1 feature per
+  month to 2 features delivered roughly every 2 weeks**.
 * Shipped important medical and research products that served our
 [long-term strategy](https://www.lumoslabs.com/digital-medicine) to expand into
 more markets, including:
   * A fully-documented backend for an 18-month FDA-reviewed clinical trial to
   validate a potential **ADHD digital therapeutic**.
-  * A web application for **an active double-blind study of 10,000 participants** to
-  detect biomarkers that might support early
-  diagnosis of multiple sclerosis.
+  * A web application for **an active double-blind study of 10,000 participants**
+  to detect biomarkers that might support early diagnosis of multiple sclerosis.
+* Managed, coached, and promoted 15 engineers across a breadth of specialties
+including data engineering, infrastructure, web and backend development, and
+Corp IT.
 * Reshaped the interview process to extract stronger signal from candidates in
-fewer cycles and **hit all of our hiring goals** in an extremely competitive talent
-market.
-* Managed, coached, and promoted engineers across a breadth of specialties
-including data engineering, infrastructure, web and backend development,
-security, and Corp IT.
+fewer cycles and **hit all of our hiring goals** in an extremely competitive
+talent market (2022) resulting in the web and platform functions growing from
+**2 engineers to 8**.
+* Created and staffed a security and compliance function to manage our bug
+bounty program, provide regular training, and to shape early controls ahead of
+bringing a digital therapeutic product to market.
 
 ## Jeli, Inc. - Co-founder and CTO
 ### 8/2019 - 9/2020
@@ -60,18 +63,31 @@ for a SOC 2 Type 2 attestation that would appeal to early customers.
 
 ## Bloomberg, L.P. - Senior Software Engineer
 ### 3/2017 - 8/2019
-* Managed projects, provided architectural guidance, and engineering expertise to develop a storage automation project that reduced a request backlog from 1 week to 1 day and eliminated a $1M service contract.
-* Designed and implemented a CI platform supporting 4 operating systems, configuration management solutions (Chef, Salt) and multiple projects written in Python, Ruby, and Go. After onboarding 100 repos in 3 months, engineers and management were more confident in their updates, detecting common/recurring bugs, and following consistent testing practices.
+* Managed projects, provided architectural guidance, and engineering expertise
+to develop a storage automation project that reduced a request backlog from 1
+week to 1 day and eliminated a $1M service contract.
+* Designed and implemented a CI platform supporting 4 operating systems,
+configuration management solutions (Chef, Salt) and multiple projects written in
+Python, Ruby, and Go. After onboarding 100 repos in 3 months, engineers and
+management were more confident in their updates, detecting common/recurring
+bugs, and following consistent testing practices.
 
 ## Etsy, Inc. - Staff Operations Engineer
 ### 1/2013 - 3/2017
-* Partnered with product teams to help them focus operational effort in support of their work including preparing feature launches and honing reliability practices. By describing a minimum set of required outcomes and training to realize them, I provided a clear roadmap to teams that enabled them to consistently deliver reliable features.
-* Led architecture reviews, operational readiness efforts, and facilitated incident debriefings to drive an holistic approach to systems thinking and continuous learning.
-* Contributed open source tooling in the monitoring space and encouraged the industry to think differently about alert design and the on-call experience.
+* Partnered with product teams to help them focus operational effort in support
+of their work including preparing feature launches and honing reliability
+practices. By describing a minimum set of required outcomes and training to
+realize them, I provided a clear roadmap to teams that enabled them to
+consistently deliver reliable features.
+* Led architecture reviews, operational readiness efforts, and facilitated
+incident debriefings to drive an holistic approach to systems thinking and
+continuous learning.
+* Contributed open source tooling in the monitoring space and encouraged the
+industry to think differently about alert design and the on-call experience.
 
 ## Conifer Health Solutions (Tenet Healthcare) - Technical Services Director
 ### 1/2004 - 1/2013
-* Established and grew the SRE and Corp IT teams that built and operated the
+* Established and grew an Engineering team (0 to 10) to build and operate the
 infrastructure for the following products (largely for self-funded health plans):
   * Online enrollment for dental, medical, and vision plans.
   * Third-party administration of dental, medical, and vision claims via LuminX.
@@ -83,8 +99,8 @@ center operations.
 * Provided all telecommunications management including bundling T1s, PSTN lines,
 and a VoIP-based unified messaging platform to deliver both our online presence
 and toll-free based services for over 100 customers.
-* Drafted, performed, and audited all necessary controls to maintain HIPAA
-compliance within my area of responsibility.
+* Drafted, performed, and audited all necessary technical controls to maintain
+HIPAA compliance on an annual basis.
 
 ## Ebix Health - Senior System Administrator
 ### 10/1998 - 1/2004
@@ -102,7 +118,10 @@ customers. The scope of this work included:
 # Miscellany
 ## Conference Presentations
 
-I am fascinated by the prospect of people using computers to augment their activities during incidents. I’ve given several presentations on tooling I’ve built to support on-call engineers, alert design, and how we might apply concepts from Cognitive Systems Engineering to improve the state of the art.
+I am fascinated by the prospect of people using computers to augment their
+activities during incidents. I’ve given several presentations on tooling I’ve
+built to support on-call engineers, alert design, and how we might apply
+concepts from Cognitive Systems Engineering to improve the state of the art.
 
 * [Designing Alerts to Direct Attention](https://ryanfrantz.com/talks/designing-alerts-direct-attention/) describes Cognitive Systems Engineering concepts and their application in designing alerts.
   * [https://ryanfrantz.com/talks/designing-alerts-direct-attention/](https://ryanfrantz.com/talks/designing-alerts-direct-attention/)
