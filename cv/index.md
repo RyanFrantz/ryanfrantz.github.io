@@ -17,9 +17,9 @@ and managing the architecture necessary to operate a medical management
 company's nationwide mission of raising the bar for patient care and
 simultaneously reducing total healthcare costs.
 
-I dive into my roles, identifying key outcomes, and prioritizing work to deliver
-the team's mission. **When the path is clear I'm a force multiplier; in the face
-of ambiguity I set a course**. And I create the conditions necessary to support
+I identify key outcomes and ruthlessly prioritize work to deliver the team's
+mission. **When the path is clear I'm a force multiplier; in the face of
+ambiguity I set a course**. And I create the conditions necessary to support
 focus, so that **we work on the right thing at the right time**.
 
 # Experience
