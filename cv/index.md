@@ -1,26 +1,19 @@
 [ryan+cv@ryanfrantz.com](mailto:ryan+cv@ryanfrantz.com)
 
-I'm seeking engineering management (director-level and above) roles to continue
-**progressing toward becoming a CTO**. I'm interested in well-established
-companies looking to improve their engineering processes and startups that have
-found product market fit and need to scale. I'm an engineering leader by trade,
-a translator by practice. I distill business strategy into engineering direction
-and convert engineering outcomes into business value.
+I am a product-oriented engineering manager. My multifaceted career has been
+driven by the desire to close the distance between my engineering work and the
+customer experience. From my time as a sysadmin starting 25 years ago, during my
+web operations experience at e-commerce and fintech companies, while designing
+systems to operate reliably at scale, through crafting engineering teams and
+processes to deliver software and systems I have learned to combine people
+management, knowledge of scalable infrastructure, and product development into
+one clear mission statement: engineering _is_ the product.
 
-A sample of my achievements includes delivering the backend for **a long-running,
-FDA-reviewed, clinical trial**; shipping a backwards-compatible authentication
-solution for a **1-million-user consumer application**; kickstarting a security and
-compliance program, targeting SOC 2 compliance, to position a SaaS startup for
-enterprise customers;  building a cross-platform CI rig, and related tooling, to
-support development of products that **impact global financial markets**; designing
-and managing the architecture necessary to operate a medical management
-company's nationwide mission of raising the bar for patient care and
-simultaneously reducing total healthcare costs.
-
-I identify key outcomes and ruthlessly prioritize work to deliver the team's
-mission. **When the path is clear I'm a force multiplier; in the face of
-ambiguity I set a course**. And I create the conditions necessary to support
-focus, so that **we work on the right thing at the right time**.
+Whether shepherding a complete rewrite of the frontend and backend for a
+1-million user (MAU) web consumer app, designing a new SaaS product’s
+operational footprint to scale from day one, or shipping enhanced testing
+solutions to streamline developer experience I distill business strategy into
+engineering direction and deliver delightful products for customers.
 
 # Experience
 
