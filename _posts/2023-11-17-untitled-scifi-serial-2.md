@@ -5,7 +5,7 @@ tags:
   - Science Fiction
 type: post
 status: publish
-published: false
+published: true
 ---
 
 [Part 1](posts/untitled-scifi-serial.html)
