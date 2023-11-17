@@ -8,7 +8,7 @@ status: publish
 published: true
 ---
 
-[Part 1](posts/untitled-scifi-serial.html)
+[Part 1](/posts/untitled-scifi-serial.html)
 
 These Uplinkers know something. That's why I'm here. Some of these fuckers are
 rich. Insanely rich. A few of them made boatloads in the 20s selling AI
