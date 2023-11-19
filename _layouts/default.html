@@ -1,6 +1,3 @@
----
-banner_image: "/images/brooklyn_deer.png"
----
 <html>
     <head>
         <meta charset="utf-8">
@@ -9,42 +6,24 @@ banner_image: "/images/brooklyn_deer.png"
         {% include google_analytics.html %}
     </head>
     <body>
-        <div class="header">
-            <div class="title">
-              <a href="/">Ryan Frantz</a>
-            </div>
-            <div class="menu">
-              <ul>
-                <li><a href="/archive/">Archive</a></li>
-                <li><a href="/contact">Contact</a></li>
-                <li><a href="/cv">CV</a></li>
-                <li><a href="/papers/">Papers</a></li>
-                <li><a href="/reading/">Reading</a></li>
-                <li><a href="/tags/">Tags</a></li>
-                <li><a href="/talks/">Talks</a></li>
-              </ul>
-            </div>
-        </div> <!-- end header -->
-        <div class="banner">
-            <!--<img src="/images/brooklyn_deer.png">-->
-            <img src="{{ layout.banner_image }}">
-        </div>
-        <div class="container">
-            <div id="left" class="column">
-                <div class="menu">
-                <!-- Uses https://github.com/allejo/jekyll-toc -->
-                <!-- Only display TOC if the layout says so. -->
-                {% if layout.display_toc %}
-                <a href="#title">{{ page.title }}</a>
-                {% include toc.html html=content ordered=true %}
-                {% endif %}
-                </div> <!-- end menu -->
-            </div> <!-- end left column -->
-            <div id="right" class="column">
-                <div class="content">
-                  {{ content }}
-                </div> <!-- end content -->
-            </div> <!-- end right column -->
-        </div> <!-- end class="container"-->
+      <banner>
+        <a href="/">Ryan Frantz</a>
+      </banner>
+      <header>
+        <nav>
+          <ul>
+            <li><a href="/archive/">Archive</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/cv">CV</a></li>
+            <li><a href="/papers/">Papers</a></li>
+            <li><a href="/reading/">Reading</a></li>
+            <li><a href="/tags/">Tags</a></li>
+            <li><a href="/talks/">Talks</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        {{ content }}
+      </main>
     </body>
 </html>
