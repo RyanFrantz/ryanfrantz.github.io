@@ -1,3 +1,8 @@
+banner {
+  display: flex;
+  justify-content: center;
+}
+
 body {
   font-family: verdana, sans-serif;
 }
@@ -14,5 +19,5 @@ nav ul {
 }
 
 nav ul li {
-  padding: .5rem;
+  padding: .6rem;
 }
