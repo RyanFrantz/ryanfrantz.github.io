@@ -12,12 +12,25 @@ header {
   justify-content: center;
 }
 
+footer {
+  display: flex;
+  justify-content: center;
+}
+
 nav ul {
   display: flex;
   justify-content: space-around;
-  list-style-type: none;
 }
 
 nav ul li {
   padding: .6rem;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+}
+
+ul {
+  list-style-type: none;
 }

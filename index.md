@@ -4,7 +4,7 @@ title: "Posts"
 banner_image: "/images/brooklyn_deer.png"
 ---
 
-<div class="menu">
+<section id="posts">
   <ul>
     {% for post in site.posts limit:6 %}
     <li>
@@ -13,9 +13,11 @@ banner_image: "/images/brooklyn_deer.png"
     <!--{{ post.excerpt }}-->
     {% endfor %}
   </ul>
+</section>
+<section>
   <p>
     For older posts, check out the <a href="/archive">archive</a>.
   </p>
-</div>
+</section>
 
 {% include footer.html %}
