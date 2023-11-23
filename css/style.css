@@ -26,6 +26,15 @@ nav ul li {
   padding: .6rem;
 }
 
+#posts ul li {
+  padding-top: .5rem;
+}
+
+time {
+  display: block;
+  font-size: .75rem;
+}
+
 section {
   display: flex;
   justify-content: center;

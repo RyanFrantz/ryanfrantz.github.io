@@ -6,11 +6,13 @@ banner_image: "/images/brooklyn_deer.png"
 
 <section id="posts">
   <ul>
-    {% for post in site.posts limit:6 %}
+    {% for post in site.posts limit:10 %}
     <li>
-      <a href="{{ post.url }}">{{ post.title }}</a> <span class="date">{{ post.date | date: "%B %e, %Y" }}</span>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+      <time datetime="{{ post.date | date: "%Y-%m-%d" }}">
+        {{ post.date | date: "%e %b %Y" }}
+      </time>
     </li>
-    <!--{{ post.excerpt }}-->
     {% endfor %}
   </ul>
 </section>
