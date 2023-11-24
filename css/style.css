@@ -1,10 +1,26 @@
+@font-face {
+  font-family: 'Mona Sans';
+  src:
+    url('/fonts/MonaSans-Regular.woff2') format('woff2 supports variations'),
+    url('/fonts/MonaSans-Regular.woff2') format('woff2-variations');
+}
+
+@font-face {
+  font-family: 'Mona Sans Black';
+  src:
+    url('/fonts/MonaSans-Black.woff2') format('woff2 supports variations'),
+    url('/fonts/MonaSans-Black.woff2') format('woff2-variations');
+}
+
 banner {
   display: flex;
   justify-content: center;
+  font-family: 'Mona Sans Black';
+  font-size: 1.5rem;
 }
 
 body {
-  font-family: verdana, sans-serif;
+  font-family: 'Mona Sans', verdana, sans-serif;
 }
 
 header {
