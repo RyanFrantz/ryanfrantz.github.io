@@ -21,5 +21,3 @@ banner_image: "/images/brooklyn_deer.png"
     For older posts, check out the <a href="/archive">archive</a>.
   </p>
 </section>
-
-{% include footer.html %}

@@ -12,6 +12,21 @@ header {
   justify-content: center;
 }
 
+figcaption {
+  padding-top: .5rem;
+}
+
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: .5rem;
+}
+
+figure img {
+  width: 32;
+}
+
 footer {
   display: flex;
   justify-content: center;
