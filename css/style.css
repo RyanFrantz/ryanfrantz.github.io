@@ -12,6 +12,15 @@
     url('/fonts/MonaSans-Black.woff2') format('woff2-variations');
 }
 
+a {
+  text-decoration: none;
+  color: blue;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 banner {
   display: flex;
   justify-content: center;
