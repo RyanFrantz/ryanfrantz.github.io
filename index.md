@@ -15,7 +15,7 @@ title: "Posts"
     {% endfor %}
   </ul>
 </section>
-<section>
+<section id="archive-attention">
   <p>
     For older posts, check out the <a href="/archive">archive</a>.
   </p>

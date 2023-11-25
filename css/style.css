@@ -21,6 +21,10 @@ a:hover {
   text-decoration: underline;
 }
 
+#archive-attention {
+  font-size: .75em;
+}
+
 banner {
   display: flex;
   justify-content: center;
@@ -37,7 +41,7 @@ body {
 header {
   box-sizing: border-box
   display: flex;
-  font-size: 3.5vw;
+  font-size: .75em;
   justify-content: center;
 }
 
@@ -58,7 +62,7 @@ figure img {
 
 footer {
   display: flex;
-  font-size: 3.5vw;
+  font-size: .75em;
   justify-content: space-around;
 }
 
@@ -78,7 +82,7 @@ nav ul {
 
 time {
   display: block;
-  font-size: .75em;
+  font-size: .5em;
 }
 
 section {
@@ -88,4 +92,30 @@ section {
 
 ul {
   list-style-type: none;
+}
+
+@media (orientation: landscape) {
+  body {
+    font-size: 3vw;
+    max-width: 75vw;
+    margin: 0 auto;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 960px) {
+  body {
+    font-size: 2.5vw;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1080px) {
+  body {
+    font-size: 2vw;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1200px) {
+  body {
+    font-size: 1.75vw;
+  }
 }
