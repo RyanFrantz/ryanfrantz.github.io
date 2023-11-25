@@ -1,15 +1,11 @@
 @font-face {
   font-family: 'Mona Sans';
+  font-display: swap;
+  font-weight: 200 900;
+  font-stretch: 75% 125%;
   src:
-    url('/fonts/MonaSans-Regular.woff2') format('woff2 supports variations'),
-    url('/fonts/MonaSans-Regular.woff2') format('woff2-variations');
-}
-
-@font-face {
-  font-family: 'Mona Sans Light';
-  src:
-    url('/fonts/MonaSans-Light.woff2') format('woff2 supports variations'),
-    url('/fonts/MonaSans-Light.woff2') format('woff2-variations');
+    url('/fonts/MonaSans.woff2') format('woff2 supports variations'),
+    url('/fonts/MonaSans.woff2') format('woff2-variations');
 }
 
 a {
@@ -28,14 +24,19 @@ a:hover {
 banner {
   display: flex;
   justify-content: center;
-  font-family: 'Mona Sans Light';
   font-size: 1.75em;
+  /* Light */
+  font-weight: 300;
+  font-stretch: 100%;
 }
 
 body {
   font-family: 'Mona Sans', verdana, sans-serif;
   padding: 1em;
   font-size: 4vw;
+  /* Regular */
+  font-weight: 400;
+  font-stretch: 100%;
 }
 
 header {
