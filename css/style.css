@@ -1,320 +1,154 @@
-
-/*
- * The flex-y portions of this styling have been adapted from
- * https://www.bitovi.com/blog/use-flexbox-to-create-a-sticky-header-and-sidebar-with-flexible-content
- */
-* {
-    -webkit-font-smoothing: antialiased; /* Thins out the font nicely. */
+/* https://github.com/github/mona-sans#styles */
+@font-face {
+  font-family: 'Mona Sans';
+  font-display: swap;
+  font-weight: 200 900;
+  font-stretch: 75% 125%;
+  src:
+    url('/fonts/MonaSans.woff2') format('woff2 supports variations'),
+    url('/fonts/MonaSans.woff2') format('woff2-variations');
 }
 
 a {
-  color: #227ce8;
+  text-decoration: none;
+  /* Contrasts 4.6:1 against white and 4.56:1 against black. */
+  color: #3278BD;
 }
 
-a:link {
-    text-decoration: none;
+a:hover {
+  text-decoration: underline;
 }
 
-a:visited {
-    text-decoration: none;
+#archive-attention {
+  font-size: .75em;
 }
 
-.banner {
-    height: 250px;
-    background-size: cover;
-    padding-bottom: 20px;
+banner {
+  display: flex;
+  justify-content: center;
+  font-size: 1.75em;
+  /* Light */
+  font-weight: 300;
+  font-stretch: 100%;
 }
 
-/* Ensure our images cover the container and scale nicely. */
-.banner img {
-    max-height: 100%;
-    width: 100%;
-    object-fit: cover;
+.bg-blue {
+  background-color: lightblue;
 }
 
-/*
- * Borrowed blockquote stylin from
- * https://css-tricks.com/snippets/css/simple-and-nice-blockquote-styling/
- */
-blockquote {
-  background: #f9f9f9;
-  border-left: 10px solid #ccc;
-  font-size: 14px;
-  margin: 1.5em 10px;
-  padding: 0.5em 10px;
+.bg-green {
+  background-color: lightgreen;
 }
-blockquote p {
-  display: inline; 
+
+.bg-red {
+  background-color: pink;
 }
 
 body {
-    font-family: verdana;
-    height: 100%;   
-    margin: 8px;
+  font-family: 'Mona Sans', verdana, sans-serif;
+  padding: 1em;
+  font-size: 4vw;
+  /* Regular */
+  font-weight: 400;
+  font-stretch: 100%;
 }
 
-.byline {
-    color: #777;
-    font-size: 15px;
+header {
+  box-sizing: border-box
+  display: flex;
+  font-size: .75em;
+  justify-content: center;
 }
 
-.caption {
-    font-size: 13px;
-    font-weight: bold;
-    margin-top: 0px;
-    margin-bottom: 8px;
+figcaption {
+  padding-top: .5em;
 }
 
-.content p code {
-  font-family: monospace;
-  background-color: #eeeeee;
-  padding: 2px 3px;
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: .5em;
 }
 
-.column {
-    height: 100%;  /*allows both columns to span the full height of the browser window*/
-    display: flex;
-    flex-direction: column;  /*places the left and right headers above the bottom content*/
-    padding: 10px;
+figure img {
+  width: 32;
 }
 
-.container {
-    overflow: hidden; /*makes the container non-scrollable (we will add scrolling to the menu and main content containers)*/
-    display: flex; /*enables flex content for its children*/
-    padding: 8px;
-    margin-top: 30px;
+footer {
+  display: flex;
+  font-size: .75em;
+  justify-content: space-around;
 }
 
-.container .menu ol {
-    font-size: 12px;
-    list-style-type: none;
-    padding-left: 10px;
+mark {
+  border-radius: 10px;
+  /* Just enough distance to separate the box but not too far from non-marked height.*/
+  line-height: 1.3;
+  padding: 0 2px;
 }
 
-.container .menu li {
-    padding-top: 3px;
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  padding-inline-start: 0;
 }
 
-#right .content .menu ul {
-    margin: 0px;
+#posts ul {
+  list-style-type: none;
+  padding-inline-start: 0;
 }
 
-.content .menu li {
-	margin-top: 10px;
-	padding: 7px 5px;
-    font-size: 18px;
+#posts ul li {
+  padding-top: .5em;
 }
 
-.content .menu p {
-    margin: 0px;
-	padding: 7px 5px;
+#tags ul {
+  list-style-type: none;
+  padding-inline-start: 0;
 }
 
-.content .menu li span {
-	float: right;
-    font-size: 12px;
-    color: #999
+#tags ul h3 {
+  text-align: center;
 }
 
-.copyright {
-    font-style: italic;
+time {
+  display: block;
+  font-size: .5em;
 }
 
-/* A simple, elegant divider. */
-.divider {
-    border: 1px;
-    border-bottom-style: solid;
-    border-top-style: solid;
-    font-size: 12px;
-    margin-left: 15px;
-    margin-right: 15px;
-    padding-left: 5px;
-    padding-right: 5px;
-    text-align: right;
+.underline {
+  text-decoration: underline;
 }
 
-.footer {
-    margin-top: 25px;
+section {
+  display: flex;
+  justify-content: center;
 }
 
-.footer .info {
-    display: inline-block;
-    text-align: center;
-    padding: 0 10px;
+@media (orientation: landscape) {
+  body {
+    font-size: 3vw;
+    max-width: 75vw;
+    margin: 0 auto;
+  }
 }
 
-.footer .info div {
-    margin-top: 20px;
-    font-size: 12px;
+@media (orientation: landscape) and (min-width: 960px) {
+  body {
+    font-size: 2.5vw;
+  }
 }
 
-.footnote {
-    font-size: 12px;
+@media (orientation: landscape) and (min-width: 1080px) {
+  body {
+    font-size: 2vw;
+  }
 }
 
-.header {
-    padding: 10px;
-    margin-left: 15px;
-    margin-right: 15px;
-    /*text-align: center;*/
+@media (orientation: landscape) and (min-width: 1200px) {
+  body {
+    font-size: 1.75vw;
+  }
 }
-
-.header .menu li {
-	display: inline;
-    padding-right: 15px;
-}
-
-.header .menu li a {
-	text-transform: uppercase;
-}
-
-h1, h2, h3, h4 {
-    margin-top: 18px;
-    margin-bottom: 5px;
-    font-weight: normal;
-}
-
-h1 {
-    font-size: 25px;
-}
-
-h2 {
-    font-size: 20px;
-}
-
-h3 {
-    font-size: 17px;
-}
-
-h4 {
-    font-size: 14px;
-}
-
-html {
-    height: 100%;
-}
-
-img {
-    max-width: 100%;
-}
-
-#left {
-    flex-shrink: 0;  /*makes sure that content is not cut off in a smaller browser window*/
-}
-
-#left.column {
-    width: 25%;
-    padding-left: 5px;
-    /*list-style-type: none;*/
-    margin: 0px;
-}
-
-.logo {
-    float: left;
-    margin: 8px;
-}
-
-.menu {
-    margin-top: 5px; /* Ensure the top of the menu doesn't look clipped. */
-}
-
-.menu, .content {
-    flex-grow: 1;  /*ensures that the container will take up the full height of the parent container*/
-    overflow-y: auto;  /*adds scroll to this container*/
-}
-
-.menu a:hover {
-    /*background: lightgrey;*/
-    background: none;
-}
-
-.menu a:link {
-    text-decoration: none;
-}
-
-.menu a:visited {
-    text-decoration: none;
-}
-
-.menu ul {
-	list-style-type: none;
-	padding-left: 0;
-}
-
-.header .menu ul {
-    display: block;
-    list-style-type: none;
-}
-
-p {
-    margin-top: 16px;
-    margin-bottom: 16px;
-    font-size: 14px;
-}
-
-/* Give presentation images a simple border so they stand out.
- * Great for light-colored images.
- */
-/* Jekyll will nest the image inside a paragraph element. */
-.presentation p img {
-    border: 2px solid;
-    /* Some images are large. Basic attempt to size them a bit smaller. */
-    width: 90%;
-}
-
-.quote {
-    font-style: italic;
-}
-
-#right.column {
-    width: 60%;
-}
-
-span.date {
-    text-transform: uppercase;
-}
-
-table {
-    border-collapse: collapse;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    padding-left: 8px;
-}
-
-td {
-    padding: 5px;
-    vertical-align: top;
-    border-bottom: 1px solid;
-}
-
-/* Making a row clickable requires some JS that I don't believe is
- * necessary at the moment. Should we decide we want that sort of
- * functionality, let's uncomment this styling so that it matches
- * the design of the left-hand menu.
-tr:hover {
-    background-color: lightgrey;
-}
- */
-
-.title {
-    text-align: left;
-    font-size: 35px;
-}
-
-.title a:hover {
-    background: none;
-}
-
-ul {
-    font-size: 14px;
-}
-
-ul.footnote, ul.reference {
-    list-style-type: none;
-}
-
-ul.footnote li, ul.reference li {
-    padding-top: 5px;
-    padding-bottom: 10px;
-}
-
