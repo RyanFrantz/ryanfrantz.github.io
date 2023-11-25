@@ -72,10 +72,12 @@ footer {
 nav ul {
   display: flex;
   justify-content: space-around;
+  list-style-type: none;
   padding-inline-start: 0;
 }
 
 #posts ul {
+  list-style-type: none;
   padding-inline-start: 0;
 }
 
@@ -91,10 +93,6 @@ time {
 section {
   display: flex;
   justify-content: center;
-}
-
-ul {
-  list-style-type: none;
 }
 
 @media (orientation: landscape) {

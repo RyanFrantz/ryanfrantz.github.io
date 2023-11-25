@@ -1,14 +1,13 @@
 ---
 layout: default
-banner_image: "/images/brooklyn_deer.png"
-display_toc: true
 ---
 
-<a name="title"></a>
-<div class="title"></div>
- <div class="byline">
-     {{ page.date | date: "%B %e, %Y" }}
+<div class="title">
+  {{ page.title }}
 </div>
+<time datetime="{{ page.date | date: "%Y-%m-%d" }}">
+  {{ page.date | date: "%e %b %Y" }}
+</time>
 
 {{ content }}
 
