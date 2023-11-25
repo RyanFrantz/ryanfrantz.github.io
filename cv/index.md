@@ -1,13 +1,19 @@
+---
+layout: default
+---
+
 [ryan+cv@ryanfrantz.com](mailto:ryan+cv@ryanfrantz.com)
 
 I am a product-oriented engineering manager. My multifaceted career has been
 driven by the desire to close the distance between my engineering work and the
-customer experience. From my time as a sysadmin starting 25 years ago, during my
-web operations experience at e-commerce and fintech companies, while designing
-systems to operate reliably at scale, through crafting engineering teams and
-processes to deliver software and systems I have learned to combine people
-management, knowledge of scalable infrastructure, and product development into
-one clear mission statement: engineering _is_ the product.
+customer experience.
+
+From my time as a sysadmin starting 25 years ago, during my web operations
+experience at e-commerce and fintech companies, while designing systems to
+operate reliably at scale, through crafting engineering teams and processes to
+deliver software and systems I have learned to combine people management,
+knowledge of scalable infrastructure, and product development into one clear
+mission statement: engineering _is_ the product.
 
 Whether shepherding a complete rewrite of the frontend and backend for a
 1-million user (MAU) web consumer app, designing a new SaaS product’s
