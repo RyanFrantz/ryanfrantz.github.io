@@ -30,24 +30,26 @@ banner {
 
 body {
   font-family: 'Mona Sans', verdana, sans-serif;
-  padding: 1rem;
-  font-size: 3.5vw;
+  padding: 1em;
+  font-size: 4vw;
 }
 
 header {
+  box-sizing: border-box
   display: flex;
+  font-size: 3.5vw;
   justify-content: center;
 }
 
 figcaption {
-  padding-top: .5rem;
+  padding-top: .5em;
 }
 
 figure {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: .5rem;
+  margin: .5em;
 }
 
 figure img {
@@ -56,17 +58,14 @@ figure img {
 
 footer {
   display: flex;
-  justify-content: center;
+  font-size: 3.5vw;
+  justify-content: space-around;
 }
 
 nav ul {
   display: flex;
   justify-content: space-around;
   padding-inline-start: 0;
-}
-
-nav ul li {
-  padding: .6rem;
 }
 
 #posts ul {
@@ -79,7 +78,7 @@ nav ul li {
 
 time {
   display: block;
-  font-size: .75rem;
+  font-size: .75em;
 }
 
 section {
