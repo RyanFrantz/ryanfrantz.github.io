@@ -25,13 +25,13 @@ banner {
   display: flex;
   justify-content: center;
   font-family: 'Mona Sans Light';
-  font-size: 2.0rem;
+  font-size: 1.75em;
 }
 
 body {
   font-family: 'Mona Sans', verdana, sans-serif;
   padding: 1rem;
-  font-size: 1.5rem;
+  font-size: 3.5vw;
 }
 
 header {
@@ -62,14 +62,19 @@ footer {
 nav ul {
   display: flex;
   justify-content: space-around;
+  padding-inline-start: 0;
 }
 
 nav ul li {
   padding: .6rem;
 }
 
+#posts ul {
+  padding-inline-start: 0;
+}
+
 #posts ul li {
-  padding-top: .5rem;
+  padding-top: .5em;
 }
 
 time {
