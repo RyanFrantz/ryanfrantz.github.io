@@ -1,7 +1,6 @@
 ---
 layout: default
 title: "Posts"
-banner_image: "/images/brooklyn_deer.png"
 ---
 
 <section id="posts">

@@ -6,10 +6,10 @@
 }
 
 @font-face {
-  font-family: 'Mona Sans Black';
+  font-family: 'Mona Sans Light';
   src:
-    url('/fonts/MonaSans-Black.woff2') format('woff2 supports variations'),
-    url('/fonts/MonaSans-Black.woff2') format('woff2-variations');
+    url('/fonts/MonaSans-Light.woff2') format('woff2 supports variations'),
+    url('/fonts/MonaSans-Light.woff2') format('woff2-variations');
 }
 
 a {
@@ -24,12 +24,14 @@ a:hover {
 banner {
   display: flex;
   justify-content: center;
-  font-family: 'Mona Sans Black';
-  font-size: 1.5rem;
+  font-family: 'Mona Sans Light';
+  font-size: 2.0rem;
 }
 
 body {
   font-family: 'Mona Sans', verdana, sans-serif;
+  padding: 1rem;
+  font-size: 1.5rem;
 }
 
 header {
