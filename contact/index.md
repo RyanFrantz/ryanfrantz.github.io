@@ -9,12 +9,22 @@ I am a product-oriented engineering manager. My multifaceted career has been
 driven by the desire to close the distance between my engineering work and the
 customer experience.
 
-From my time as a sysadmin starting 25 years ago, during my web operations
-experience at e-commerce and fintech companies, while designing systems to
-operate reliably at scale, through crafting engineering teams and processes to
-deliver software and systems I have learned to combine people management,
+From my time as a sysadmin starting 25 years ago, during my
+<mark class="bg-blue">
+web operations experience at e-commerce and fintech companies
+</mark>
+, while
+<mark class="bg-red">designing systems to operate reliably at scale</mark>
+, through
+<mark class="bg-green">
+shaping engineering teams and processes
+</mark>
+to deliver software and systems I have learned to combine people management,
 knowledge of scalable infrastructure, and product development into one clear
-mission statement: engineering is the product.
+mission statement:
+<span class="underline">
+engineering is the product.
+</span>
 
 My contributions have included:
 <ul>
