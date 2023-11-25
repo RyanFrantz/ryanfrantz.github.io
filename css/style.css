@@ -1,3 +1,4 @@
+/* https://github.com/github/mona-sans#styles */
 @font-face {
   font-family: 'Mona Sans';
   font-display: swap;
@@ -10,7 +11,8 @@
 
 a {
   text-decoration: none;
-  color: blue;
+  /* Contrasts 4.6:1 against white and 4.56:1 against black. */
+  color: #3278BD;
 }
 
 a:hover {
