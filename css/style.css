@@ -53,13 +53,6 @@ body {
   font-stretch: 100%;
 }
 
-header {
-  box-sizing: border-box
-  display: flex;
-  font-size: .75em;
-  justify-content: center;
-}
-
 figcaption {
   padding-top: .5em;
 }
@@ -79,6 +72,19 @@ footer {
   display: flex;
   font-size: .75em;
   justify-content: space-around;
+}
+
+header {
+  box-sizing: border-box
+  display: flex;
+  font-size: .75em;
+  justify-content: center;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
 }
 
 mark {
