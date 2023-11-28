@@ -7,17 +7,19 @@ status: publish
 published: true
 ---
 
-<blockquote class="quote">
-Knowledge and error flow from the same mental sources; only success can tell
-one from the other.<br>
-<br>
-Ernst Mach
+<blockquote>
+  Knowledge and error flow from the same mental sources; only success can tell
+  one from the other.
+  <footer>
+    Ernst Mach
+  </footer>
 </blockquote>
 
-<blockquote class="quote">
-How did this ever work?!<br><br>
-
-Every person that has ever attempted to write software.
+<blockquote>
+  How did this ever work?!
+  <footer>
+     Every person that has ever attempted to write software.
+  </footer>
 </blockquote>
 
 The complexity of our systems means they are not easily decomposable; it is rare
@@ -123,7 +125,7 @@ describe the dynamics of complex systems as "messy details" that "operators
 navigate and negotiate" to "create success." They go on to inform us why it is
 difficult to get at the reasons for that success:
 
-<blockquote class="quote">
+<blockquote>
 [A] basic difficulty arises and is captured by the law of fluency in
 cognitive systems: “well adapted cognitive work occurs with a facility that
 belies the difficulty of the demands resolved and the dilemmas balanced” .
@@ -143,24 +145,30 @@ understand what "normal" is for us. We must study our systems and organizations
 from the Safety-II perspective: seeking to understand the totality of what it
 means to operate.
 
-<blockquote class="quote">
+<blockquote
+  cite="http://www.safetydifferently.com/what-safety-ii-isnt/"
+>
 Safety-II is about all possible outcomes: involving normal, everyday, routine
 performance; exceptionally good performance: and near-misses accidents and
 disasters. Our traditional approach, Safety-I, has largely limited itself to the
 latter – the accidents (actual or potential) at the tail end of the distribution.
 Safety-II is about the whole distribution, and its profile.<br>
-<br>
-Steven Shorrock, http://www.safetydifferently.com/what-safety-ii-isnt/
+<footer>
+Steven Shorrock, <cite>http://www.safetydifferently.com/what-safety-ii-isnt/</cite>
+</footer>
 </blockquote>
 
 Safety II and Safety-I are not mutually exclusive. Indeed, as we endeavor to
 discover the numerous ways that a system works successfully, we are bound to
 uncover even more failure scenarios:
 
-<blockquote class="quote">
+<blockquote
+  cite="https://how.complexsystems.fail/#4"
+>
 Complex systems contain changing mixtures of failures latent within them.<br>
-<br>
-Dr. Richard Cook, How Complex Systems Fail
+<footer>
+Dr. Richard Cook, <cite>How Complex Systems Fail</cite>
+</footer>
 </blockquote>
 
 How do our people adapt to those scenarios? Cook continues by stating that our
@@ -209,7 +217,16 @@ an everyday part of our work.
 ## Footnotes
 
 <a name="fn_1"></a>
-[1] "[N]ew view stories... tend[] to end up in the world, in the system in which
-people work[], systems which people made work in the first place."
+[1] 
+<blockquote
+  cite="http://www.humanfactors.lth.se/fileadmin/lusa/Sidney_Dekker/articles/2007/SafetyScienceMonitor.pdf"
+>
+[N]ew view stories... tend[] to end up in the world, in the system in which
+people work[], systems which people made work in the first place.
+<footer>
 Siegenthaler and Laursen,
-[Six stages to the new view of human error](http://www.humanfactors.lth.se/fileadmin/lusa/Sidney_Dekker/articles/2007/SafetyScienceMonitor.pdf)
+<cite>
+<a href="http://www.humanfactors.lth.se/fileadmin/lusa/Sidney_Dekker/articles/2007/SafetyScienceMonitor.pdf">Six stages to the new view of human error</a>
+</cite>
+</footer>
+</blockquote>
