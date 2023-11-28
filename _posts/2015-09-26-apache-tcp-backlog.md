@@ -60,9 +60,9 @@ I had enough. I started digging into kernel source this week to find the damned
 thing. The more I dug, the more I found traces. First, I landed a direct hit in
 `include/net/sock.h` with the following comment: [[3]](#references)
 
-{% highlight c %}
-*        @sk_ack_backlog: current listen backlog
-{% endhighlight %}
+<pre>
+* @sk_ack_backlog: current listen backlog
+</pre>
 
 **I'd caught the scent and it wafted, nay stang, with an impudence that dared
 me further. Heady with anticipation I trudged further into the kernel.**
@@ -72,19 +72,19 @@ information in a struct called `tcp_info`. When called, if a socket is in the
 `LISTEN` state, it assigns the value of the listen backlog to a property called
 `tcpi_unacked`: [[4]](#references)
 
-{% highlight c %}
-    if (sk->sk_state == TCP_LISTEN) {
-        info->tcpi_unacked = sk->sk_ack_backlog;
-{% endhighlight %}
+<pre>
+  if (sk->sk_state == TCP_LISTEN) {
+    info->tcpi_unacked = sk->sk_ack_backlog;
+</pre>
 
 Hoping that `ss` could finally be of some use again here (I never gave up on
 this workhorse) I dug into its source (from iproute2-3.10) and found that it
 does, in fact poll sockets for that same struct and will display the backlog:
 
-{% highlight c %}
-     if (info->tcpi_unacked)
-         printf(" unacked:%u", info->tcpi_unacked);
-{% endhighlight %}
+<pre>
+  if (info->tcpi_unacked)
+    printf(" unacked:%u", info->tcpi_unacked);
+</pre>
 
 See, I never found this before because it made sense to me that any variables
 tracking a listen backlog would have the string '**backlog**' *somewhere* in their
@@ -96,12 +96,12 @@ overloaded.
 Now that we know backlogged connections are defined as **unacked**, we can call
 on `ss` to determine if the HTTP socket is backing up:
 
-```
+<pre>
 [root@apache01:~] $ ss -lti '( sport = :http )'
-State      Recv-Q Send-Q                                                       Local Address:Port                                                           Peer Address:Port
-LISTEN     223    511                                                                      *:http                                                                      *:*
-          rto:1000 mss:536 cwnd:10 unacked:223
-```
+State      Recv-Q Send-Q   Local Address:Port    Peer Address:Port
+LISTEN     223    511                  *:http               *:*
+         rto:1000 mss:536 cwnd:10 unacked:223
+</pre>
 
 The output above was output when `siege`ing Apache.
 
