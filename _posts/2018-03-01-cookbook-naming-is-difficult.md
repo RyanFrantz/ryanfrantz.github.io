@@ -136,10 +136,13 @@ end
 # errors [b]. Hopefully this does not cause unexpected issues in the future. At a
 # minimum, it looks like the upstream 'nrpe' cookbook [c] is stale/unmaintained
 # just like our internal version ;)
-# [a] https://github.com/chef/chef-dk/blob/aa5f0272633559ccbf61f7046eff472d92ccb6db/lib/chef-dk/policyfile_compiler.rb#L422-L435
+#
+# [a] https://github.com/chef/chef-dk/blob/aa5f02/lib/chef-dk/policyfile_compiler.rb#L422-L435
 # [b]
 #  Error: Failed to generate Policyfile.lock
-#  Reason: (ChefDK::CookbookSourceConflict) Source supermarket(https://supermarket.chef.io) and supermarket(https://supermarket.example.com) contain conflicting cookbooks:
+#  Reason: (ChefDK::CookbookSourceConflict)
+#  Source supermarket(https://supermarket.chef.io) and
+#  supermarket(https://supermarket.example.com) contain conflicting cookbooks:
 #  - nrpe
 #
 #  You can set a preferred source to resolve this issue with code like:
@@ -147,7 +150,7 @@ end
 #  default_source :supermarket, "https://supermarket.chef.io" do |s|
 #    s.preferred_for "nrpe"
 #  end
-# [c] https://supermarket.chef.io/cookbooks/nrpe/versions/1.0.0
+# [c] supermarket.chef.io/cookbooks/nrpe
 </pre>
 
 ## Footnotes
