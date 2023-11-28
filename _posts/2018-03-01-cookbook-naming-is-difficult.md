@@ -25,11 +25,11 @@ There is also an upstream (public Chef Supermarket) `nrpe` cookbook. This wasn't
 an issue for us as we could define a preferred source for our cookbook in a given
 `Policyfile.rb`, like so:
 
-```
+<pre>
 default_source :supermarket, 'https://supermarket.example.com' do |src|
   src.preferred_for 'nrpe'
 end
-```
+</pre>
 
 During the policy compilation phase of a `chef update` run, the `nrpe` cookbook
 would get sourced internally and all was well.
@@ -52,7 +52,7 @@ the internal `nrpe` cookbook.
 One day, a coworker was updating a policy file, adding the newer `nrpe-client`
 cookbook and removing the `nrpe` reference. `chef update` complained with:
 
-```
+<pre>
 Error: Failed to generate Policyfile.lock
 Reason: (ChefDK::CookbookSourceConflict) Source supermarket(https://supermarket.chef.io) and supermarket(https://supermarket.example.com) contain conflicting cookbooks:
 - nrpe
@@ -62,7 +62,7 @@ You can set a preferred source to resolve this issue with code like:
 default_source :supermarket, "https://supermarket.chef.io" do |s|
   s.preferred_for "nrpe"
 end
-```
+</pre>
 
 No biggie. We decided to double-check for any version constraints that might
 reference an older cookbook that had once depended on `nrpe`. We found none.
@@ -116,7 +116,7 @@ However, future engineers may encounter this issue and it's important they have
 the necessary context to address this. While this article should be useful, I'll
 be updating any `Policyfile.rb` I come across with the following story:
 
-```
+<pre>
 default_source :community
 default_source :supermarket, 'https://supermarket.example.com' do |s|
   s.preferred_for 'nrpe-client',
@@ -148,7 +148,7 @@ end
 #    s.preferred_for "nrpe"
 #  end
 # [c] https://supermarket.chef.io/cookbooks/nrpe/versions/1.0.0
-```
+</pre>
 
 ## Footnotes
 
