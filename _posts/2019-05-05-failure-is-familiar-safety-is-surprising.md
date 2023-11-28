@@ -64,7 +64,7 @@ several hundred known and defined ways. Those definitions are assigned a unique
 number that may be provided as an exit status. See some examples in the snippet
 below:
 
-```
+<pre>
 #define    EPERM         1    /* Operation not permitted */
 #define    ENOENT        2    /* No such file or directory */
 ...
@@ -79,7 +79,7 @@ below:
  * implementations should refrain from returning -ENOSYS.
  */
 #define    ENOSYS        38    /* Invalid system call number */
-```
+</pre>
 
 Note the fine-grained (possibly esoteric) errors like `Not a typewriter` and
 cases where specifying an error, `ENOSYS`, may be invalid (an error within an
