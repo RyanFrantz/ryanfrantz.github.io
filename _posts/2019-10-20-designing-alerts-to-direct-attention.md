@@ -63,7 +63,7 @@ To facilitate this topic, though, let's agree to the definition of **directed
 attention** offered by Woods in "The Alarm Problem and Directed Attention in
 Dynamic Fault Management":
 
-<blockquote class="quote">
+<blockquote>
 [A] cognitive function that inherently involves the coordination of multiple
 agents through the use of external media.
 </blockquote>
@@ -100,7 +100,7 @@ we have it. For this consideration we'll focus on four of these functions:
 
 ### Shift
 
-<blockquote class="quote">
+<blockquote>
 The ability to move freely from one situation to another and to think flexibly
 in order to respond appropriately to the situation.
 </blockquote>
@@ -122,7 +122,7 @@ signal warrants a shift in attention**." (Woods; emphasis mine)
 
 ### Initiation
 
-<blockquote class="quote">
+<blockquote>
 The ability to begin a task or activity and to independently generate ideas,
 responses, or problem-solving strategies.
 </blockquote>
@@ -136,7 +136,7 @@ possible avenues that time is wasted on ineffective action.
 
 ### Working Memory
 
-<blockquote class="quote">
+<blockquote>
 The capacity to hold information in mind for the purpose of completing a task.
 </blockquote>
 
@@ -150,7 +150,7 @@ that process as efficient as possible by including relevant information.
 
 ### Planning/Organization
 
-<blockquote class="quote">
+<blockquote>
 The ability to manage current and future-oriented task demands.
 </blockquote>
 
@@ -229,16 +229,25 @@ complexity.
 <a name="attention_defs"></a>
 [1] There are several definitions for "attention" including, at least:
 
-<blockquote class="quote">
-The act or state of applying the mind to something - Merriam-Webster
+<blockquote>
+The act or state of applying the mind to something
+<footer>
+Merriam-Webster
+</footer>
 </blockquote>
 
-<blockquote class="quote">
+<blockquote>
 The concentration of awareness on some phenomenon to the exclusion of other
-stimuli - Encyclopedia Britannica
+stimuli
+<footer>
+Encyclopedia Britannica
+</footer>
 </blockquote>
 
-<blockquote class="quote">
+<blockquote>
 The behavioral and cognitive process of selectively concentrating on a discrete
-aspect of information... while ignoring other perceivable information. - Wikipedia
+aspect of information... while ignoring other perceivable information.
+<footer>
+Wikipedia
+</footer>
 </blockquote>

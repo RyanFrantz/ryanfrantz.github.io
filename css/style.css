@@ -44,6 +44,19 @@ banner {
   background-color: pink;
 }
 
+blockquote {
+  margin: .5em;
+  font-size: .75em;
+  background-color: #eceff1;
+  border-radius: 10px;
+  padding: 8px 12px;
+}
+
+blockquote footer {
+  display: block; /* Override footer styling below. */
+  margin-top: 5px;
+}
+
 body {
   font-family: 'Mona Sans', verdana, sans-serif;
   padding: 1em;
@@ -51,6 +64,10 @@ body {
   /* Regular */
   font-weight: 400;
   font-stretch: 100%;
+}
+
+code {
+  font-size: .75em;
 }
 
 figcaption {
@@ -108,6 +125,15 @@ nav ul {
 
 #posts ul li {
   padding-top: .5em;
+}
+
+pre {
+  /*background-color: #f5f5f5;*/
+  background-color: #eceff1;
+  border-radius: 10px;
+  font-size: .5em;
+  padding: 8px 12px;
+  white-space: pre-wrap;
 }
 
 #tags ul {
