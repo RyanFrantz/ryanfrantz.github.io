@@ -7,11 +7,12 @@ status: publish
 published: true
 ---
 
-<blockquote class="quote">
+<blockquote>
 I love America more than any other country in this world, and, exactly for this
 reason, I insist on the right to criticize her perpetually.<br>
-<br>
-James Baldwin, in <b>Notes of a Native Son</b>
+<footer>
+James Baldwin, <cite>Notes of a Native Son</cite>
+</footer>
 </blockquote>
 
 ## If You're White...

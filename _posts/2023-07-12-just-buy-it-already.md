@@ -41,8 +41,11 @@ low-cost (free!) ways. For my time and money, that's where I'd start. Every time
 
 ## It Can't be _That_ Bad!
 
-<blockquote class="quote">
-Familiarity breeds contempt. - Aesop
+<blockquote>
+Familiarity breeds contempt.
+<footer>
+Aesop
+</footer>
 </blockquote>
 
 Listen, friend: just because you _can_ do something, does not mean that you _should_.

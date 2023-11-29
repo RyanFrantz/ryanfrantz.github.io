@@ -7,12 +7,14 @@ status: publish
 published: true
 ---
 
-<blockquote class="quote">
-There were incidents and accidents,<br>
+<blockquote>
+There were incidents and accidents,
 
-There were hints and allegations.<br><br>
+There were hints and allegations.
 
-Paul Simon, "You Can Call Me Al"
+<footer>
+Paul Simon, <cite>You Can Call Me Al</cite>
+</footer>
 </blockquote>
 
 ## Control
@@ -33,13 +35,17 @@ existing outside our systems, with absolute ability to manipulate all inputs and
 outputs. It requires omniscience and omnipotence. But, today, at least, such
 control is impossible because we are neither all-knowing nor all-powerful:
 
-<blockquote class="quote">
+<blockquote>
 Information technology anomalies are frequently fundamental surprises. This is
 due to the difficulty in maintaining adequate mental models of what is below
 the line, understanding how this connects to what is above the line -- crossing
-the line, as software systems grow in complexity and continuously change.<br>
-<br>
-From the Stella Report, section 3.4.2, subsection <a href="https://snafucatchers.github.io/#3_4_2_Surprise">Surprise</a>
+the line, as software systems grow in complexity and continuously change.
+<footer>
+The Stella Report,
+<cite>
+section 3.4.2, subsection <a href="https://snafucatchers.github.io/#3_4_2_Surprise">Surprise</a>
+</cite>
+</footer>
 </blockquote>
 
 Further, this idea of control ignores that we are, in fact
@@ -96,15 +102,16 @@ and discussions that are part of that review.**
 Why, then, do folks continue to believe in, and search for, a root cause? I
 think Hollnagel helps to clarify the attraction of a root cause:
 
-<blockquote class="quote">
+<blockquote>
 The qualities of a 'good' cause are (1) that it conforms to the current norms
 for explanations, (2) that it can be associated unequivocally with a known
 structure, function,  or activity (involving people, components, procedures,
 etc) of the system where the accident happened, so (3) that it is possible to do
 something about it with an acceptable or affordable investment of time and
 effort.
-<br><br>
-Erik Hollnagel, "The ETTO Principle"
+<footer>
+Erik Hollnagel, <cite>The ETTO Principle</cite>
+</footer>
 </blockquote>
 
 To contextualize his points I would say that the term "root cause" persists as an
@@ -137,11 +144,12 @@ that **none of them are a root cause** and an **incident can only occur when
 multiple factors occur at the same time**. In "How Complex Systems Fail"
 Richard Cook states this simply as:
 
-<blockquote class="quote">
+<blockquote>
 Each of these [factors] is necessary to cause catastrophe but only the
-combination is sufficient to permit failure."<br>
-<br>
-Richard I. Cook, "How Complex Systems Fail"
+combination is sufficient to permit failure."
+<footer>
+Richard I. Cook, <cite>How Complex Systems Fail</cite>
+</footer>
 </blockquote>
 
 The "root cause" is probably the most persistent agent of control because it
@@ -149,10 +157,11 @@ furthers the belief that if we can just find that thing that caused us to lose
 control, we can prevent it in the future.
 ### Blame
 
-<blockquote class="quote">
-Blame is simply the discharging of pain and discomfort.<br>
-<br>
-Dr. Brene Brown, "Daring Greatly"
+<blockquote>
+Blame is simply the discharging of pain and discomfort.
+<footer>
+Dr. Brene Brown, <cite>Daring Greatly</cite>
+</footer>
 </blockquote>
 
 An insidious agent of control is blame. What could be easier than pointing the
@@ -185,10 +194,11 @@ targets of blame. This stunts our ability to learn from our experts.
 
 ### Hindsight
 
-<blockquote class="quote">
-Hindsight bias makes surprises vanish.<br>
-<br>
+<blockquote>
+Hindsight bias makes surprises vanish.
+<footer>
 Daniel Kahneman
+</footer>
 </blockquote>
 
 In other words, knowing the outcome gives us confidence we know how to resolve
@@ -206,11 +216,12 @@ system changes with us moving along with it. And the experiences of the people
 interacting with the system differ in large degrees often because they do not
 (likely cannot) share the same mental model of it.
 
-<blockquote class="quote">
+<blockquote>
 "The surprise event challenges the model and triggers learning and model
-revision..."<br>
-<br>
-Gary Klein, "Sources of Power"
+revision..."
+<footer>
+Gary Klein, <cite>Sources of Power</cite>
+</footer>
 </blockquote>
 
 The quote above, taken from "Sources of Power" is related to how experts make
@@ -228,20 +239,23 @@ If we put in the effort to develop the practice of facilitation, we will learn
 there are a number of approaches we should avoid so that we can collectively
 develop our expertise. After all:
 
-<blockquote class="quote">
+<blockquote>
 Recognizing hazard and successfully manipulating system operations to remain
 inside the tolerable performance boundaries requires intimate contact with
-failure.<br><br>
-Richard I. Cook, "How Complex Systems Fail"
+failure.
+<footer>
+Richard I. Cook, <cite>How Complex Systems Fail</cite>
+</footer>
 </blockquote>
 
 And, more importantly, recognizing that we are an integral part of our systems
 and the larger environment may yet lead us to a different ideal than control:
 mastery.
 
-<blockquote class="quote">
+<blockquote>
 [M]astery has less to do with pushing leverage points than it does with
 strategically, profoundly, madly, letting go and dancing with the system."
-<br><br>
-Donella H. Meadows, "Thinking in Systems"
+<footer>
+Donella H. Meadows, <cite>Thinking in Systems</cite>
+</footer>
 </blockquote>
