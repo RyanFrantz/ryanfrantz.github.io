@@ -17,6 +17,6 @@ title: "Posts"
 </section>
 <section id="archive-attention">
   <p>
-    For older posts, check out the <a href="/archive">archive</a>.
+    For older posts, <a href="/archive">check out the archive</a>.
   </p>
 </section>

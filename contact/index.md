@@ -3,7 +3,7 @@ layout: default
 title: "Contact"
 ---
 
-Find my CV [here](/cv).
+Read [my CV](/cv).
 
 I am a product-oriented engineering manager. My multifaceted career has been
 driven by the desire to close the distance between my engineering work and the

@@ -1,3 +1,20 @@
+/* Global variables */
+:root {
+  --bg-color: #ffffff;
+  --link-bg-color: #000080;
+  --link-hover-color: #ffffff;
+  --text-color: #000000;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #222;
+    --link-bg-color: lightgreen;
+    --link-hover-color: #000000;
+    --text-color: #ffffff;
+  }
+}
+
 /* https://github.com/github/mona-sans#styles */
 @font-face {
   font-family: 'Mona Sans';
@@ -10,13 +27,13 @@
 }
 
 a {
-  text-decoration: none;
   /* Contrasts 4.6:1 against white and 4.56:1 against black. */
-  color: #3278BD;
+  color: var(--text-color);
 }
 
-a:hover {
-  text-decoration: underline;
+a:hover, a:focus {
+  color: var(--link-hover-color);
+  background-color: var(--link-bg-color);
 }
 
 #archive-attention {
@@ -58,6 +75,8 @@ blockquote footer {
 }
 
 body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
   font-family: 'Mona Sans', verdana, sans-serif;
   padding: 1em;
   font-size: 4vw;
