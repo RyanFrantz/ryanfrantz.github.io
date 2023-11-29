@@ -1,6 +1,7 @@
 /* Global variables */
 :root {
   --bg-color: #ffffff;
+  --blockquote-color: #ffffff;
   --link-bg-color: #000080;
   --link-hover-color: #ffffff;
   --text-color: #000000;
@@ -9,6 +10,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --bg-color: #222;
+    --blockquote-color: #000000;
     --link-bg-color: lightgreen;
     --link-hover-color: #000000;
     --text-color: #ffffff;
@@ -27,7 +29,7 @@
 }
 
 a {
-  /* Contrasts 4.6:1 against white and 4.56:1 against black. */
+  /* All the contrast. */
   color: var(--text-color);
 }
 
@@ -62,6 +64,7 @@ banner {
 }
 
 blockquote {
+  color: var(--blockquote-color);
   margin: .5em;
   font-size: .75em;
   background-color: #eceff1;
