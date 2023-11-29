@@ -1,5 +1,6 @@
 ---
 layout: default
+title: "Curriculum vitae"
 ---
 
 [ryan+cv@ryanfrantz.com](mailto:ryan+cv@ryanfrantz.com)

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Posts"
+title: "ryanfrantz.com"
 ---
 
 <section id="posts">
