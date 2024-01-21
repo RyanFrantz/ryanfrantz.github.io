@@ -1,7 +1,6 @@
 /* Global variables */
 :root {
   --bg-color: #ffffff;
-  --blockquote-color: #ffffff;
   --link-bg-color: #000080;
   --link-hover-color: #ffffff;
   --text-color: #000000;
@@ -63,7 +62,7 @@ banner {
 }
 
 blockquote {
-  color: var(--blockquote-color);
+  color: #ffffff;
   margin: .5em;
   font-size: .75em;
   background-color: #eceff1;
