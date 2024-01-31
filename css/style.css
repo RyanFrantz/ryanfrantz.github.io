@@ -70,6 +70,10 @@ blockquote {
   padding: 8px 12px;
 }
 
+blockquote a {
+  color: #000000; /* Always black on a white background. */
+}
+
 blockquote footer {
   display: block; /* Override footer styling below. */
   margin-top: 5px;
