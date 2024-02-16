@@ -1,7 +1,7 @@
 ---
 layout: post
 title: nested stars
-tags:
+tags: [Poetry]
 type: post
 status: publish
 published: true
