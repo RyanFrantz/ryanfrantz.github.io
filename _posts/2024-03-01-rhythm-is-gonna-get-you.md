@@ -8,9 +8,13 @@ published: true
 ---
 
 > In bed
+> 
 > Throw the covers on your head
+> 
 > You pretend like you are dead
+> 
 > But I know it
+> 
 > The rhythm is gonna get you!
 >
 > Gloria Estefan, Rhythm is Gonna Get You
