@@ -3,7 +3,7 @@ permalink: /posts/:title.html
 #excerpt_separator: ""   # Workaround for http://blog.slaks.net/2013-08-09/jekyll-tag-was-never-closed
 
 name: Ryan Frantz
-url: http://www.ryanfrantz.com
+url: https://ryanfrantz.com
 description: Ryan Frantz
 twitter: Ryan_Frantz
 github: RyanFrantz
