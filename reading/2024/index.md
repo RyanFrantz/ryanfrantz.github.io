@@ -11,6 +11,7 @@ title: 2024 Reading
 - [Blood in the Machine: The Origins of the Rebellion Against Big Tech](https://bookshop.org/p/books/blood-in-the-machine-the-origins-of-the-rebellion-against-big-tech-brian-merchant/17824365)
 - [To Be Taught, If Fortunate](https://bookshop.org/p/books/to-be-taught-if-fortunate-becky-chambers/8021324)
 - [On Tyranny: Twenty Lessons from the Twentieth Century](https://bookshop.org/p/books/on-tyranny-twenty-lessons-from-the-twentieth-century-timothy-snyder/16520165)
+- [You Deserve a Tech Union](https://abookapart.com/products/you-deserve-a-tech-union)
 
 ## Acquired This Year (But Not Yet Read)
 
