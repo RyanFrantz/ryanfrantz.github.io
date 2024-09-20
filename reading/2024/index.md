@@ -12,6 +12,10 @@ title: 2024 Reading
 - [To Be Taught, If Fortunate](https://bookshop.org/p/books/to-be-taught-if-fortunate-becky-chambers/8021324)
 - [On Tyranny: Twenty Lessons from the Twentieth Century](https://bookshop.org/p/books/on-tyranny-twenty-lessons-from-the-twentieth-century-timothy-snyder/16520165)
 - [You Deserve a Tech Union](https://abookapart.com/products/you-deserve-a-tech-union)
+- [The Light Eaters: How the Unseen World of Plant Intelligence Offers a New Understanding of Life on Earth](https://bookshop.org/p/books/the-light-eaters-how-the-unseen-world-of-plant-intelligence-offers-a-new-understanding-of-life-on-earth-zoe-schlanger/20890522)
+- [Tracers in the Dark: The Global Hunt for the Crime Lords of Cryptocurrency](https://bookshop.org/p/books/tracers-in-the-dark-the-global-hunt-for-the-crime-lords-of-cryptocurrency-andy-greenberg/18264682)
+- [Dark Wire: The Incredible True Story of the Largest Sting Operation Ever](https://bookshop.org/p/books/dark-wire-the-incredible-true-story-of-the-largest-sting-operation-in-history-joseph-cox/20664624)
+- [Semiosis](https://bookshop.org/p/books/semiosis-sue-burke/7103931)
 
 ## Acquired This Year (But Not Yet Read)
 
@@ -20,9 +24,7 @@ title: 2024 Reading
 - [How Buildings Learn: What Happens After They're Built](https://bookshop.org/p/books/how-buildings-learn-what-happens-after-they-re-built-stewart-brand/9683207)
 - [The Smartest Guys in the Room: The Amazing Rise and Scandalous Fall of Enron](https://bookshop.org/p/books/the-smartest-guys-in-the-room-the-amazing-rise-and-scandalous-fall-of-enron-bethany-mclean/7678702)
 - [Context Changes Everything: How Constraints Create Coherence](https://bookshop.org/p/books/context-changes-everything-how-constraints-create-coherence/18880288)
-- [Tracers in the Dark: The Global Hunt for the Crime Lords of Cryptocurrency](https://bookshop.org/p/books/tracers-in-the-dark-the-global-hunt-for-the-crime-lords-of-cryptocurrency-andy-greenberg/18264682)
 - [Year of No Garbage: Recycling Lies, Plastic Problems, and One Woman's Trashy Journey to Zero Waste](https://bookshop.org/p/books/year-of-no-garbage-recycling-lies-plastic-problems-and-one-woman-s-trashy-journey-to-zero-waste-eve-o-schaub/18564657)
 - [Killed by a Traffic Engineer: Shattering the Delusion That Science Underlies Our Transportation System](https://bookshop.org/p/books/killed-by-a-traffic-engineer-shattering-the-delusion-that-science-underlies-our-transportation-system-wes-marshall/20880386)
 - [Command and Control: Nuclear Weapons, the Damascus Accident, and the Illusion of Safety](https://bookshop.org/p/books/command-and-control-nuclear-weapons-the-damascus-accident-and-the-illusion-of-safety-eric-schlosser/6676064)
-- [The Light Eaters: How the Unseen World of Plant Intelligence Offers a New Understanding of Life on Earth](https://bookshop.org/p/books/the-light-eaters-how-the-unseen-world-of-plant-intelligence-offers-a-new-understanding-of-life-on-earth-zoe-schlanger/20890522)
 - [Charlie Hustle: The Rise and Fall of Pete Rose, and the Last Glory Days of Baseball](https://bookshop.org/p/books/charlie-hustle-the-rise-of-pete-rose-and-the-fall-of-baseball-keith-o-brien/20213711)
