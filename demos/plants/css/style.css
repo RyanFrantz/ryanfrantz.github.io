@@ -45,6 +45,7 @@ header {
   border: solid .125rem;
   border-radius: .75rem;
   padding: 1%;
+  display: flex;
 }
 
 body > header {
@@ -82,6 +83,8 @@ h1, h2, h3, h4, h5 {
   box-sizing: content-box;
   margin-inline: auto;
   max-inline-size: var(--measure);
+  padding-inline-start: 3%;
+  padding-inline-end: 3%;
 }
 
 li {

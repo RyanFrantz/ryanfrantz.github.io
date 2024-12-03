@@ -8,24 +8,28 @@
   </head>
   <body class="center">
     <header>
-      <label for="type-filter">Filter by type:</label>
-      <select id="type-filter" autocomplete="off">
-        <option value="All">All</option>
-        <option value="Fern">Ferns</option>
-        <option value="Grass">Grasses</option>
-        <option value="Herbaceaous">Herbaceous</option>
-        <option value="Shrub">Shrubs</option>
-        <option value="Tree">Trees</option>
-        <option value="Vine">Vines</option>
-      </select>
-      <label for="name-filter">Filter by name</label>
-      <!-- FIXME: Does this need ARIA markup? -->
-      <input
-        id="name-filter"
-        type="text"
-        placeholder="Common or Latin name"
-        autocomplete="off"
-      />
+      <div>
+        <label for="type-filter">Filter by type:</label>
+        <select id="type-filter" autocomplete="off">
+          <option value="All">All</option>
+          <option value="Fern">Ferns</option>
+          <option value="Grass">Grasses</option>
+          <option value="Herbaceaous">Herbaceous</option>
+          <option value="Shrub">Shrubs</option>
+          <option value="Tree">Trees</option>
+          <option value="Vine">Vines</option>
+        </select>
+      </div>
+      <div>
+        <label for="name-filter">Filter by name</label>
+        <!-- FIXME: Does this need ARIA markup? -->
+        <input
+          id="name-filter"
+          type="text"
+          placeholder="Common or Latin name"
+          autocomplete="off"
+        />
+      </div>
     </header>
     <main>
       <div class="stack">
