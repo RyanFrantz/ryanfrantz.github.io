@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/filters.js" defer></script>
+  </head>
+  <body class="center">
+    <header>
+      <label for="type-filter">Filter by type:</label>
+      <select id="type-filter" autocomplete="off">
+        <option value="All">All</option>
+        <option value="Fern">Ferns</option>
+        <option value="Grass">Grasses</option>
+        <option value="Herbaceaous">Herbaceous</option>
+        <option value="Shrub">Shrubs</option>
+        <option value="Tree">Trees</option>
+        <option value="Vine">Vines</option>
+      </select>
+      <label for="name-filter">Filter by name</label>
+      <!-- FIXME: Does this need ARIA markup? -->
+      <input
+        id="name-filter"
+        type="text"
+        placeholder="Common or Latin name"
+        autocomplete="off"
+      />
+    </header>
+    <main>
+      <div class="stack">
+        <article
+          data-common-name="northern maidenhair fern"
+          data-latin-name="adiantum pedantum"
+          data-plant-type="fern"
+        >
+          <h2>northern maidenhair fern</h2>
+          <h3><em>adiantum pedantum</em></h3>
+          <h4>Type: Fern</h4>
+          <h5>characteristics</h5>
+          <ul class="character">
+            <li>Height: 1'-2'</li>
+            <li>Fruit: N/A</li>
+          </ul>
+          <details>
+            <summary>Details</summary>
+            <h5>conditions</h5>
+            <ul>
+              <li>Sun: Part Shade, Full Shade</li>
+              <li>Moisture: M</li>
+              <li>Soil pH: 4.5-6.5</li>
+              <li>Soil Type: L, S, O</li>
+            </ul>
+            <h5>habitat</h5>
+            <ul>
+              <li>moist woods, rocky shaded habitats</li>
+            </ul>
+            <h5>notes</h5>
+            <ul>
+              <li>grows in clumps; delicate texture; herbal uses</li>
+              <li>Ground cover</li>
+            </ul>
+          </details>
+        </article>
+        <article
+          data-common-name="ebony spleenwort"
+          data-latin-name="asplenium platyneuron"
+          data-plant-type="fern"
+        >
+          <h2>ebony spleenwort</h2>
+          <h3><em>asplenium platyneuron</em></h3>
+          <h4>Type: Fern</h4>
+          <h5>characteristics</h5>
+          <ul class="character">
+            <li>Height: 0.5'-1.5'</li>
+            <li>Fruit: May-Sep</li>
+          </ul>
+          <details>
+            <summary>Details</summary>
+            <h5>conditions</h5>
+            <ul>
+              <li>Sun: Sun, Part Shade, Full Shade</li>
+              <li>Moisture: M</li>
+              <li>Soil pH: 4.5-7</li>
+              <li>Soil Type: C, L, S</li>
+            </ul>
+            <h5>habitat</h5>
+            <ul>
+              <li>banks, open woods and thickets, slopes, rocky ledges, swamps</li>
+            </ul>
+            <h5>notes</h5>
+            <ul>
+              <li>easily transplanted; only moderate care needed; evergreen</li>
+              <li>Evergreen</li>
+              <li>Ground cover</li>
+            </ul>
+          </details>
+        </article>
+        <article
+          data-common-name="northern lady fern"
+          data-latin-name="athyrium filix-femina"
+          data-plant-type="fern"
+        >
+          <h2>northern lady fern</h2>
+          <h3><em>athyrium filix-femina</em></h3>
+          <h4>Type: Fern</h4>
+          <h5>characteristics</h5>
+          <ul class="character">
+            <li>Height: 1'-3'</li>
+            <li>Fruit: N/A</li>
+          </ul>
+          <details>
+            <summary>Details</summary>
+            <h5>conditions</h5>
+            <ul>
+              <li>Sun: Part Shade</li>
+              <li>Moisture: M, W</li>
+              <li>Soil pH: N/A</li>
+              <li>Soil Type: L, S</li>
+            </ul>
+            <h5>habitat</h5>
+            <ul>
+              <li>woods, banks, wooded hillsides, sandy bogs</li>
+            </ul>
+            <h5>notes</h5>
+            <ul>
+              <li>varieties occur throughout region; in MD, VA can also use subspecies asplenioides (southern lady fern)</li>
+              <li>Ground cover</li>
+            </ul>
+          </details>
+        </article>
+        <article
+          data-common-name="autumn bentgrass"
+          data-latin-name="agrosti perennans"
+          data-plant-type="grass"
+        >
+          <h2>autumn bentgrass</h2>
+          <h3><em>agrosti perennans</em></h3>
+          <h4>Type: Grass</h4>
+          <h5>characteristics</h5>
+          <ul class="character">
+            <li>Height: 1'-3'</li>
+            <li>Flowers: Jun-Oct</li>
+          </ul>
+          <details>
+            <summary>Details</summary>
+            <h5>conditions</h5>
+            <ul>
+              <li>Sun: Sun, Part Shade, Full Shade</li>
+              <li>Moisture: D, M, W</li>
+              <li>Soil pH: 5.5-7.5</li>
+              <li>Soil Type: C, L</li>
+            </ul>
+            <h5>habitat</h5>
+            <ul>
+              <li>dry or moist thickets, open woods</li>
+            </ul>
+            <h5>notes</h5>
+            <ul>
+              <li></li>
+            </ul>
+          </details>
+        </article>
+      </div>
+    </main>
+  </body>
+</html>
+

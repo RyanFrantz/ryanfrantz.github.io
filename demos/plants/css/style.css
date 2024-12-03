@@ -1,0 +1,116 @@
+/* Apply axiom from every-layout.dev: “the measure should never exceed 60ch” */
+:root {
+  --measure: 60ch;
+  --space: 1.5rem ;
+  --characteristic-gap: .5rem;
+  --bg-color: #ffffff;
+  --text-color: #006600;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #006600;
+    --text-color: #ffffff;
+  }
+}
+
+* {
+  max-inline-size: var(--measure);
+  margin: 0;
+  /* Some properties aren't inherited. Force inheritance for consistency. */
+  font-family: inherit;
+  line-height: inherit;
+  color: inherit;
+  background-color: inherit;
+  /* Avoid common layout issues */
+  box-sizing: border-box;
+}
+
+html,body,div,header,nav,main,footer {
+  max-inline-size: none;
+}
+
+html {
+  font-size: 125%;
+  font-family: sans-serif;
+  line-height: 1.5;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Images should be responsive. */
+img { max-inline-size: 100%; }
+
+header {
+  border: solid .125rem;
+  border-radius: .75rem;
+  padding: 1%;
+}
+
+body > header {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+article {
+  border: solid .125rem;
+  border-radius: .75rem;
+  padding: 1%;
+}
+
+h1, h2, h3, h4, h5 {
+  text-transform: capitalize;
+}
+
+/* https://every-layout.dev/layouts/stack/ */
+.stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.stack > * {
+  margin-block: 0;
+} 
+
+.stack > * + * {
+  margin-block-start: var(--space, 1.5rem);
+}
+
+/* https://every-layout.dev/layouts/center/ */
+.center {
+  box-sizing: content-box;
+  margin-inline: auto;
+  max-inline-size: var(--measure);
+}
+
+li {
+  list-style: none;
+  /*border: solid; *//* temp, for visualizing spacing */
+}
+
+/* https://every-layout.dev/layouts/cluster/ */
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space, 1rem);
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* FIXME: Define more generic name/purpose? */
+.character {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--characteristic-gap, .5rem);
+}
+
+input, select {
+  border: solid .125rem;
+  border-radius: .75rem;
+  padding: .75%;
+}
+
+::placeholder {
+  font-style: italic;
+}
