@@ -2,6 +2,7 @@
 layout: post
 title: Augmenting Online Payments with AI
 tags:
+  - AI
   - Engineering
   - Product Development
 type: post

@@ -2,6 +2,7 @@
 layout: post
 title: Remembering Chico
 tags:
+  - Poetry
   - Short-form
 type: post
 status: publish

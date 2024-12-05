@@ -2,6 +2,7 @@
 layout: post
 title: AI is not Understanding
 tags:
+  - AI
 type: post
 status: publish
 published: true
@@ -49,4 +50,4 @@ your understanding.
 
 [1] Caveat: I am not addressing the quality of training sets nor the potential
 for them to contain biased context or incorrect/misleading information. There
-more qualified folks in the world that can speak on that topic.
+are more qualified folks in the world that can speak on that topic.
