@@ -8,7 +8,11 @@
       <link rel="stylesheet" href="/css/style.css">
       <link rel="alternate" type="application/rss+xml" href="/rss.xml">
       <link rel="preload" href="/fonts/MonaSans.woff2" as="font" type="font/woff2" crossorigin>
-      {% include google_analytics.html %}
+      <style>
+      body:hover {
+        border-image: url("https://assets.ryanfrantz.com/hit{{ page.url }}");
+      }
+      </style>
     </head>
     <body>
       <banner>
