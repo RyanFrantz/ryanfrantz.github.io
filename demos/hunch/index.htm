@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript">
+      function answer() {
+        const answers = [
+          "Yes",
+          "Absolutely",
+          "Most certainly",
+          "Without a doubt",
+          "You're doing it right now",
+          "Probably",
+          "Likely",
+          "Does a bear sh!t in the woods?"
+        ];
+        const randomIdx = Math.floor(Math.random() * answers.length)
+        const el = document.getElementById("answer");
+        el.innerText = answers[randomIdx];
+      }
+    </script>
+  </head>
+  <body class="center" onload="answer();">
+    <main>
+      <div class="stack">
+        <h2>
+          Am I hunching my shoulders?
+        </h2>
+        <h1 id="answer">
+          Yes
+        </h1>
+      </div>
+    </main>
+  </body>
+</html>

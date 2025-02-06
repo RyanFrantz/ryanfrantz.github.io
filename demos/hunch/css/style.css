@@ -1,0 +1,67 @@
+/* Apply axiom from every-layout.dev: “the measure should never exceed 60ch” */
+:root {
+  --measure: 60ch;
+  --space: 1.5rem ;
+  --characteristic-gap: .5rem;
+  --bg-color: #84E296;
+  --text-color: #0F0F0F;
+}
+
+* {
+  max-inline-size: var(--measure);
+  margin: 0;
+  /* Some properties aren't inherited. Force inheritance for consistency. */
+  font-family: inherit;
+  line-height: inherit;
+  color: inherit;
+  background-color: inherit;
+  /* Avoid common layout issues */
+  box-sizing: border-box;
+}
+
+html,body,div,header,nav,main,footer {
+  max-inline-size: none;
+}
+
+html {
+  font-size: 150%;
+  font-family: sans-serif;
+  line-height: 2.5;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+body > header {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+h1, h2, h3, h4, h5 {
+  /*text-transform: capitalize;*/
+  text-align: center;
+}
+
+/* https://every-layout.dev/layouts/stack/ */
+.stack {
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.stack > * {
+  margin-block: 0;
+} 
+
+.stack > * + * {
+  margin-block-start: var(--space, 1.5rem);
+}
+
+/* https://every-layout.dev/layouts/center/ */
+.center {
+  box-sizing: content-box;
+  margin-inline: auto;
+  max-inline-size: var(--measure);
+  padding-inline-start: 3%;
+  padding-inline-end: 3%;
+}
