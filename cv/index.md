@@ -5,27 +5,35 @@ title: "Curriculum vitae"
 
 [ryan+cv@ryanfrantz.com](mailto:ryan+cv@ryanfrantz.com)
 
-I am a product-oriented engineering manager. My multifaceted career has been
-driven by the desire to close the distance between my engineering work and the
+I am a product-oriented engineering manager whose multifaceted career has been
+driven by the desire to close the distance between engineering work and the
 customer experience.
 
-From my time as a sysadmin starting 25 years ago, during my web operations
-experience at e-commerce and fintech companies, while designing systems to
-operate reliably at scale, through crafting engineering teams and processes to
-deliver software and systems I have learned to combine people management,
-knowledge of scalable infrastructure, and product development into one clear
-mission statement: engineering _is_ the product.
+From my early days as a system administrator, while running large web clusers at
+e-commerce sites, through crafting engineering teams and processes, I have
+learned to compose management, infrastructure know-how, and product development
+experience into a coherent message: engineering _is_ the product.
 
 Whether shepherding a complete rewrite of the frontend and backend for a
 1-million user (MAU) web consumer app, designing a new SaaS product’s
 operational footprint to scale from day one, or shipping enhanced testing
-solutions to streamline developer experience I distill business strategy into
+solutions to streamline developer experience, I distill business strategy into
 engineering direction and deliver delightful products for customers.
 
 # Experience
 
+## SS&C - Senior Architect
+### 9/2023 - Present
+* Partnered with, and trained, infrastructure teams to take advantage of
+  existing systems to implement repeatable and automated processes in support
+  of their fleet lifecycle responsibilities (e.g. builds, patching, access
+  control audits).
+* Designed and built functional proofs-of-concept for product teams to support
+  their operational processes such as environment-based feature flag management
+  and an authorization service driven by a graph database.
+
 ## Lumos Labs - Engineering Director
-### 10/2020 - Present
+### 10/2020 - 7/2023
 * Developed an execution strategy using personas and user story mapping, that
 improved the engineers' delivery capability as they rewrote our core consumer
 web app. **We shipped an early version of the web app to India and the
